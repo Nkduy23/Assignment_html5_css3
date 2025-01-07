@@ -1,0 +1,188 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Roboto", sans-serif;
+}
+
+header a {
+  color: black;
+  text-decoration: none;
+}
+header .container-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5rem;
+}
+header .nav__logo .nav__logo-img {
+  width: 12rem;
+}
+header .nav {
+  position: relative;
+}
+header .nav .nav__list {
+  display: flex;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+}
+header .nav .nav__list .nav__item {
+  position: relative;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+header .nav .nav__list .nav__item:hover .nav__sublist.dropdown {
+  visibility: visible;
+  transform: translateY(0px);
+}
+header .nav .nav__list .nav__item .nav__link {
+  padding: 0.8rem;
+}
+header .nav .nav__list .nav__item .nav__subitem {
+  background-color: #fff;
+}
+header .nav .nav__list .nav__item .nav__subitem .nav__sublink {
+  padding: 0.8rem;
+  display: block;
+}
+header .nav .nav__list .nav__item .nav__subitem .nav__sublink:hover {
+  background-color: #ccc;
+}
+header .nav .nav__sublist.dropdown {
+  min-width: 10rem;
+  visibility: hidden;
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  transform: translateY(-10px);
+  transition: transform 0.3s ease-in-out;
+}
+header .nav__search {
+  position: relative;
+}
+header .nav__search .nav__search-input {
+  padding: 0.5rem 3rem 0.5rem 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+header .nav__search .nav__search-btn {
+  position: absolute;
+  top: 50%;
+  right: 0.5rem;
+  transform: translateY(-50%);
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+header .nav__action {
+  display: flex;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+}
+header .nav__action .nav__action-btn {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+/* Slider Container */
+.container-slider {
+  position: relative;
+  overflow: hidden;
+}
+.container-slider .slider__prev,
+.container-slider .slider__next {
+  position: absolute;
+  z-index: 1;
+}
+
+.slider {
+  transition: transform 0.5s ease-in-out;
+  display: flex;
+}
+
+.slider__image {
+  width: 100%;
+}
+
+.slider__prev,
+.slider__next {
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 50%;
+}
+
+.slider__prev {
+  left: 10px;
+}
+
+.slider__next {
+  right: 10px;
+}
+
+.slider__prev:hover,
+.slider__next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}

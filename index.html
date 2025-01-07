@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trang chủ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <link rel="stylesheet" href="public/css/main.css" />
+  </head>
+  <body style="height: 2000px;">
+    <header class="header">
+      <div class="container-header">
+        <!-- Navbar -->
+        <!-- <div class="nav__navbar">
+          <button class="nav__toggle-btn" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span>
+              <i class="fa-solid fa-bars"></i>
+            </span>
+          </button>
+        </div> -->
+
+        <!-- Logo -->
+        <div class="nav__logo">
+          <a href="index.html" class="nav__logo-link">
+            <img src="public/img/logo.png" alt="logo" class="nav__logo-img" />
+          </a>
+        </div>
+
+        <!-- navigation -->
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item" role="menuitem" aria-current="page" aria-haspopup="true">
+              <a class="nav__link" href="#about">Giày Nam</a>
+              <ul class="nav__sublist dropdown" role="submenu" aria-labelledby="dropdownMenu">
+                <li class="nav__subitem">
+                  <a class="nav__sublink" href="#">submenu</a>
+                </li>
+                <li class="nav__subitem">
+                  <a class="nav__sublink" href="#">submenu</a>
+                </li>
+                <li class="nav__subitem">
+                  <a class="nav__sublink" href="#">submenu</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav__item" role="menuitem" aria-haspopup="true"><a class="nav__link" href="#about">Giày Nữ</a></li>
+            <li class="nav__item" role="menuitem" aria-haspopup="true"><a class="nav__link" href="#about">Balo-Túi</a></li>
+          </ul>
+        </nav>
+
+        <!-- Search -->
+        <div class="nav__search">
+          <input type="text" class="nav__search-input" placeholder="Search..." />
+          <button class="nav__search-btn">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+
+        <!-- action -->
+        <div class="nav__action">
+          <button class="nav__action-btn">
+            <i class="fa-regular fa-user"></i>
+          </button>
+          <button class="nav__action-btn">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- slider -->
+    <div class="container-slider" aria-label="Image Slider">
+      <!-- Nút chuyển slide trước -->
+      <button class="slider__prev" aria-label="Previous Slide">❮</button>
+      <!-- Slider -->
+      <div class="slider" role="list">
+        <img
+          class="slider__image"
+          src="public/img/slider-pc-1.jpg"
+          data-large="public/img/slider-pc-1.jpg"
+          data-small="public/img/slider-mb-1.jpg"
+          alt="Slider Image 1 - Description"
+          draggable="false"
+          role="listitem"
+        />
+        <img
+          class="slider__image"
+          src="public/img/slider-pc-2.jpg"
+          data-large="public/img/slider-pc-2.jpg"
+          data-small="public/img/slider-mb-2.jpg"
+          alt="Slider Image 2 - Description"
+          draggable="false"
+          role="listitem"
+        />
+        <img
+          class="slider__image"
+          src="public/img/slider-pc-3.jpg"
+          data-large="public/img/slider-pc-3.jpg"
+          data-small="public/img/slider-mb-3.jpg"
+          alt="Slider Image 3 - Description"
+          draggable="false"
+          role="listitem"
+        />
+        <img
+          class="slider__image"
+          src="public/img/slider-pc-4.jpg"
+          data-large="public/img/slider-pc-4.jpg"
+          data-small="public/img/slider-mb-4.jpg"
+          alt="Slider Image 4 - Description"
+          draggable="false"
+          role="listitem"
+        />
+      </div>
+      <!-- Nút chuyển slide tiếp theo -->
+      <button class="slider__next" aria-label="Next Slide">❯</button>
+    </div>
+    <script src="public/js/slider.js"></script>
+  </body>
+</html>
