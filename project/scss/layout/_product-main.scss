@@ -18,8 +18,8 @@
   justify-content: center;
 }
 
-.product-card, .product-list--regular {
-  width: 250px;
+.product-card {
+  width: calc(25% - 2rem);
   background-color: #fff;
   border-radius: 10px;
   overflow: hidden;
@@ -36,7 +36,7 @@
 
   &__image {
     width: 100%;
-    height: 200px;
+    height: auto;
     object-fit: cover;
     transition: opacity 0.3s ease;
   }

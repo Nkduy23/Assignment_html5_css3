@@ -1,0 +1,30 @@
+[
+  {
+    "id": "sale1",
+    "name": "Sản phẩm Sale 1",
+    "price": "500,000 VND",
+    "image": "project/public/img/sale1-gray.jpg",
+    "type": "sale",
+    "salePercent": "40%",
+    "progress": 75,
+    "colors": ["gray", "red"]
+  },
+  {
+    "id": "sale1",
+    "name": "Sản phẩm Sale 1",
+    "price": "500,000 VND",
+    "image": "project/public/img/sale1-gray.jpg",
+    "type": "sale",
+    "salePercent": "40%",
+    "progress": 30,
+    "colors": ["gray", "red"]
+  },
+  {
+    "id": "regular1",
+    "name": "Sản phẩm Regular 1",
+    "price": "700,000 VND",
+    "image": "project/public/img/regular1-black.jpg",
+    "type": "regular",
+    "colors": ["black", "white"]
+  }
+]

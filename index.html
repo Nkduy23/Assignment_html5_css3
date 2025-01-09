@@ -5,74 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Trang chủ</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
-    <link rel="stylesheet" href="public/css/main.css" />
+    <link rel="stylesheet" href="/project/public/css/main.css" />
   </head>
-  <body style="height: 2000px">
-    <div class="container-main">
-      <!-- header -->
-      <header class="header">
-        <div class="container-header">
-          <!-- Logo -->
-          <div class="nav__logo" aria-label="Logo MWC">
-            <a href="index.html" class="nav__logo-link">
-              <img src="public/img/logo.png" alt="Logo MWC" class="nav__logo-img" />
-            </a>
-          </div>
-
-          <!-- navigation -->
-          <nav class="nav" aria-label="Main Navigation">
-            <ul class="nav__list">
-              <li class="nav__item" role="menuitem" aria-current="page" aria-haspopup="true">
-                <a class="nav__link" href="#about" id="dropdownMenu">Giày Nam</a>
-                <ul class="nav__sublist dropdown" role="submenu" aria-labelledby="dropdownMenu">
-                  <li class="nav__subitem">
-                    <a class="nav__sublink" href="#">submenu</a>
-                  </li>
-                  <li class="nav__subitem">
-                    <a class="nav__sublink" href="#">submenu</a>
-                  </li>
-                  <li class="nav__subitem">
-                    <a class="nav__sublink" href="#">submenu</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="nav__item" role="menuitem" aria-current="page" aria-haspopup="true">
-                <a class="nav__link" href="#about" id="dropdownMenu">Giày Nam</a>
-                <ul class="nav__sublist dropdown" role="submenu" aria-labelledby="dropdownMenu">
-                  <li class="nav__subitem">
-                    <a class="nav__sublink" href="#">submenu</a>
-                  </li>
-                  <li class="nav__subitem">
-                    <a class="nav__sublink" href="#">submenu</a>
-                  </li>
-                  <li class="nav__subitem">
-                    <a class="nav__sublink" href="#">submenu</a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </nav>
-
-          <!-- Search -->
-          <div class="nav__search" aria-label="Search">
-            <input type="text" class="nav__search-input" placeholder="Search..." />
-            <button class="nav__search-btn" aria-label="Search button">
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-          </div>
-
-          <!-- action -->
-          <div class="nav__action" aria-label="Action buttons">
-            <button class="nav__action-btn" aria-label="Login button">
-              <i class="fa-regular fa-user"></i>
-            </button>
-            <button class="nav__action-btn" aria-label="Cart button">
-              <i class="fa-solid fa-cart-shopping"></i>
-            </button>
-          </div>
-        </div>
-      </header>
-    </div>
+  <body>
+    <!-- header -->
+    <div id="header-placeholder"></div>
 
     <!-- slider -->
     <div class="container-slider" aria-label="Image Slider">
@@ -82,36 +19,36 @@
       <div class="slider" role="list" aria-label="Image List" aria-live="polite">
         <img
           class="slider__image"
-          src="public/img/slider-pc-1.jpg"
-          data-large="public/img/slider-pc-1.jpg"
-          data-small="public/img/slider-mb-1.jpg"
+          src="project/public/img/slider-pc-1.jpg"
+          data-large="project/public/img/slider-pc-1.jpg"
+          data-small="project/public/img/slider-mb-1.jpg"
           alt="Slider Image 1 - Description"
           draggable="false"
           role="listitem"
         />
         <img
           class="slider__image"
-          src="public/img/slider-pc-2.jpg"
-          data-large="public/img/slider-pc-2.jpg"
-          data-small="public/img/slider-mb-2.jpg"
+          src="project/public/img/slider-pc-2.jpg"
+          data-large="project/public/img/slider-pc-2.jpg"
+          data-small="project/public/img/slider-mb-2.jpg"
           alt="Slider Image 2 - Description"
           draggable="false"
           role="listitem"
         />
         <img
           class="slider__image"
-          src="public/img/slider-pc-3.jpg"
-          data-large="public/img/slider-pc-3.jpg"
-          data-small="public/img/slider-mb-3.jpg"
+          src="project/public/img/slider-pc-3.jpg"
+          data-large="project/public/img/slider-pc-3.jpg"
+          data-small="project/public/img/slider-mb-3.jpg"
           alt="Slider Image 3 - Description"
           draggable="false"
           role="listitem"
         />
         <img
           class="slider__image"
-          src="public/img/slider-pc-4.jpg"
-          data-large="public/img/slider-pc-4.jpg"
-          data-small="public/img/slider-mb-4.jpg"
+          src="project/public/img/slider-pc-4.jpg"
+          data-large="project/public/img/slider-pc-4.jpg"
+          data-small="project/public/img/slider-mb-4.jpg"
           alt="Slider Image 4 - Description"
           draggable="false"
           role="listitem"
@@ -147,184 +84,31 @@
 
     <!-- Sản phẩm -->
 
-    <!-- Section: Flash Sale -->
-    <section class="home__flash-sale" aria-label="Flash Sale">
-      <h2 class="home__section-title">🔥 Sản phẩm Flash Sale 🔥</h2>
-      <div class="product-list">
-        <div class="product-card" data-type="sale" aria-label="Product Card">
-          <div class="product-card__image-wrapper">
-            <img src="/public/img/sale1-gray.jpg" alt="Sản phẩm 1" class="product-card__image" data-color="red" data-product-id="sale1" />
-            <div class="product-card__sale-label" data-sale="40%" aria-label="Sale 40%"></div>
-            <div class="product-card__color-options">
-              <span class="product-card__color" data-color="gray" style="background-color: gray" aria-describedby="Gray"></span>
-              <span class="product-card__color" data-color="red" style="background-color: red" aria-describedby="Red"></span>
-            </div>
-          </div>
-          <div class="product-card__info">
-            <h3 class="product-card__title">Sản phẩm 1</h3>
-            <p class="product-card__price">500,000 VND</p>
-            <div class="product-card__progress" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-label="Progress bar">
-              <div class="product-card__progress-bar" style="width: 75%" data-progress="75"></div>
-            </div>
-          </div>
-        </div>
+    <div class="container-main">
+      <!-- Flash Sale Section -->
+      <section class="home__flash-sale" aria-label="Flash Sale">
+        <h2 class="home__section-title">🔥 Sản phẩm Flash Sale 🔥</h2>
+        <div id="flash-sale-products" class="product-list"></div>
+      </section>
 
-        <div class="product-card" data-type="sale" aria-label="Product Card">
-          <div class="product-card__image-wrapper">
-            <img src="/public/img/sale1-gray.jpg" alt="Sản phẩm 1" class="product-card__image" data-color="red" data-product-id="sale1" />
-            <div class="product-card__sale-label" data-sale="40%" aria-label="Sale 40%"></div>
-            <div class="product-card__color-options">
-              <span class="product-card__color" data-color="gray" style="background-color: gray" aria-describedby="Gray"></span>
-              <span class="product-card__color" data-color="red" style="background-color: red" aria-describedby="Red"></span>
-            </div>
-          </div>
-          <div class="product-card__info">
-            <h3 class="product-card__title">Sản phẩm 1</h3>
-            <p class="product-card__price">500,000 VND</p>
-            <div class="product-card__progress" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-label="Progress bar">
-              <div class="product-card__progress-bar" style="width: 75%" data-progress="75"></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="product-card" data-type="sale" aria-label="Product Card">
-          <div class="product-card__image-wrapper">
-            <img src="/public/img/sale1-gray.jpg" alt="Sản phẩm 1" class="product-card__image" data-color="red" data-product-id="sale1" />
-            <div class="product-card__sale-label" data-sale="40%" aria-label="Sale 40%"></div>
-            <div class="product-card__color-options">
-              <span class="product-card__color" data-color="gray" style="background-color: gray" aria-describedby="Gray"></span>
-              <span class="product-card__color" data-color="red" style="background-color: red" aria-describedby="Red"></span>
-            </div>
-          </div>
-          <div class="product-card__info">
-            <h3 class="product-card__title">Sản phẩm 1</h3>
-            <p class="product-card__price">500,000 VND</p>
-            <div class="product-card__progress" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-label="Progress bar">
-              <div class="product-card__progress-bar" style="width: 75%" data-progress="75"></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="product-card" data-type="sale" aria-label="Product Card">
-          <div class="product-card__image-wrapper">
-            <img src="/public/img/sale1-gray.jpg" alt="Sản phẩm 1" class="product-card__image" data-color="red" data-product-id="sale1" />
-            <div class="product-card__sale-label" data-sale="40%" aria-label="Sale 40%"></div>
-            <div class="product-card__color-options">
-              <span class="product-card__color" data-color="gray" style="background-color: gray" aria-describedby="Gray"></span>
-              <span class="product-card__color" data-color="red" style="background-color: red" aria-describedby="Red"></span>
-            </div>
-          </div>
-          <div class="product-card__info">
-            <h3 class="product-card__title">Sản phẩm 1</h3>
-            <p class="product-card__price">500,000 VND</p>
-            <div class="product-card__progress" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-label="Progress bar">
-              <div class="product-card__progress-bar" style="width: 75%" data-progress="75"></div>
-            </div>
-          </div>
-        </div>
-        <!-- More sale products here -->
-      </div>
-    </section>
-
-    
-
-    <!-- Section: Regular Products -->
-    <section class="home__regular-products">
-      <h2 class="home__section-title">Sản phẩm thông thường</h2>
-      <div class="product-list">
-        <!-- Regular products here -->
-        <div class="product-card" data-type="regular">
-          <div class="product-card__image-wrapper" aria-label="Product Card">
-            <img src="/public/img/sale1-gray.jpg" alt="Sản phẩm 1" class="product-card__image" data-color="red" data-product-id="sale1" />
-            <div class="product-card__color-options">
-              <span class="product-card__color" data-color="gray" style="background-color: gray" aria-describedby="Gray"></span>
-              <span class="product-card__color" data-color="red" style="background-color: red" aria-describedby="Red"></span>
-            </div>
-          </div>
-          <div class="product-card__info">
-            <h3 class="product-card__title">Sản phẩm 1</h3>
-            <p class="product-card__price">500,000 VND</p>
-            <div class="product-card__progress" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-label="Progress bar">
-              <div class="product-card__progress-bar" style="width: 75%" data-progress="75"></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="product-card" data-type="regular">
-          <div class="product-card__image-wrapper" aria-label="Product Card">
-            <img src="/public/img/sale1-gray.jpg" alt="Sản phẩm 1" class="product-card__image" data-color="red" data-product-id="sale1" />
-            <div class="product-card__color-options">
-              <span class="product-card__color" data-color="gray" style="background-color: gray" aria-describedby="Gray"></span>
-              <span class="product-card__color" data-color="red" style="background-color: red" aria-describedby="Red"></span>
-            </div>
-          </div>
-          <div class="product-card__info">
-            <h3 class="product-card__title">Sản phẩm 1</h3>
-            <p class="product-card__price">500,000 VND</p>
-            <div class="product-card__progress" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-label="Progress bar">
-              <div class="product-card__progress-bar" style="width: 75%" data-progress="75"></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="product-card" data-type="regular">
-          <div class="product-card__image-wrapper" aria-label="Product Card">
-            <img src="/public/img/sale1-gray.jpg" alt="Sản phẩm 1" class="product-card__image" data-color="red" data-product-id="sale1" />
-            <div class="product-card__color-options">
-              <span class="product-card__color" data-color="gray" style="background-color: gray" aria-describedby="Gray"></span>
-              <span class="product-card__color" data-color="red" style="background-color: red" aria-describedby="Red"></span>
-            </div>
-          </div>
-          <div class="product-card__info">
-            <h3 class="product-card__title">Sản phẩm 1</h3>
-            <p class="product-card__price">500,000 VND</p>
-            <div class="product-card__progress" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-label="Progress bar">
-              <div class="product-card__progress-bar" style="width: 75%" data-progress="75"></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="product-card" data-type="regular">
-          <div class="product-card__image-wrapper" aria-label="Product Card">
-            <img src="/public/img/sale1-gray.jpg" alt="Sản phẩm 1" class="product-card__image" data-color="red" data-product-id="sale1" />
-            <div class="product-card__color-options">
-              <span class="product-card__color" data-color="gray" style="background-color: gray" aria-describedby="Gray"></span>
-              <span class="product-card__color" data-color="red" style="background-color: red" aria-describedby="Red"></span>
-            </div>
-          </div>
-          <div class="product-card__info">
-            <h3 class="product-card__title">Sản phẩm 1</h3>
-            <p class="product-card__price">500,000 VND</p>
-            <div class="product-card__progress" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-label="Progress bar">
-              <div class="product-card__progress-bar" style="width: 75%" data-progress="75"></div>
-            </div>
-          </div>
-        </div>
-        
-        <div class="product-card" data-type="regular">
-          <div class="product-card__image-wrapper" aria-label="Product Card">
-            <img src="/public/img/sale1-gray.jpg" alt="Sản phẩm 1" class="product-card__image" data-color="red" data-product-id="sale1" />
-            <div class="product-card__color-options">
-              <span class="product-card__color" data-color="gray" style="background-color: gray" aria-describedby="Gray"></span>
-              <span class="product-card__color" data-color="red" style="background-color: red" aria-describedby="Red"></span>
-            </div>
-          </div>
-          <div class="product-card__info">
-            <h3 class="product-card__title">Sản phẩm 1</h3>
-            <p class="product-card__price">500,000 VND</p>
-            <div class="product-card__progress" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-label="Progress bar">
-              <div class="product-card__progress-bar" style="width: 75%" data-progress="75"></div>
-            </div>
-          </div>
-        </div>
-
-        
-      </div>
-      <!-- <button class="home__see-all-btn">Xem tất cả</button> -->
-    </section>
-
-    <script src="public/js/slider.js"></script>
-    <script src="public/js/flash-sale.js"></script>
-    <script src="public/js/varia-color.js"></script>
+      <!-- Regular Products Section -->
+      <section class="home__regular-products" aria-label="Regular Products">
+        <h2 class="home__section-title">Sản phẩm thông thường</h2>
+        <div id="regular-products" class="product-list"></div>
+      </section>
+      <!-- <button class="home__see-all-btn"><a href="#">Xem tất cả</a></button> -->
+    </div>
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+    <!-- type="module" giúp bạn làm việc với các file JavaScript như những module độc lập, dễ dàng tái sử dụng và quản lý mã nguồn. -->
+    <script src="project/public/js/include.js"></script>
+    <script src="project/public/js/slider.js"></script>
+    <script src="project/public/js/flash-sale.js"></script>
+    <script src="project/public/js/create-product-html.js" type="module"></script>
+    <script src="project/public/js/color-change.js" type="module"></script>
+    <script src="path/to/progress-update.js" type="module"></script>
+    <script src="project/public/js/render-product.js" type="module"></script>
+    <script src="project/public/js/load-data.js" type="module"></script>
+    <script src="project/public/js/main.js" type="module"></script>
   </body>
 </html>
