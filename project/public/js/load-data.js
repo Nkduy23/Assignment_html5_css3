@@ -1,26 +1,25 @@
-import { renderSaleProduct, renderRegularProduct } from './render-product.js';
+import { renderSaleProduct, renderRegularProductByCategory } from './render-product.js';
 import { addColorChangeEventListeners } from './color-change.js';
-import { updateProductProgress } from './progress-update.js';  // Import hàm cập nhật tiến độ
+import { updateProductProgress } from './progress-update.js'; // Import hàm cập nhật tiến độ
 
-// Hàm loadData() để tải dữ liệu và render sản phẩm
-function loadData() {
-  fetch("project/json/products-main.json") // Đảm bảo bạn đã xác định đúng đường dẫn đến tệp JSON
+function loadData(container) {
+  fetch("json/products-main.json") // Đảm bảo bạn đã xác định đúng đường dẫn đến tệp JSON
     .then((response) => response.json())
     .then((products) => {
-      // Xử lý dữ liệu và render sản phẩm
-      products.forEach((product) => {
-        console.log(product); // Kiểm tra dữ liệu sản phẩm
+      // Duyệt qua từng nhóm sản phẩm trong JSON
+      if (products.saleProducts && Array.isArray(products.saleProducts)) {
+        products.saleProducts.forEach((product) => {
+          renderSaleProduct(product, container); // Truyền container vào hàm renderSaleProduct
+        });
+      }
 
-        if (product.type === "sale") {
-          // Render sản phẩm Sale
-          renderSaleProduct(product);
-        } else {
-          // Render sản phẩm Regular
-          renderRegularProduct(product);
-        }
-      });
+      if (products.regularProducts && Array.isArray(products.regularProducts)) {
+        products.regularProducts.forEach((product) => {
+          renderRegularProductByCategory(product, container); // Truyền container vào hàm renderRegularProductByCategory
+        });
+      }
 
-      // Gọi hàm gắn sự kiện sau khi render xong
+      // Gắn sự kiện sau khi render xong
       addColorChangeEventListeners();
 
       // Cập nhật tiến độ cho các sản phẩm
@@ -28,5 +27,16 @@ function loadData() {
     })
     .catch((error) => console.error("Error loading products:", error));
 }
+
+// Gọi loadData với container là phần tử DOM mà bạn muốn render sản phẩm vào
+document.addEventListener("DOMContentLoaded", () => {
+  const saleContainer = document.getElementById("flash-sale-products");
+  if (saleContainer) {
+    console.log("Container found! Fetching data...");
+    loadData(saleContainer); // Render sản phẩm vào container flash-sale-products
+  } else {
+    console.error("Sale container not found!");
+  }
+});
 
 export { loadData };

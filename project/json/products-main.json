@@ -1,30 +1,159 @@
-[
-  {
-    "id": "sale1",
-    "name": "Sản phẩm Sale 1",
-    "price": "500,000 VND",
-    "image": "project/public/img/sale1-gray.jpg",
-    "type": "sale",
-    "salePercent": "40%",
-    "progress": 75,
-    "colors": ["gray", "red"]
-  },
-  {
-    "id": "sale1",
-    "name": "Sản phẩm Sale 1",
-    "price": "500,000 VND",
-    "image": "project/public/img/sale1-gray.jpg",
-    "type": "sale",
-    "salePercent": "40%",
-    "progress": 30,
-    "colors": ["gray", "red"]
-  },
-  {
-    "id": "regular1",
-    "name": "Sản phẩm Regular 1",
-    "price": "700,000 VND",
-    "image": "project/public/img/regular1-black.jpg",
-    "type": "regular",
-    "colors": ["black", "white"]
-  }
-]
+{
+  "saleProducts": [
+    {
+      "id": "sale1",
+      "name": "BALO MWC - 1031 Balo Nam Nữ Thời Trang Cao Cấp Đa Năng Đi Học ,Đi Chơi Chống Sốc Chống Nước Nhiều Ngăn",
+      "price": "500,000đ",
+      "image": "public/img/sale1-gray.jpg",
+      "type": "sale",
+      "salePercent": "40%",
+      "progress": 75,
+      "colors": ["gray", "DarkRed"]
+    },
+    {
+      "id": "sale2",
+      "name": "BALO MWC - 1031 Balo Nam Nữ Thời Trang Cao Cấp Đa Năng Đi Học ,Đi Chơi Chống Sốc Chống Nước Nhiều Ngăn",
+      "price": "500,000đ",
+      "image": "public/img/sale2-.jpg",
+      "type": "sale",
+      "salePercent": "40%",
+      "progress": 30,
+      "colors": []
+    },
+    {
+      "id": "sale3",
+      "name": "BALO MWC - 1072 Balo Phong Cách Basic Cao Cấp Vải Mềm Mịn,Đa Năng Đi Học ,Đi Chơi Chống Sốc Chống Nước Thời Trang",
+      "price": "500,000đ",
+      "image": "public/img/sale3-SteelBlue.jpg",
+      "type": "sale",
+      "salePercent": "40%",
+      "progress": 75,
+      "colors": ["SteelBlue", "DodgerBlue"]
+    },
+    {
+      "id": "sale4",
+      "name": "Balô MWC BALO - 1083 Túi Đeo Chéo Nam Nữ Unisex Nhiều Ngăn",
+      "price": "500,000đ",
+      "image": "public/img/sale4-black.jpg",
+      "type": "sale",
+      "salePercent": "40%",
+      "progress": 30,
+      "colors": ["black", "white"]
+    }
+  ],
+  "regularProducts": [
+    {
+      "id": "regular1",
+      "name": "Sản phẩm Regular 1",
+      "price": "700,000đ",
+      "image": "public/img/regular1-white.jpg",
+      "type": "regular",
+      "colors": ["white", "Cornsilk"],
+      "category": "shoesForWomen"
+    },
+    {
+      "id": "regular2",
+      "name": "Sản phẩm Regular 2",
+      "price": "700,000đ",
+      "image": "public/img/regular2-white.jpg",
+      "type": "regular",
+      "colors": [],
+      "category": "shoesForWomen"
+    },
+    {
+      "id": "regular3",
+      "name": "Sản phẩm Regular 3",
+      "price": "700,000đ",
+      "image": "public/img/regular3-Cornsilk.jpg",
+      "type": "regular",
+      "colors": ["Cornsilk", "black"],
+      "category": "shoesForWomen"
+    },
+    {
+      "id": "regular4",
+      "name": "Sản phẩm Regular 2",
+      "price": "700,000đ",
+      "image": "public/img/regular4-Cornsilk.jpg",
+      "type": "regular",
+      "colors": ["Cornsilk", "black"],
+      "category": "shoesForWomen"
+    },
+
+    {
+      "id": "regular5",
+      "name": "Sản phẩm Regular 2",
+      "price": "700,000đ",
+      "image": "public/img/regular5-black.jpg",
+      "type": "regular",
+      "colors": [],
+      "category": "balo"
+    },
+    {
+      "id": "regular6",
+      "name": "Sản phẩm Regular 2",
+      "price": "700,000đ",
+      "image": "public/img/regular6-black.jpg",
+      "type": "regular",
+      "colors": ["black", "HotPink", "gray"],
+      "category": "balo"
+    },
+    {
+      "id": "regular7",
+      "name": "Sản phẩm Regular 2",
+      "price": "700,000đ",
+      "image": "public/img/regular7-black.jpg",
+      "type": "regular",
+      "colors": ["black"],
+      "category": "balo"
+    },
+    {
+      "id": "regular8",
+      "name": "Sản phẩm Regular 2",
+      "price": "700,000đ",
+      "image": "public/img/regular8-black.jpg",
+      "type": "regular",
+      "colors": ["black", "gray"],
+      "category": "balo"
+    },
+
+    {
+      "id": "regular9",
+      "name": "Sản phẩm Regular 2",
+      "price": "700,000đ",
+      "image": "public/img/regular9-black.jpg",
+      "type": "regular",
+      "colors": ["black","white"],
+      "category": "shoesForMen"
+    },
+    {
+      "id": "regular10",
+      "name": "Sản phẩm Regular 2",
+      "price": "700,000đ",
+      "image": "public/img/regular10-Grey.jpg",
+      "type": "regular",
+      "colors": [],
+      "category": "shoesForMen"
+
+    },
+    {
+      "id": "regular11",
+      "name": "Sản phẩm Regular 2",
+      "price": "700,000đ",
+      "image": "public/img/regular11-Grey.jpg",
+      "type": "regular",
+      "colors": ["Grey", "brow"],
+      "category": "shoesForMen"
+
+    },
+    {
+      "id": "regular12",
+      "name": "Sản phẩm Regular 2",
+      "price": "700,000đ",
+      "image": "public/img/regular12-Chocolate.jpg",
+      "type": "regular",
+      "colors": ["Chocolate"],
+      "category": "shoesForMen"
+    }
+
+  ]
+}

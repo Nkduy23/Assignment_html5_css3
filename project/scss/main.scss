@@ -1,8 +1,17 @@
 @use "base/reset";
 @use "base/typography";
 @use "base/common";
+@use "utilities/_flex";
+@use "utilities/button";
+@use "utilities/position";
+@use "utilities/display";
+
 @use "layout/header";
 @use "layout/slider";
 @use "layout/flash-sale";
 @use "layout/product-main";
 @use "layout/footer";
+
+@use "responsive/desktop";
+@use "responsive/tablet";
+@use "responsive/mobile";

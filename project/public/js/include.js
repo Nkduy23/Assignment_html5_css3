@@ -4,5 +4,5 @@ async function includeHTML(file, elementId) {
     document.getElementById(elementId).innerHTML = content;
 }
 
-includeHTML("project/view/partials/header.html", "header-placeholder");
-includeHTML("project/view/partials/footer.html", "footer-placeholder");
+includeHTML("view/partials/header.html", "header-placeholder");
+includeHTML("view/partials/footer.html", "footer-placeholder");

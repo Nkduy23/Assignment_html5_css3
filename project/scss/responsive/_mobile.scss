@@ -1,0 +1,53 @@
+@media (max-width: 768px) {
+  .header {
+    &__search {
+      visibility: hidden;
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 80%;
+      height: 100%;
+      background-color: #fff;
+      transition: right 0.3s ease-in-out;
+      z-index: 1050;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding-top: 2rem;
+
+      &-input {
+        border: 1px solid #f3efef;
+      }
+      &-form {
+        position: relative;
+      }
+      &.show {
+        right: 0;
+        visibility: visible;
+        overflow-y: scroll;
+      }
+
+      &-close {
+        display: block;
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        font-size: 2rem;
+      }
+    }
+
+    &__action {
+      &-btn-search {
+        display: block;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .category-lists,
+  #flash-sale-products,
+.category-list {
+  grid-template-columns: repeat(1, 1fr);
+}
+}
