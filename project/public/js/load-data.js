@@ -1,12 +1,11 @@
 import { renderSaleProduct, renderRegularProductByCategory } from './render-product.js';
 import { addColorChangeEventListeners } from './color-change.js';
-import { updateProductProgress } from './progress-update.js'; // Import hàm cập nhật tiến độ
+import { updateProductProgress } from './progress-update.js';
 
 function loadData(container) {
-  fetch("json/products-main.json") // Đảm bảo bạn đã xác định đúng đường dẫn đến tệp JSON
+  fetch("json/products-main.json")
     .then((response) => response.json())
     .then((products) => {
-      // Duyệt qua từng nhóm sản phẩm trong JSON
       if (products.saleProducts && Array.isArray(products.saleProducts)) {
         products.saleProducts.forEach((product) => {
           renderSaleProduct(product, container); // Truyền container vào hàm renderSaleProduct

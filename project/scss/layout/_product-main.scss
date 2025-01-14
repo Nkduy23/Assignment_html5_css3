@@ -19,13 +19,19 @@
   text-transform: uppercase;
   color: #272323;
 }
-.category-lists,
+
+.category-list-container,
 #flash-sale-products,
 .category-list {
   display: grid;
   // grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
+}
+
+.category-list-container {
+  row-gap: 2.5rem;
+  margin-bottom: 5rem;
 }
 
 .product-card {

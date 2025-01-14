@@ -1,8 +1,7 @@
 import { loadData } from "./load-data.js";
 
-// Gọi loadData khi trang được tải xong (load dữ liệu mặc định)
 document.addEventListener("DOMContentLoaded", () => {
-  loadData(); // Tải dữ liệu từ products-main.json
+  loadData();
 
   // Lắng nghe sự kiện click vào nút "Xem tất cả"
   const saleCategoryButton = document.getElementById("sale-category");

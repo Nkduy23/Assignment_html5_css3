@@ -153,6 +153,43 @@
       "type": "regular",
       "colors": ["Chocolate"],
       "category": "shoesForMen"
+    },
+
+    {
+      "id": "regular13",
+      "name": "Sản phẩm Regular 2",
+      "price": "700,000đ",
+      "image": "public/img/regular13-black.jpg",
+      "type": "regular",
+      "colors": ["black","gray"],
+      "category": "DepSandal"
+    },
+    {
+      "id": "regular14",
+      "name": "Sản phẩm Regular 2",
+      "price": "700,000đ",
+      "image": "public/img/regular14-black.jpg",
+      "type": "regular",
+      "colors": ["black","gray"],
+      "category": "DepSandal"
+    },
+    {
+      "id": "regular15",
+      "name": "Sản phẩm Regular 2",
+      "price": "700,000đ",
+      "image": "public/img/regular15-black.jpg",
+      "type": "regular",
+      "colors": [],
+      "category": "DepSandal"
+    },
+    {
+      "id": "regular16",
+      "name": "Sản phẩm Regular 2",
+      "price": "700,000đ",
+      "image": "public/img/regular16-black.jpg",
+      "type": "regular",
+      "colors": ["black","GoldenRod"],
+      "category": "DepSandal"
     }
 
   ]

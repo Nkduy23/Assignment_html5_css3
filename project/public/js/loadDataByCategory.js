@@ -1,10 +1,8 @@
 import { renderSaleProduct, renderRegularProductByCategory } from "./render-product.js";
 import { addColorChangeEventListeners } from "./color-change.js";
 import { updateProductProgress } from "./progress-update.js";
-console.log("loadDataByCategory.js");
 
 function loadDataByCategory(category) {
-  // Xác định file JSON dựa trên category
   let jsonFile = "";
   switch (category) {
     case "sale":
@@ -14,28 +12,24 @@ function loadDataByCategory(category) {
       jsonFile = "json/products-regular.json";
       break;
     case "category1":
-      jsonFile = "json/products-category1.json";
+      jsonFile = "json/products-regular2.json";
       break;
     case "category2":
-      jsonFile = "json/products-category2.json";
+      jsonFile = "json/products-regular3.json";
       break;
     default:
       console.warn("Category not found. Loading default data.");
-      jsonFile = "json/products-main.json"; // File mặc định nếu không có category
+      jsonFile = "json/products-main.json";
   }
 
   console.log(`Loading products from: ${jsonFile}`);
 
-  // Chắc chắn DOM đã sẵn sàng
-// Loại bỏ sự kiện DOMContentLoaded và thử trực tiếp chạy code bên ngoài
-const container = document.getElementById("sale-category"); // Khu vực render sản phẩm
+const container = document.getElementById("sale-category");
 if (container) {
   console.log("Container found! Fetching data...");
   fetch(jsonFile)
     .then((response) => response.json())
     .then((products) => {
-      console.log("Products loaded:", products);
-
       if (category === "sale" && products.saleProducts) {
         products.saleProducts.forEach((product) => renderSaleProduct(product, container));
       } else if (category === "regular" && products.regularProducts) {
