@@ -1,0 +1,40 @@
+{
+  "category2Products": [
+    {
+      "id": "regular9",
+      "name": "Sản phẩm Regular 2",
+      "price": "100,000đ",
+      "image": "public/img/regular9-black.jpg",
+      "type": "regular",
+      "colors": ["black", "white"],
+      "category": "shoesForMen"
+    },
+    {
+      "id": "regular10",
+      "name": "Sản phẩm Regular 2",
+      "price": "700,000đ",
+      "image": "public/img/regular10-Grey.jpg",
+      "type": "regular",
+      "colors": [],
+      "category": "shoesForMen"
+    },
+    {
+      "id": "regular11",
+      "name": "Sản phẩm Regular 2",
+      "price": "700,000đ",
+      "image": "public/img/regular11-Grey.jpg",
+      "type": "regular",
+      "colors": ["Grey", "brown"],
+      "category": "shoesForMen"
+    },
+    {
+      "id": "regular12",
+      "name": "Sản phẩm Regular 2",
+      "price": "700,000đ",
+      "image": "public/img/regular12-Chocolate.jpg",
+      "type": "regular",
+      "colors": ["Chocolate"],
+      "category": "shoesForMen"
+    }
+  ]
+}

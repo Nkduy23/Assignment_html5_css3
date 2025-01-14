@@ -21,7 +21,7 @@ function createProductHTML(product) {
   return `
         <div class="product-card" data-type="${product.type}" aria-label="Product Card">
           <div class="product-card__image-wrapper">
-            <img src="${product.image}" alt="${product.name}" class="product-card__image" data-product-id="${product.id}" />
+            <a href="#"><img src="${product.image}" alt="${product.name}" class="product-card__image" data-product-id="${product.id}" /></a>
             ${saleLabel}
             <div class="product-card__color-options">
               ${colorOptions}

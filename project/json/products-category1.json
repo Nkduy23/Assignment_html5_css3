@@ -1,0 +1,40 @@
+{
+  "category1Products": [
+    {
+      "id": "regular5",
+      "name": "Sản phẩm Regular 2",
+      "price": "700,000đ",
+      "image": "public/img/regular5-black.jpg",
+      "type": "regular",
+      "colors": [],
+      "category": "balo"
+    },
+    {
+      "id": "regular6",
+      "name": "Sản phẩm Regular 2",
+      "price": "700,000đ",
+      "image": "public/img/regular6-black.jpg",
+      "type": "regular",
+      "colors": ["black", "HotPink", "gray"],
+      "category": "balo"
+    },
+    {
+      "id": "regular7",
+      "name": "Sản phẩm Regular 2",
+      "price": "700,000đ",
+      "image": "public/img/regular7-black.jpg",
+      "type": "regular",
+      "colors": ["black"],
+      "category": "balo"
+    },
+    {
+      "id": "regular8",
+      "name": "Sản phẩm Regular 2",
+      "price": "700,000đ",
+      "image": "public/img/regular8-black.jpg",
+      "type": "regular",
+      "colors": ["black", "gray"],
+      "category": "balo"
+    }
+  ]
+}

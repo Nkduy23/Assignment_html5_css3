@@ -141,7 +141,7 @@
       "price": "700,000đ",
       "image": "public/img/regular11-Grey.jpg",
       "type": "regular",
-      "colors": ["Grey", "brow"],
+      "colors": ["Grey","brown"],
       "category": "shoesForMen"
 
     },

@@ -1,17 +1,21 @@
 import { loadData } from "./load-data.js";
 
 document.addEventListener("DOMContentLoaded", () => {
-  loadData();
+  // Xác định container cần truyền
+  const saleContainer = document.getElementById("flash-sale-products");
 
-  // Lắng nghe sự kiện click vào nút "Xem tất cả"
+  if (saleContainer) {
+    console.log("Container found! Fetching data...");
+    loadData(saleContainer); // Truyền container vào loadData
+  } else {
+    console.error("Sale container not found!");
+  }
+
+  // Xử lý sự kiện click cho nút "Xem tất cả"
   const saleCategoryButton = document.getElementById("sale-category");
-  // console.log(`saleCategoryButton: ${saleCategoryButton}`);
-
   if (saleCategoryButton) {
     saleCategoryButton.addEventListener("click", (event) => {
-      event.preventDefault(); // Ngăn không cho thẻ <a> tải lại trang
-
-      // Chuyển hướng tới trang sale.html với tham số category=sale
+      event.preventDefault(); // Ngăn không tải lại trang
       window.location.href = "sale.html?category=sale";
     });
   } else {
