@@ -8,10 +8,6 @@
 
 @media (max-width: 992px) {
   .header {
-    &__toggler {
-      display: block;
-    }
-
     .nav {
       visibility: hidden;
       position: fixed;
@@ -23,6 +19,10 @@
       transition: left 0.3s ease-in-out;
       z-index: 1050;
       box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.5);
+
+      &__button-bar {
+        display: block;
+      }
 
       &.show {
         left: 0;
@@ -81,10 +81,10 @@
         }
       }
 
-      &__close {
+      &__button-icon {
         position: absolute;
-        right: 0px;
-        top: 0;
+        right: 5px;
+        top: 5px;
         font-size: 2rem;
       }
     }

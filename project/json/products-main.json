@@ -139,7 +139,7 @@
       "id": "regular11",
       "name": "Sản phẩm Regular 2",
       "price": "700,000đ",
-      "image": "public/img/regular11-Grey.jpg",
+      "image": "public/img/regular11-grey.jpg",
       "type": "regular",
       "colors": ["Grey","brown"],
       "category": "shoesForMen"

@@ -1,5 +1,5 @@
 // Thời gian kết thúc
-const saleEndTime = new Date("2025-01-15T12:00:00").getTime();
+const saleEndTime = new Date("2025-01-20T12:00:00").getTime();
 
 
 // Lấy các phần tử hiển thị thời gian 

@@ -27,7 +27,7 @@
         overflow-y: scroll;
       }
 
-      &-close {
+      &-button-close {
         display: block;
         position: absolute;
         right: 5px;
@@ -37,7 +37,7 @@
     }
 
     &__action {
-      &-btn-search {
+      &-button-open {
         display: block;
       }
     }

@@ -3,9 +3,9 @@
   <header class="header">
     <div class="container-header d-flex-between flex-wrap">
       <!-- Navbar Toggler -->
-      <button type="button" class="header__toggler d-none button" aria-controls="navbar" aria-expanded="false" aria-label="Toggler navigation">
-        <span class="navbar__toggler-icon">
-          <i class="fa-solid fa-list"></i>
+      <button type="button" class="nav__button-bar d-none button" aria-controls="navbar" aria-label="Toggler navigation">
+        <span class="navbar__button-icon">
+          <i class="fa-solid fa-bars"></i>
         </span>
       </button>
 
@@ -20,14 +20,14 @@
       <nav class="nav" aria-label="Main Navigation">
         <div class="nav__menu d-none">
           <h5 class="nav__menu-title">Menu</h5>
-          <button type="button" class="nav__close button" aria-label="Close menu">
-            <span class="nav__close-icon"><i class="fa-solid fa-xmark"></i></span>
+          <button type="button" class="nav__button-close button" aria-label="Close menu">
+            <span class="nav__button-icon"><i class="fa-solid fa-xmark"></i></span>
           </button>
         </div>
 
         <ul class="nav__list d-flex">
           <li class="nav__item" role="menuitem" aria-haspopup="true">
-            <a class="nav__link dropdown" href="#about" id="dropdownMenu-1" aria-expanded="false">Giày Nam</a>
+            <a class="nav__link dropdown" href="#about" id="dropdownMenu-1">Giày Nam</a>
             <ul class="nav__sublist" role="submenu" aria-labelledby="dropdownMenu-1">
               <li class="nav__subitem">
                 <a class="nav__sublink" href="#">Thể Thao</a>
@@ -44,7 +44,7 @@
             </ul>
           </li>
           <li class="nav__item" role="menuitem" aria-haspopup="true">
-            <a class="nav__link dropdown" href="#about" id="dropdownMenu-2" aria-expanded="false">Giày Nữ</a>
+            <a class="nav__link dropdown" href="#about" id="dropdownMenu-2">Giày Nữ</a>
             <ul class="nav__sublist" role="submenu" aria-labelledby="dropdownMenu-2">
               <li class="nav__subitem">
                 <a class="nav__sublink" href="#">Thể Thao</a>
@@ -67,7 +67,7 @@
             </ul>
           </li>
           <li class="nav__item" role="menuitem" aria-haspopup="true">
-            <a class="nav__link dropdown" href="#about" id="dropdownMenu-2" aria-expanded="false">Giày Cặp</a>
+            <a class="nav__link dropdown" href="#about" id="dropdownMenu-2">Giày Cặp</a>
             <ul class="nav__sublist" role="submenu" aria-labelledby="dropdownMenu-2">
               <li class="nav__subitem">
                 <a class="nav__sublink" href="#">Thể Thao</a>
@@ -90,7 +90,7 @@
             </ul>
           </li>
           <li class="nav__item" role="menuitem" aria-haspopup="true">
-            <a class="nav__link dropdown" href="#about" id="dropdownMenu-2" aria-expanded="false">Balo-Túi</a>
+            <a class="nav__link dropdown" href="#about" id="dropdownMenu-2">Balo-Túi</a>
             <ul class="nav__sublist" role="submenu" aria-labelledby="dropdownMenu-2">
               <li class="nav__subitem">
                 <a class="nav__sublink" href="#">Balo Laptop, Du Lịch, Thời Trang</a>
@@ -113,7 +113,7 @@
             </ul>
           </li>
           <li class="nav__item" role="menuitem" aria-haspopup="true">
-            <a class="nav__link dropdown" href="#about" id="dropdownMenu-2" aria-expanded="false">Phụ Kiện</a>
+            <a class="nav__link dropdown" href="#about" id="dropdownMenu-2">Phụ Kiện</a>
             <ul class="nav__sublist" role="submenu" aria-labelledby="dropdownMenu-2">
               <li class="nav__subitem">
                 <a class="nav__sublink" href="#">Vớ</a>
@@ -131,23 +131,23 @@
       <div class="header__search" aria-label="Search">
         <form action="#" class="header__search-form">
           <input type="text" class="header__search-input" placeholder="Search..." />
-          <button class="header__search-btn button" aria-label="Search button">
-            <i class="fa-solid fa-magnifying-glass"></i>
+          <button class="header__search-button button" aria-label="Search button">
+           <span class="header__search-button-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
           </button>
         </form>
 
-        <button type="button" class="header__search-close d-none button" aria-controls="Search" aria-expanded="false" aria-label="Close menu">
-          <span class="header__close-icon"><i class="fa-solid fa-xmark"></i></span>
+        <button type="button" class="header__search-button-close d-none button" aria-label="Close menu">
+          <span class="header__search-button-icon"><i class="fa-solid fa-xmark"></i></span>
         </button>
       </div>
 
       <!-- action -->
       <div class="header__action d-flex" aria-label="Action buttons">
-        <button type="button" class="header__action-btn-search d-none button" aria-label="Search button"><i class="fa-solid fa-magnifying-glass"></i></button>
-        <button class="header__action-btn button" aria-label="Login button">
+        <button type="button" class="header__action-button-open d-none button" aria-controls="Search" aria-expanded="false" aria-label="Search button"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <button class="header__action-button button" aria-label="Login button">
           <i class="fa-regular fa-user"></i>
         </button>
-        <button class="header__action-btn button" aria-label="Cart button">
+        <button class="header__action-button button" aria-label="Cart button">
           <i class="fa-solid fa-cart-shopping"></i>
         </button>
       </div>
