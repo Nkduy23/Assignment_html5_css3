@@ -7,8 +7,11 @@ function loadData(container) {
     console.error("Container is undefined or null.");
     return;
   }
+  // Phát hiện môi trường dựa trên URL
+  const isGitHubPages = window.location.hostname === "nkduy23.github.io";
+  const baseUrl = isGitHubPages ? `${window.location.origin}/Assignment_html5_css3` : window.location.origin;
 
-  fetch("/data/products-main.json")
+  fetch(`${baseUrl}/data/products-main.json`)
     .then((response) => response.json())
     .then((products) => {
       container.innerHTML = "";
