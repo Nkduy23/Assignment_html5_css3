@@ -7,27 +7,27 @@ console.log("Product Category Controller Loaded");
 // Cấu hình dữ liệu danh mục
 const CATEGORY_CONFIG = {
   sale: {
-    jsonFile: "/public/data/products-sale.json",
+    jsonFile: "/data/products-sale.json",
     containerId: "sale-category",
     renderFunction: (product, container) => renderSaleProduct(product, container),
   },
   regular: {
-    jsonFile: "/public/data/products-regular.json",
+    jsonFile: "/data/products-regular.json",
     containerId: "shoes-for-women",
     renderFunction: (product, container) => renderRegularProductByCategory(product, container),
   },
   category1: {
-    jsonFile: "/public/data/products-category1.json",
+    jsonFile: "/data/products-category1.json",
     containerId: "balo",
     renderFunction: (product, container) => renderRegularProductByCategory(product, container),
   },
   category2: {
-    jsonFile: "/public/data/products-category2.json",
+    jsonFile: "/data/products-category2.json",
     containerId: "shoes-for-men",
     renderFunction: (product, container) => renderRegularProductByCategory(product, container),
   },
   category3: {
-    jsonFile: "/public/data/products-category3.json",
+    jsonFile: "/data/products-category3.json",
     containerId: "dep-sandal",
     renderFunction: (product, container) => renderRegularProductByCategory(product, container),
   },
@@ -36,7 +36,7 @@ const CATEGORY_CONFIG = {
 // Hàm lấy cấu hình danh mục (với fallback)
 const getCategoryConfig = (category) => 
   CATEGORY_CONFIG[category] || {
-    jsonFile: "/public/data/products-main.json",
+    jsonFile: "/data/products-main.json",
     containerId: "default-container",
     renderFunction: null,
   };

@@ -8,7 +8,7 @@ function loadData(container) {
     return;
   }
 
-  fetch("/public/data/products-main.json")
+  fetch("/data/products-main.json")
     .then((response) => response.json())
     .then((products) => {
       container.innerHTML = "";
