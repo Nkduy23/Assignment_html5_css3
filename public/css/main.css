@@ -230,7 +230,7 @@ a {
   transition: transform 0.5s ease-in-out;
   display: flex;
 }
-.slider__prev-btn, .slider__next-btn {
+.slider__prev-button, .slider__next-button {
   position: absolute;
   z-index: 1;
   top: 50%;
@@ -243,13 +243,13 @@ a {
   font-size: 18px;
   border-radius: 50%;
 }
-.slider__prev-btn {
+.slider__prev-button {
   left: 10px;
 }
-.slider__next-btn {
+.slider__next-button {
   right: 10px;
 }
-.slider__prev-btn:hover, .slider__next-btn:hover {
+.slider__prev-button:hover, .slider__next-button:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
 .slider__item {
@@ -514,7 +514,7 @@ a {
   display: inline-block;
   width: 16px;
   height: 16px;
-  background-image: url("/project/public/img/google-maps.png");
+  background-image: url("/public/img/google-maps.png");
   background-size: cover;
   margin-right: 5px;
 }
@@ -541,6 +541,7 @@ a {
   }
   .header .nav__button-bar {
     display: block;
+    font-size: 2rem;
   }
   .header .nav.show {
     left: 0;

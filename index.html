@@ -14,7 +14,7 @@
     <!-- slider -->
     <div class="slider-container" aria-label="Image Slider">
       <!-- Nút chuyển slide trước -->
-      <button class="slider__prev-btn" aria-label="Previous Slide">❮</button>
+      <button class="slider__prev-button" aria-label="Previous Slide">❮</button>
       <!-- Slider -->
       <div class="slider" role="list" aria-label="Image List" aria-live="polite">
         <div class="slider__item">
@@ -63,7 +63,7 @@
         </div>
       </div>
       <!-- Nút chuyển slide tiếp theo -->
-      <button class="slider__next-btn" aria-label="Next Slide">❯</button>
+      <button class="slider__next-button" aria-label="Next Slide">❯</button>
     </div>
 
     <!-- flash sale -->
@@ -131,7 +131,7 @@
               <!-- Sản phẩm giày nam sẽ được thêm vào đây -->
             </div>
             <!-- Sửa lại cho đúng semantic  <a href="shoeforwomen.html?category=regular" class="home__see-all-btn">Xem tất cả</a> -->
-            <button class="home__see-all-btn" ><a href="sandal.html?category=category3">Xem tất cả</a></button>
+            <button class="home__see-all-btn"><a href="sandal.html?category=category3">Xem tất cả</a></button>
           </div>
         </div>
       </section>
@@ -139,16 +139,12 @@
 
     <!-- Footer -->
     <div id="footer-placeholder"></div>
-    <!-- type="module" giúp bạn làm việc với các file JavaScript như những module độc lập, dễ dàng tái sử dụng và quản lý mã nguồn. -->
-    <script src="public/js/load-partials.js"></script>
-    <script src="public/js/navbar.js"></script>
-    <script src="public/js/slider.js"></script>
-    <script src="public/js/flash-sale.js"></script>
+
+    <script src="public/js/views/partials-loader.js"></script>
+    <script src="public/js/views/navigation.js"></script>
+    <script src="public/js/views/setupSlider.js" type="module"></script>
+    <script src="public/js/views/setupCountdown.js" type="module"></script>
     <script src="public/js/main.js" type="module"></script>
-    <script src="public/js/load-data.js" type="module"></script>
-    <script src="public/js/create-product-html.js" type="module"></script>
-    <script src="public/js/render-product.js" type="module"></script>
-    <script src="public/js/color-change.js" type="module"></script>
-    <script src="public/js/progress-update.js" type="module"></script>
+    <script src="public/js/controllers/loadHome-controller.js" type="module"></script>
   </body>
 </html>

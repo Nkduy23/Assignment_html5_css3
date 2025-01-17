@@ -6,8 +6,8 @@
 
 /* Slider Navigation Buttons */
 .slider {
-  &__prev-btn,
-  &__next-btn {
+  &__prev-button,
+  &__next-button {
     position: absolute;
     z-index: 1;
     top: 50%;
@@ -21,16 +21,16 @@
     border-radius: 50%;
   }
 
-  &__prev-btn {
+  &__prev-button {
     left: 10px;
   }
 
-  &__next-btn {
+  &__next-button {
     right: 10px;
   }
 
-  &__prev-btn:hover,
-  &__next-btn:hover {
+  &__prev-button:hover,
+  &__next-button:hover {
     background-color: rgba(0, 0, 0, 0.8);
   }
 
