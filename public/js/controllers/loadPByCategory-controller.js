@@ -4,39 +4,42 @@ import { updateProductProgress } from "../views/progress-updater.js";
 
 console.log("Product Category Controller Loaded");
 
+// Phát hiện môi trường dựa trên URL
+const isGitHubPages = window.location.hostname === "nkduy23.github.io";
+const baseUrl = isGitHubPages ? `${window.location.origin}/Assignment_html5_css3` : window.location.origin;
 // Cấu hình dữ liệu danh mục
-const CATEGORY_CONFIG = {
+export const CATEGORY_CONFIG = {
   sale: {
-    jsonFile: "/data/products-sale.json",
+    jsonFile: `${baseUrl}/data/products-sale.json`,
     containerId: "sale-category",
     renderFunction: (product, container) => renderSaleProduct(product, container),
   },
-  regular: {
-    jsonFile: "/data/products-regular.json",
+  shoesForWomen: {
+    jsonFile: `${baseUrl}/data/products-regular.json`,
     containerId: "shoes-for-women",
     renderFunction: (product, container) => renderRegularProductByCategory(product, container),
   },
-  category1: {
-    jsonFile: "/data/products-category1.json",
+  balo: {
+    jsonFile: `${baseUrl}/data/products-category1.json`,
     containerId: "balo",
     renderFunction: (product, container) => renderRegularProductByCategory(product, container),
   },
-  category2: {
-    jsonFile: "/data/products-category2.json",
+  shoesForMen: {
+    jsonFile: `${baseUrl}/data/products-category2.json`,
     containerId: "shoes-for-men",
     renderFunction: (product, container) => renderRegularProductByCategory(product, container),
   },
-  category3: {
-    jsonFile: "/data/products-category3.json",
+  DepSandal: {
+    jsonFile: `${baseUrl}/data/products-category3.json`,
     containerId: "dep-sandal",
     renderFunction: (product, container) => renderRegularProductByCategory(product, container),
   },
 };
 
 // Hàm lấy cấu hình danh mục (với fallback)
-const getCategoryConfig = (category) => 
+const getCategoryConfig = (category) =>
   CATEGORY_CONFIG[category] || {
-    jsonFile: "/data/products-main.json",
+    jsonFile: `${baseUrl}/data/products-main.json`,
     containerId: "default-container",
     renderFunction: null,
   };
@@ -72,7 +75,8 @@ const loadDataByCategory = async (category) => {
   if (!container) {
     console.error(`Container element for category "${category}" not found!`);
     return;
-  }fetchCategoryData
+  }
+  fetchCategoryData;
 
   const products = await fetchCategoryData(jsonFile);
   if (products && renderFunction) {

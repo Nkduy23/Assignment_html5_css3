@@ -1,0 +1,93 @@
+.product-detail {
+    display: grid;
+    grid-template-columns: 1fr 1fr; // Chia 50% - 50% giữa gallery và info
+    gap: 20px;
+    padding: 20px;
+  
+    &__gallery {
+      display: grid;
+      grid-template-rows: auto auto;
+      gap: 15px;
+      justify-items: center;
+  
+      .product-detail__image {
+        width: 100%;
+        // max-width: 500px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+  
+      .product-detail__thumbnails {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); // 4 ảnh thumbnail trên 1 hàng
+        gap: 10px;
+        width: 100%;
+        max-width: 500px;
+  
+        .thumbnail {
+          width: 100%;
+          cursor: pointer;
+          transition: transform 0.3s ease, opacity 0.3s ease;
+  
+          &:hover {
+            transform: scale(1.1);
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+  
+    &__info {
+      display: grid;
+      grid-template-rows: auto auto auto auto;
+      align-content: start;
+      gap: 15px;
+  
+      .product-detail__title {
+        font-size: 2rem;
+        font-weight: bold;
+      }
+  
+      .product-detail__price {
+        font-size: 1.5rem;
+        color: #e74c3c;
+        font-weight: bold;
+      }
+  
+      .product-detail__description {
+        font-size: 1rem;
+        line-height: 1.5;
+        color: #555;
+      }
+  
+      .product-detail__specifications {
+        list-style: none;
+        padding: 0;
+  
+        li {
+          font-size: 1rem;
+          padding: 5px 0;
+          border-bottom: 1px solid #ddd;
+  
+          strong {
+            font-weight: bold;
+            color: #333;
+          }
+        }
+      }
+    }
+  }
+  
+  // Responsive
+  @media (max-width: 768px) {
+    .product-detail {
+      grid-template-columns: 1fr; // Chuyển về 1 cột khi màn hình nhỏ
+    }
+  
+    .product-detail__gallery {
+      .product-detail__thumbnails {
+        grid-template-columns: repeat(2, 1fr); // Giảm còn 2 ảnh trên hàng
+      }
+    }
+  }
+  

@@ -13,8 +13,8 @@ async function includeHTML(file, elementId) {
 
 window.addEventListener("DOMContentLoaded", async () => {
   try {
-    await includeHTML("view/partials/header.html", "header-placeholder");
-    await includeHTML("view/partials/footer.html", "footer-placeholder");
+    await includeHTML("/view/partials/header.html", "header-placeholder");
+    await includeHTML("/view/partials/footer.html", "footer-placeholder");
 
     // Gọi setupNavbar sau khi header và footer đã được chèn
     setupNavbar();

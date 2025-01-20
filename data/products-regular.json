@@ -1,19 +1,25 @@
 {
-  "regularProducts": [
+  "shoesForWomenProducts": [
     {
       "id": "regular1",
       "name": "Sản phẩm Regular 1",
       "price": "100,000đ",
-      "image": "public/img/regular1-white.jpg",
+      "image": "/public/img/regular1-white.jpg",
       "type": "regular",
       "colors": ["white", "Cornsilk"],
-      "category": "shoesForWomen"
+      "category": "shoesForWomen",
+      "description": "Giày sneaker nữ phong cách, chất liệu thoáng khí.",
+      "specifications": {
+        "material": "Da tổng hợp",
+        "size": "36-41",
+        "color": ["Trắng", "Be"]
+      }
     },
     {
       "id": "regular2",
       "name": "Sản phẩm Regular 2",
       "price": "700,000đ",
-      "image": "public/img/regular2-white.jpg",
+      "image": "/public/img/regular2-white.jpg",
       "type": "regular",
       "colors": [],
       "category": "shoesForWomen"
@@ -22,7 +28,7 @@
       "id": "regular3",
       "name": "Sản phẩm Regular 3",
       "price": "700,000đ",
-      "image": "public/img/regular3-Cornsilk.jpg",
+      "image": "/public/img/regular3-Cornsilk.jpg",
       "type": "regular",
       "colors": ["Cornsilk", "black"],
       "category": "shoesForWomen"
@@ -31,7 +37,7 @@
       "id": "regular4",
       "name": "Sản phẩm Regular 2",
       "price": "700,000đ",
-      "image": "public/img/regular4-Cornsilk.jpg",
+      "image": "/public/img/regular4-Cornsilk.jpg",
       "type": "regular",
       "colors": ["Cornsilk", "black"],
       "category": "shoesForWomen"
@@ -40,7 +46,7 @@
       "id": "regular1",
       "name": "Sản phẩm Regular 1",
       "price": "700,000đ",
-      "image": "public/img/regular1-white.jpg",
+      "image": "/public/img/regular1-white.jpg",
       "type": "regular",
       "colors": ["white", "Cornsilk"],
       "category": "shoesForWomen"
@@ -49,7 +55,7 @@
       "id": "regular2",
       "name": "Sản phẩm Regular 2",
       "price": "700,000đ",
-      "image": "public/img/regular2-white.jpg",
+      "image": "/public/img/regular2-white.jpg",
       "type": "regular",
       "colors": [],
       "category": "shoesForWomen"
@@ -58,7 +64,7 @@
       "id": "regular3",
       "name": "Sản phẩm Regular 3",
       "price": "700,000đ",
-      "image": "public/img/regular3-Cornsilk.jpg",
+      "image": "/public/img/regular3-Cornsilk.jpg",
       "type": "regular",
       "colors": ["Cornsilk", "black"],
       "category": "shoesForWomen"
@@ -67,7 +73,7 @@
       "id": "regular4",
       "name": "Sản phẩm Regular 2",
       "price": "700,000đ",
-      "image": "public/img/regular4-Cornsilk.jpg",
+      "image": "/public/img/regular4-Cornsilk.jpg",
       "type": "regular",
       "colors": ["Cornsilk", "black"],
       "category": "shoesForWomen"

@@ -1,19 +1,25 @@
 {
-  "category1Products": [
+  "baloProducts": [
     {
       "id": "regular5",
       "name": "Sản phẩm Regular 2",
       "price": "700,000đ",
-      "image": "public/img/regular5-black.jpg",
+      "image": "/public/img/regular5-black.jpg",
       "type": "regular",
       "colors": [],
-      "category": "balo"
+      "category": "balo",
+      "description": "Balo thời trang cao cấp, chống sốc, chống nước, nhiều ngăn tiện lợi.",
+      "specifications": {
+        "material": "Vải Oxford",
+        "size": "40x30x12 cm",
+        "weight": "800g"
+      }
     },
     {
       "id": "regular6",
       "name": "Sản phẩm Regular 2",
       "price": "700,000đ",
-      "image": "public/img/regular6-black.jpg",
+      "image": "/public/img/regular6-black.jpg",
       "type": "regular",
       "colors": ["black", "HotPink", "gray"],
       "category": "balo"
@@ -22,7 +28,7 @@
       "id": "regular7",
       "name": "Sản phẩm Regular 2",
       "price": "700,000đ",
-      "image": "public/img/regular7-black.jpg",
+      "image": "/public/img/regular7-black.jpg",
       "type": "regular",
       "colors": ["black"],
       "category": "balo"
@@ -31,7 +37,7 @@
       "id": "regular8",
       "name": "Sản phẩm Regular 2",
       "price": "700,000đ",
-      "image": "public/img/regular8-black.jpg",
+      "image": "/public/img/regular8-black.jpg",
       "type": "regular",
       "colors": ["black", "gray"],
       "category": "balo"

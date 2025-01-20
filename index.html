@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Trang chủ</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
-    <link rel="stylesheet" href="public/css/main.css" />
+    <link rel="stylesheet" href="/public/css/main.css" />
   </head>
   <body>
     <!-- header -->
@@ -95,43 +95,34 @@
     <!-- Sản phẩm -->
     <div class="container-main">
       <!-- Flash Sale Section -->
-      <section class="home__flash-sale" aria-label="Flash Sale">
-        <!-- <h2 class="home__section-title">🔥 Sản phẩm Flash Sale 🔥</h2> -->
+      <section class="home__flash-sale d-flex d-flex-column d-flex-align-center" aria-label="Flash Sale">
         <div id="flash-sale-products" class="product-list"></div>
-        <button class="home__see-all-btn" id="sale-category"><a href="sale.html?category=sale">Xem tất cả</a></button>
+        <a href="sale.html?category=sale" class="home__see-all-btn" id="sale-category">Xem tất cả</a>
       </section>
 
       <!-- Regular Products Section -->
       <section class="home__regular-products" aria-label="Regular Products">
         <div id="regular-products" class="product-list">
-          <div id="shoes-for-women" class="category">
+          <div id="shoes-for-women" class="category d-flex d-flex-column d-flex-align-center">
             <h3 class="category-title">Giày Cao Gót Nữ</h3>
-            <div class="category-list">
-              <!-- Sản phẩm giày nữ sẽ được thêm vào đây -->
-            </div>
-            <button class="home__see-all-btn"><a href="shoeforwomen.html?category=regular">Xem tất cả</a></button>
+            <div class="category-list"></div>
+            <a href="sale.html?category=sale" class="home__see-all-btn">Xem tất cả</a>
           </div>
-          <div id="balo" class="category">
+          <div id="balo" class="category d-flex d-flex-column d-flex-align-center">
             <h3 class="category-title">Balo Thời Trang</h3>
-            <div class="category-list">
-              <!-- Sản phẩm giày nam sẽ được thêm vào đây -->
-            </div>
-            <button class="home__see-all-btn"><a href="balo.html?category=category1">Xem tất cả</a></button>
+            <div class="category-list"></div>
+            <a href="balo.html?category=balo" class="home__see-all-btn">Xem tất cả</a>
           </div>
-          <div id="shoes-for-men" class="category">
+          <div id="shoes-for-men" class="category d-flex d-flex-column d-flex-align-center">
             <h3 class="category-title">Giày Nam</h3>
-            <div class="category-list">
-              <!-- Sản phẩm gi/ay nam sẽ được thêm vào đây -->
-            </div>
-            <button class="home__see-all-btn"><a href="shoeformen.html?category=category2">Xem tất cả</a></button>
+            <div class="category-list"></div>
+            <a href="shoeformen.html?category=shoesForMen" class="home__see-all-btn">Xem tất cả</a>
           </div>
-          <div id="dep-sandal" class="category">
+          <div id="dep-sandal" class="category d-flex d-flex-column d-flex-align-center">
             <h3 class="category-title">Dép Và Sandal</h3>
-            <div class="category-list">
-              <!-- Sản phẩm giày nam sẽ được thêm vào đây -->
-            </div>
+            <div class="category-list"></div>
             <!-- Sửa lại cho đúng semantic  <a href="shoeforwomen.html?category=regular" class="home__see-all-btn">Xem tất cả</a> -->
-            <button class="home__see-all-btn"><a href="sandal.html?category=category3">Xem tất cả</a></button>
+            <a class="home__see-all-btn" href="sandal.html?category=depSandal">Xem tất cả</a>
           </div>
         </div>
       </section>

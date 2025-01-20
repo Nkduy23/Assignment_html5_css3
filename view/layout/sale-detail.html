@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chi Tiết Sản Phẩm</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <link rel="stylesheet" href="/public/css/main.css" />
+    <link rel="stylesheet" href="/public/css/detail.css" />
+  </head>
+  <body>
+    <!-- header -->
+    <div id="header-placeholder"></div>
+
+    <div class="container-main">
+      <section class="product-detail">
+        <div class="product-detail__gallery">
+          <img class="product-detail__image" src="" alt="Product Image" />
+          <div class="product-detail__thumbnails">
+            <img class="thumbnail" src="" alt="Thumbnail 1" />
+            <img class="thumbnail" src="" alt="Thumbnail 2" />
+            <img class="thumbnail" src="" alt="Thumbnail 3" />
+            <img class="thumbnail" src="" alt="Thumbnail 4" />
+          </div>
+        </div>
+        <div class="product-detail__info">
+          <h1 class="product-detail__title"></h1>
+          <p class="product-detail__price"></p>
+          <p class="product-detail__description"></p>
+          <ul class="product-detail__specifications"></ul>
+        </div>
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <script src="/public/js/views/partials-loader.js"></script>
+    <script src="/public/js/views/navigation.js"></script>
+    <script src="/public/js/views/product-detail.js" type="module"></script>
+    <script src="/public/js/controllers/loadPByCategory-controller.js" type="module"></script>
+  </body>
+</html>

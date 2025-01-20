@@ -397,6 +397,7 @@ a {
   align-items: center;
 }
 .product-card__title {
+  width: 100%;
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
   white-space: nowrap;
@@ -435,15 +436,16 @@ a {
 }
 
 .home__see-all-btn {
-  display: block;
-  margin: 2rem auto;
+  width: 5rem;
+  display: inline-block;
+  margin: 2rem 0;
   padding: 0.8rem 1.5rem;
   color: #fff;
-  border: none;
   border-radius: 5px;
   font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  background-color: rgb(196, 191, 191);
 }
 .home__see-all-btn:hover {
   background-color: #2e8ef5;

@@ -4,83 +4,100 @@
       "id": "sale1",
       "name": "BALO MWC - 1031 Balo Nam Nữ Thời Trang Cao Cấp Đa Năng Đi Học ,Đi Chơi Chống Sốc Chống Nước Nhiều Ngăn",
       "price": "700,000đ",
-      "image": "public/img/sale1-gray.jpg",
+      "images": {
+        "default": "/public/img/sale1-gray.jpg",
+        "highResolution": "/public/img/sale1-gray-large.jpg"
+      },
+      "thumbnails": ["/public/img/sale1-gray-thumbnail1.jpg", "/public/img/sale1-gray-thumbnail2.jpg", "/public/img/sale1-gray-thumbnail3.jpg", "/public/img/sale1-gray-thumbnail4.jpg"],
       "type": "sale",
       "salePercent": "40%",
       "progress": 75,
-      "colors": ["gray", "DarkRed"]
+      "colors": ["gray", "DarkRed"],
+      "category": "sale",
+      "description": "Balo thời trang cao cấp, chống sốc, chống nước, nhiều ngăn tiện lợi.",
+      "specifications": {
+        "material": "Vải Oxford",
+        "size": "40x30x12 cm",
+        "weight": "800g"
+      }
     },
     {
       "id": "sale2",
       "name": "BALO MWC - 1031 Balo Nam Nữ Thời Trang Cao Cấp Đa Năng Đi Học ,Đi Chơi Chống Sốc Chống Nước Nhiều Ngăn",
       "price": "500,000đ",
-      "image": "public/img/sale2-.jpg",
+      "image": "/public/img/sale2-.jpg",
       "type": "sale",
       "salePercent": "40%",
       "progress": 30,
-      "colors": []
+      "colors": [],
+      "category": "sale"
     },
     {
       "id": "sale3",
       "name": "BALO MWC - 1072 Balo Phong Cách Basic Cao Cấp Vải Mềm Mịn,Đa Năng Đi Học ,Đi Chơi Chống Sốc Chống Nước Thời Trang",
       "price": "500,000đ",
-      "image": "public/img/sale3-SteelBlue.jpg",
+      "image": "/public/img/sale3-SteelBlue.jpg",
       "type": "sale",
       "salePercent": "40%",
       "progress": 75,
-      "colors": ["SteelBlue", "DodgerBlue"]
+      "colors": ["SteelBlue", "DodgerBlue"],
+      "category": "sale"
     },
     {
       "id": "sale4",
       "name": "Balô MWC BALO - 1083 Túi Đeo Chéo Nam Nữ Unisex Nhiều Ngăn",
       "price": "500,000đ",
-      "image": "public/img/sale4-black.jpg",
+      "image": "/public/img/sale4-black.jpg",
       "type": "sale",
       "salePercent": "40%",
       "progress": 30,
-      "colors": ["black", "white"]
+      "colors": ["black", "white"],
+      "category": "sale"
     },
-
 
     {
       "id": "sale1",
       "name": "BALO MWC - 1031 Balo Nam Nữ Thời Trang Cao Cấp Đa Năng Đi Học ,Đi Chơi Chống Sốc Chống Nước Nhiều Ngăn",
       "price": "700,000đ",
-      "image": "public/img/sale1-gray.jpg",
+      "image": "/public/img/sale1-gray.jpg",
       "type": "sale",
       "salePercent": "40%",
       "progress": 75,
-      "colors": ["gray", "DarkRed"]
+      "colors": ["gray", "DarkRed"],
+      "category": "sale"
     },
     {
       "id": "sale2",
       "name": "BALO MWC - 1031 Balo Nam Nữ Thời Trang Cao Cấp Đa Năng Đi Học ,Đi Chơi Chống Sốc Chống Nước Nhiều Ngăn",
       "price": "500,000đ",
-      "image": "public/img/sale2-.jpg",
+      "image": "/public/img/sale2-.jpg",
       "type": "sale",
       "salePercent": "40%",
       "progress": 30,
-      "colors": []
+      "colors": [],
+      "category": "sale"
     },
     {
       "id": "sale3",
       "name": "BALO MWC - 1072 Balo Phong Cách Basic Cao Cấp Vải Mềm Mịn,Đa Năng Đi Học ,Đi Chơi Chống Sốc Chống Nước Thời Trang",
       "price": "500,000đ",
-      "image": "public/img/sale3-SteelBlue.jpg",
+      "image": "/public/img/sale3-SteelBlue.jpg",
       "type": "sale",
       "salePercent": "40%",
       "progress": 75,
-      "colors": ["SteelBlue", "DodgerBlue"]
+      "colors": ["SteelBlue", "DodgerBlue"],
+      "category": "sale"
     },
     {
       "id": "sale4",
       "name": "Balô MWC BALO - 1083 Túi Đeo Chéo Nam Nữ Unisex Nhiều Ngăn",
       "price": "500,000đ",
-      "image": "public/img/sale4-black.jpg",
+      "image": "/public/img/sale4-black.jpg",
       "type": "sale",
       "salePercent": "40%",
       "progress": 30,
-      "colors": ["black", "white"]
+      "colors": ["black", "white"],
+      "category": "sale"
     }
   ]
 }
