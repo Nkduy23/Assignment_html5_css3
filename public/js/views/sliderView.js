@@ -1,4 +1,4 @@
-import { sliderLogic } from "../models/sliderLogic.js";
+import { sliderLogic } from "../models/sliderModel.js";
 
 function setupSlider() {
   const config = {

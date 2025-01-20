@@ -1,6 +1,6 @@
-import { renderSaleProduct, renderRegularProductByCategory } from "../views/product-renderer.js";
-import { addColorChangeEventListeners } from "../views/product-color-events.js";
-import { updateProductProgress } from "../views/progress-updater.js";
+import { renderSaleProduct, renderRegularProductByCategory } from "../views/productRenderView.js";
+import { addColorChangeEventListeners } from "../views/productColorEventView.js";
+import { updateProductProgress } from "../views/progressProductView.js";
 
 console.log("Product Category Controller Loaded");
 

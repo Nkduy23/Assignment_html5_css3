@@ -1,11 +1,14 @@
-import { loadData } from "./controllers/loadHome-controller.js";
+import { loadData } from "./homeController.js";
 
-document.addEventListener("DOMContentLoaded", () => {
+function handleProductLoading() {
   const saleContainer = document.getElementById("flash-sale-products");
+
   if (saleContainer) {
-    console.log("Container found! Fetching data...");
+    console.log("Sale container found! Fetching sale data...");
     loadData(saleContainer);
   } else {
     console.error("Sale container not found!");
   }
-});
+}
+
+export { handleProductLoading };

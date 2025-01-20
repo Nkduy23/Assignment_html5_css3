@@ -1,9 +1,9 @@
-import { CountdownTimer } from "../models/countdownLogic.js";
+import { CountdownTimer } from "../models/countdownModel.js";
 
 // Khởi tạo và sử dụng lớp CountdownTimer
 document.addEventListener("DOMContentLoaded", () => {
   const timer = new CountdownTimer(
-    "2025-01-20T12:00:00", // Thời gian kết thúc
+    "2025-01-25T12:00:00", // Thời gian kết thúc
     {
       days: document.getElementById("days"),
       hours: document.getElementById("hours"),

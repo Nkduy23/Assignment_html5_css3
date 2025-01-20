@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Trang chủ</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
-    <link rel="stylesheet" href="/public/css/main.css" />
+    <link rel="stylesheet" href="../public/css/main.css" />
   </head>
   <body>
     <!-- header -->
@@ -20,9 +20,9 @@
         <div class="slider__item">
           <img
             class="slider__image"
-            src="public/img/slider-pc-1.jpg"
-            data-large="public/img/slider-pc-1.jpg"
-            data-small="public/img/slider-mb-1.jpg"
+            src="../public/img/slider-pc-1.jpg"
+            data-large="../public/img/slider-pc-1.jpg"
+            data-small="../public/img/slider-mb-1.jpg"
             alt="Slider Image 1 - Description"
             draggable="false"
             role="listitem"
@@ -31,9 +31,9 @@
         <div class="slider__item">
           <img
             class="slider__image"
-            src="public/img/slider-pc-2.jpg"
-            data-large="public/img/slider-pc-2.jpg"
-            data-small="public/img/slider-mb-2.jpg"
+            src="../public/img/slider-pc-2.jpg"
+            data-large="../public/img/slider-pc-2.jpg"
+            data-small="../public/img/slider-mb-2.jpg"
             alt="Slider Image 2 - Description"
             draggable="false"
             role="listitem"
@@ -42,9 +42,9 @@
         <div class="slider__item">
           <img
             class="slider__image"
-            src="public/img/slider-pc-3.jpg"
-            data-large="public/img/slider-pc-3.jpg"
-            data-small="public/img/slider-mb-3.jpg"
+            src="../public/img/slider-pc-3.jpg"
+            data-large="../public/img/slider-pc-3.jpg"
+            data-small="../public/img/slider-mb-3.jpg"
             alt="Slider Image 3 - Description"
             draggable="false"
             role="listitem"
@@ -53,9 +53,9 @@
         <div class="slider__item">
           <img
             class="slider__image"
-            src="public/img/slider-pc-4.jpg"
-            data-large="public/img/slider-pc-4.jpg"
-            data-small="public/img/slider-mb-4.jpg"
+            src="../public/img/slider-pc-4.jpg"
+            data-large="../public/img/slider-pc-4.jpg"
+            data-small="../public/img/slider-mb-4.jpg"
             alt="Slider Image 4 - Description"
             draggable="false"
             role="listitem"
@@ -106,7 +106,7 @@
           <div id="shoes-for-women" class="category d-flex d-flex-column d-flex-align-center">
             <h3 class="category-title">Giày Cao Gót Nữ</h3>
             <div class="category-list"></div>
-            <a href="sale.html?category=sale" class="home__see-all-btn">Xem tất cả</a>
+            <a href="shoeforwomen.html?category=shoesForWomen" class="home__see-all-btn">Xem tất cả</a>
           </div>
           <div id="balo" class="category d-flex d-flex-column d-flex-align-center">
             <h3 class="category-title">Balo Thời Trang</h3>
@@ -122,7 +122,7 @@
             <h3 class="category-title">Dép Và Sandal</h3>
             <div class="category-list"></div>
             <!-- Sửa lại cho đúng semantic  <a href="shoeforwomen.html?category=regular" class="home__see-all-btn">Xem tất cả</a> -->
-            <a class="home__see-all-btn" href="sandal.html?category=depSandal">Xem tất cả</a>
+            <a class="home__see-all-btn" href="sandal.html?category=DepSandal">Xem tất cả</a>
           </div>
         </div>
       </section>
@@ -131,11 +131,11 @@
     <!-- Footer -->
     <div id="footer-placeholder"></div>
 
-    <script src="public/js/views/partials-loader.js"></script>
-    <script src="public/js/views/navigation.js"></script>
-    <script src="public/js/views/setupSlider.js" type="module"></script>
-    <script src="public/js/views/setupCountdown.js" type="module"></script>
-    <script src="public/js/main.js" type="module"></script>
-    <script src="public/js/controllers/loadHome-controller.js" type="module"></script>
+    <!-- <script src="../public/js/app.js" type="module"></script> -->
+    <script src="../public/js/views/homeView.js" type="module"></script>
+    <script src="../public/js/views/navigationView.js"></script>
+    <script src="../public/js/views/sliderView.js" type="module"></script>
+    <script src="../public/js/views/countdownView.js" type="module"></script>
+    <script src="../public/js/controllers/productController.js" type="module"></script>
   </body>
 </html>

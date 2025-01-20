@@ -1,4 +1,3 @@
-// Configurations
 const config = {
   navbar: {
     body: ".nav",

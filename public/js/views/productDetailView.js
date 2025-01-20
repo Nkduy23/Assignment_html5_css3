@@ -1,4 +1,4 @@
-import { CATEGORY_CONFIG } from "../controllers/loadPByCategory-controller.js";
+import { CATEGORY_CONFIG } from "../controllers/categoryController.js";
 
 // Lấy tham số từ URL (id và category)
 const urlParams = new URLSearchParams(window.location.search);

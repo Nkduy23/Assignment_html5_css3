@@ -19,8 +19,8 @@ function createProductHTML(product) {
 
   // Định nghĩa đường dẫn chi tiết sản phẩm dựa vào type
   const productPage = product.type === "sale" 
-    ? `/view/layout/sale-detail.html?id=${product.id}&category=${product.category}` 
-    : `/view/layout/product-detail.html?id=${product.id}&category=${product.category}`;
+    ? `/views/sale-detail.html?id=${product.id}&category=${product.category}` 
+    : `/views/product-detail.html?id=${product.id}&category=${product.category}`;
 
   return `
         <div class="product-card" data-type="${product.type}" aria-label="Product Card">

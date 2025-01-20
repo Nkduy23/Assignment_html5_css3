@@ -1,15 +1,5 @@
 import { createProductHTML } from "../helpers/product-template.js";
-
-// Hàm lấy container theo danh mục
-const getCategoryContainer = (category) => {
-  const categoryMap = {
-    shoesForWomen: document.querySelector("#shoes-for-women .category-list"),
-    balo: document.querySelector("#balo .category-list"),
-    shoesForMen: document.querySelector("#shoes-for-men .category-list"),
-    DepSandal: document.querySelector("#dep-sandal .category-list"),
-  };
-  return categoryMap[category] || null;
-};
+import { getCategoryContainer } from "../controllers/categoryMap.js";
 
 // Hàm render sản phẩm
 const renderProduct = (product, container = null) => {

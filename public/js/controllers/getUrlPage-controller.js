@@ -1,4 +1,4 @@
-import { loadDataByCategory } from "./loadPByCategory-controller.js";
+import { loadDataByCategory } from "./categoryController.js";
 
 // Lấy tham số từ url
 const getURLParameter = (paramName) => {

@@ -1,17 +1,14 @@
-import { renderSaleProduct, renderRegularProductByCategory } from "../views/product-renderer.js";
-import { addColorChangeEventListeners } from "../views/product-color-events.js";
-import { updateProductProgress } from "../views/progress-updater.js";
+import { renderSaleProduct, renderRegularProductByCategory } from "../views/productRenderView.js";
+import { addColorChangeEventListeners } from "../views/productColorEventView.js";
+import { updateProductProgress } from "../views/progressProductView.js";
 
 function loadData(container) {
   if (!container) {
     console.error("Container is undefined or null.");
     return;
   }
-  // Phát hiện môi trường dựa trên URL
-  const isGitHubPages = window.location.hostname === "nkduy23.github.io";
-  const baseUrl = isGitHubPages ? `${window.location.origin}/Assignment_html5_css3` : window.location.origin;
-
-  fetch(`${baseUrl}/data/products-main.json`)
+  
+  fetch(`../data/products-main.json`)
     .then((response) => response.json())
     .then((products) => {
       container.innerHTML = "";
