@@ -8,7 +8,11 @@ function loadData(container) {
     return;
   }
   
-  fetch(`../data/products-main.json`)
+  const basePath = window.location.hostname === "nkduy23.github.io" 
+  ? "/Assignment_html5_css3" 
+  : "..";
+
+  fetch(`${basePath}/data/products-main.json`)
     .then((response) => response.json())
     .then((products) => {
       container.innerHTML = "";
