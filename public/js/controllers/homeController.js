@@ -10,7 +10,7 @@ function loadData(container) {
   
   const basePath = window.location.hostname === "nkduy23.github.io" 
   ? "/Assignment_html5_css3" 
-  : "..";
+  : "./";
 
   fetch(`${basePath}/data/products-main.json`)
     .then((response) => response.json())
