@@ -1,22 +1,18 @@
 import { renderSaleProduct, renderRegularProductByCategory } from "../views/productRenderView.js";
 import { addColorChangeEventListeners } from "../views/productColorEventView.js";
 import { updateProductProgress } from "../views/progressProductView.js";
+import { fetchData } from "../utils/fetchData.js"; // Import fetchData
 
 function loadData(container) {
   if (!container) {
     console.error("Container is undefined or null.");
     return;
   }
-  
-  const basePath = window.location.hostname === "nkduy23.github.io" 
-  ? "/Assignment_html5_css3" 
-  : "./";
 
-  fetch(`${basePath}/data/products-main.json`)
-    .then((response) => response.json())
+  // Gọi hàm fetchData để lấy dữ liệu
+  fetchData("data/productsHome.json")
     .then((products) => {
       container.innerHTML = "";
-      // console.log(products);
 
       if (products.saleProducts && Array.isArray(products.saleProducts)) {
         products.saleProducts.forEach((product) => {
@@ -31,7 +27,7 @@ function loadData(container) {
           renderRegularProductByCategory(product, container);
         });
       } else {
-        console.error("regular container is undefined or null.");
+        console.error("Regular container is undefined or null.");
       }
 
       addColorChangeEventListeners();

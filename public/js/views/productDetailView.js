@@ -1,3 +1,5 @@
+import { fetchData } from "../utils/fetchData.js"; // Import fetchData
+
 import { CATEGORY_CONFIG } from "../controllers/categoryController.js";
 
 // Lấy tham số từ URL (id và category)
@@ -9,9 +11,8 @@ const category = urlParams.get("category");
 if (CATEGORY_CONFIG[category]) {
   const { jsonFile } = CATEGORY_CONFIG[category];
 
-  // Fetch dữ liệu từ file JSON của danh mục sản phẩm tương ứng
-  fetch(jsonFile)
-    .then((response) => response.json())
+  // Sử dụng hàm fetchData để lấy dữ liệu
+  fetchData(jsonFile)
     .then((data) => {
       // Xác định key sản phẩm dựa trên category (ví dụ: balo => baloProducts, shoes => shoesProducts)
       const productKey = `${category}Products`;

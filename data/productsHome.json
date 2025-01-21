@@ -4,11 +4,11 @@
       "id": "sale1",
       "name": "BALO MWC - 1031 Balo Nam Nữ Thời Trang Cao Cấp Đa Năng Đi Học ,Đi Chơi Chống Sốc Chống Nước Nhiều Ngăn",
       "price": "500,000đ",
-      "image": "./public/img/sale1-gray.jpg",
+      "image": "./public/img/sale1-DarkRed.jpg",
       "type": "sale",
       "salePercent": "40%",
       "progress": 75,
-      "colors": ["gray", "DarkRed"],
+      "colors": ["DarkRed"],
       "category": "sale"
     },
     {

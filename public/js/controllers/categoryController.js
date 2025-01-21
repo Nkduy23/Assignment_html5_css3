@@ -1,36 +1,39 @@
 import { renderSaleProduct, renderRegularProductByCategory } from "../views/productRenderView.js";
 import { addColorChangeEventListeners } from "../views/productColorEventView.js";
 import { updateProductProgress } from "../views/progressProductView.js";
+import { fetchData } from "../utils/fetchData.js"; // Import fetchData
+// import { basePath } from "../base.js";
+
+const basePath = window.location.hostname === "nkduy23.github.io" 
+  ? "/Assignment_html5_css3" 
+  : "..";
 
 console.log("Product Category Controller Loaded");
 
-// Phát hiện môi trường dựa trên URL
-const isGitHubPages = window.location.hostname === "nkduy23.github.io";
-const baseUrl = isGitHubPages ? `${window.location.origin}/Assignment_html5_css3` : window.location.origin;
 // Cấu hình dữ liệu danh mục
 export const CATEGORY_CONFIG = {
   sale: {
-    jsonFile: `${baseUrl}/data/products-sale.json`,
+    jsonFile: `${basePath}/data/productsSale.json`,  // Sử dụng basePath ở đây
     containerId: "sale-category",
     renderFunction: (product, container) => renderSaleProduct(product, container),
   },
   shoesForWomen: {
-    jsonFile: `${baseUrl}/data/products-regular.json`,
+    jsonFile: `${basePath}/data/productsShoesForWomen.json`,
     containerId: "shoes-for-women",
     renderFunction: (product, container) => renderRegularProductByCategory(product, container),
   },
   balo: {
-    jsonFile: `${baseUrl}/data/products-category1.json`,
+    jsonFile: `${basePath}/data/productsBalo.json`,
     containerId: "balo",
     renderFunction: (product, container) => renderRegularProductByCategory(product, container),
   },
   shoesForMen: {
-    jsonFile: `${baseUrl}/data/products-category2.json`,
+    jsonFile: `${basePath}/data/productsShoesForMen.json`,
     containerId: "shoes-for-men",
     renderFunction: (product, container) => renderRegularProductByCategory(product, container),
   },
   DepSandal: {
-    jsonFile: `${baseUrl}/data/products-category3.json`,
+    jsonFile: `${basePath}/data/productsDepSandal.json`,
     containerId: "dep-sandal",
     renderFunction: (product, container) => renderRegularProductByCategory(product, container),
   },
@@ -39,22 +42,10 @@ export const CATEGORY_CONFIG = {
 // Hàm lấy cấu hình danh mục (với fallback)
 const getCategoryConfig = (category) =>
   CATEGORY_CONFIG[category] || {
-    jsonFile: `${baseUrl}/data/products-main.json`,
+    jsonFile: `data/productsHome.json`,
     containerId: "default-container",
     renderFunction: null,
   };
-
-// Hàm fetch dữ liệu từ JSON
-const fetchCategoryData = async (jsonFile) => {
-  try {
-    const response = await fetch(jsonFile);
-    if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
-    return await response.json();
-  } catch (error) {
-    console.error("Error fetching data:", error);
-    return null;
-  }
-};
 
 // Hàm render sản phẩm
 const renderProducts = (products, category, container, renderFunction) => {
@@ -76,15 +67,19 @@ const loadDataByCategory = async (category) => {
     console.error(`Container element for category "${category}" not found!`);
     return;
   }
-  fetchCategoryData;
 
-  const products = await fetchCategoryData(jsonFile);
-  if (products && renderFunction) {
-    renderProducts(products, category, container, renderFunction);
+  // Sử dụng fetchData để lấy dữ liệu với basePath
+  try {
+    const products = await fetchData(`${basePath}/${jsonFile}`);
+    if (products && renderFunction) {
+      renderProducts(products, category, container, renderFunction);
 
-    // Gắn sự kiện sau khi render
-    addColorChangeEventListeners();
-    updateProductProgress();
+      // Gắn sự kiện sau khi render
+      addColorChangeEventListeners();
+      updateProductProgress();
+    }
+  } catch (error) {
+    console.error("Error fetching category data:", error);
   }
 };
 
