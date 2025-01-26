@@ -37,6 +37,15 @@
   align-content: start;
   gap: 15px;
 }
+.product-detail__rating {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+.product-detail__stars {
+  color: #ffcc00;
+}
 .product-detail__size-selection, .product-detail__color-selection {
   margin-top: 5px;
   display: flex;
@@ -114,6 +123,13 @@
   font-size: 2.4rem;
   color: #e74c3c;
   font-weight: bold;
+}
+.product-detail__price-original {
+  text-decoration: line-through;
+  color: #535353;
+}
+.product-detail__price-discounted {
+  margin-left: 10px;
 }
 .product-detail__description {
   font-size: 1.2rem;
@@ -213,7 +229,10 @@
 }
 
 .product-item {
+  width: 100%;
   transform: translateY(0);
+  cursor: pointer;
+  overflow: hidden;
 }
 
 .product-item:hover {

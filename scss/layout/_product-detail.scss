@@ -42,6 +42,16 @@
     gap: 15px;
   }
 
+  &__rating {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+  }
+
+  &__stars {
+    color: #ffcc00;
+  }
+
   &__size-selection,
   &__color-selection {
     margin-top: 5px;
@@ -136,6 +146,15 @@
     font-size: 2.4rem;
     color: #e74c3c;
     font-weight: bold;
+
+    &-original {
+      text-decoration: line-through;
+      color: #535353;
+    }
+
+    &-discounted {
+      margin-left: 10px;
+    }
   }
 
   &__description {
@@ -243,7 +262,10 @@
 }
 
 .product-item {
+  width: 100%;
   transform: translateY(0);
+  cursor: pointer;
+  overflow: hidden;
 }
 
 .product-item:hover {

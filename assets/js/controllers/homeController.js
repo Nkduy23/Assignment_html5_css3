@@ -11,29 +11,33 @@ function loadData(container) {
 
   // Gọi hàm fetchData để lấy dữ liệu
   fetchData("data/productsHome.json")
-    .then((products) => {
-      container.innerHTML = "";
+  .then((products) => {
+    container.innerHTML = "";
 
-      if (products.saleProducts && Array.isArray(products.saleProducts)) {
-        products.saleProducts.forEach((product) => {
-          renderSaleProduct(product, container);
-        });
-      } else {
-        console.error("Sale container is undefined or null.");
-      }
+    if (products.saleProducts && Array.isArray(products.saleProducts)) {
+      products.saleProducts.forEach((product) => {
+        renderSaleProduct(product, container);
+      });
+    } else {
+      console.error("Sale container is undefined or null.");
+    }
 
-      if (products.regularProducts && Array.isArray(products.regularProducts)) {
-        products.regularProducts.forEach((product) => {
-          renderRegularProductByCategory(product, container);
-        });
-      } else {
-        console.error("Regular container is undefined or null.");
-      }
+    if (products.regularProducts && Array.isArray(products.regularProducts)) {
+      products.regularProducts.forEach((product) => {
+        renderRegularProductByCategory(product, container);
+      });
+    } else {
+      console.error("Regular container is undefined or null.");
+    }
 
-      addColorChangeEventListeners();
-      updateProductProgress();
-    })
-    .catch((error) => console.error("Error loading products:", error));
+    // Gộp tất cả sản phẩm thành một mảng duy nhất để xử lý sự kiện màu sắc
+    const allProducts = [...products.saleProducts, ...products.regularProducts];
+
+    addColorChangeEventListeners(allProducts);
+    updateProductProgress();
+  })
+  .catch((error) => console.error("Error loading products:", error));
+
 }
 
 export { loadData };

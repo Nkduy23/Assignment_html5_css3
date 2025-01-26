@@ -44,10 +44,10 @@
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 400px) {
   .category-list-container,
   #flash-sale-products,
-.category-list {
-  grid-template-columns: repeat(1, 1fr);
-}
+  .category-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

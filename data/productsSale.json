@@ -2,25 +2,28 @@
   "saleProducts": [
     {
       "id": "sale1",
-      "name": "BALO MWC - 1031 Balo Nam Nữ Thời Trang Cao Cấp Đa Năng Đi Học, Đi Chơi Chống Sốc Chống Nước Nhiều Ngăn",
-      "price": 700000,
-      "currency": "VND",
+      "name": "Dép Nữ MWC - 8136 Dép Nữ Quai Ngang Cách Điệu Dép Nữ Đế Bệt Mũi Vuông Hot Trend",
+      "price": "125,000đ",
       "images": {
-        "default": "../../assets/img/sale1-DarkRed.jpg",
-        "highResolution": "../../assets/img/sale1-DarkRed-large.jpg"
+        "default": "../../assets/img/sale/sale1-Bisque.jpg",
+        "highResolution": "../../assets/img/sale/sale1-Bisque-large.jpg"
       },
       "thumbnails": [
-        "../../assets/img/sale1-DarkRed-thumbnail1.jpg",
-        "../../assets/img/sale1-DarkRed-thumbnail2.jpg",
-        "../../assets/img/sale1-DarkRed-thumbnail3.jpg",
-        "../../assets/video/icon-video.png"
+        "../../assets/img/sale/sale1-Bisque-thumbnail1.jpg",
+        "../../assets/img/sale/sale1-Bisque-thumbnail2.jpg",
+        "../../assets/img/sale/sale1-Bisque-thumbnail3.jpg",
+        "../../assets/img/sale/sale1-Bisque-thumbnail4.jpg"
       ],
-      "type": "khuyến mãi",
-      "salePercent": 40,
+      "type": "sale",
+      "salePercent": "40%",
+      "saleEnd": "",
       "progress": 75,
       "colors": ["DarkRed"],
       "sizes": ["35", "36", "37", "38"],
-      "category": "khuyến mãi",
+      "reviews": 100,
+      "likes": 10,
+      "rating": 4.5,
+      "category": "sale",
       "description": "Balo thời trang cao cấp, chống sốc, chống nước, nhiều ngăn tiện lợi.",
       "specifications": {
         "Chất liệu": "Vải Oxford cao cấp",
@@ -53,20 +56,28 @@
 
     {
       "id": "sale2",
-      "name": "BALO MWC - 1031 Balo Nam Nữ Thời Trang Cao Cấp Đa Năng Đi Học, Đi Chơi Chống Sốc Chống Nước Nhiều Ngăn",
-      "price": 700000,
-      "currency": "VND",
+      "name": "Dép Nữ MWC - 8136 Dép Nữ Quai Ngang Cách Điệu Dép Nữ Đế Bệt Mũi Vuông Hot Trend",
+      "price": "125,000đ",
       "images": {
-        "default": "../../assets/img/sale2-.jpg",
-        "highResolution": "../../assets/img/sale2-large.jpg"
+        "default": "../../assets/img/sale/sale1-Bisque.jpg",
+        "highResolution": "../../assets/img/sale/sale1-Bisque-large.jpg"
       },
-      "thumbnails": ["../../assets/img/sale2-thumbnail1.jpg", "../../assets/img/sale2-thumbnail2.jpg", "../../assets/img/sale2-thumbnail3.jpg", "../../assets/video/icon-video.png"],
-      "type": "khuyến mãi",
-      "salePercent": 40,
+      "thumbnails": [
+        "../../assets/img/sale/sale1-Bisque-thumbnail1.jpg",
+        "../../assets/img/sale/sale1-Bisque-thumbnail2.jpg",
+        "../../assets/img/sale/sale1-Bisque-thumbnail3.jpg",
+        "../../assets/img/sale/sale1-Bisque-thumbnail4.jpg"
+      ],
+      "type": "sale",
+      "salePercent": "40%",
+      "saleEnd": "",
       "progress": 75,
-      "colors": ["black"],
+      "colors": ["DarkRed"],
       "sizes": ["35", "36", "37", "38"],
-      "category": "khuyến mãi",
+      "reviews": 100,
+      "likes": 10,
+      "rating": 4.5,
+      "category": "sale",
       "description": "Balo thời trang cao cấp, chống sốc, chống nước, nhiều ngăn tiện lợi.",
       "specifications": {
         "Chất liệu": "Vải Oxford cao cấp",
@@ -99,25 +110,28 @@
 
     {
       "id": "sale3",
-      "name": "BALO MWC - 1031 Balo Nam Nữ Thời Trang Cao Cấp Đa Năng Đi Học, Đi Chơi Chống Sốc Chống Nước Nhiều Ngăn",
-      "price": 700000,
-      "currency": "VND",
+      "name": "Dép Nữ MWC - 8136 Dép Nữ Quai Ngang Cách Điệu Dép Nữ Đế Bệt Mũi Vuông Hot Trend",
+      "price": "125,000đ",
       "images": {
-        "default": "../../assets/img/sale3-SteelBlue.jpg",
-        "highResolution": "../../assets/img/sale3-SteelBlue-large.jpg"
+        "default": "../../assets/img/sale/sale1-Bisque.jpg",
+        "highResolution": "../../assets/img/sale/sale1-Bisque-large.jpg"
       },
       "thumbnails": [
-        "../../assets/img/sale1-DarkRed-thumbnail1.jpg",
-        "../../assets/img/sale1-DarkRed-thumbnail2.jpg",
-        "../../assets/img/sale1-DarkRed-thumbnail3.jpg",
-        "../../assets/video/icon-video.png"
+        "../../assets/img/sale/sale1-Bisque-thumbnail1.jpg",
+        "../../assets/img/sale/sale1-Bisque-thumbnail2.jpg",
+        "../../assets/img/sale/sale1-Bisque-thumbnail3.jpg",
+        "../../assets/img/sale/sale1-Bisque-thumbnail4.jpg"
       ],
-      "type": "khuyến mãi",
-      "salePercent": 40,
+      "type": "sale",
+      "salePercent": "40%",
+      "saleEnd": "",
       "progress": 75,
-      "colors": ["black"],
+      "colors": ["DarkRed"],
       "sizes": ["35", "36", "37", "38"],
-      "category": "khuyến mãi",
+      "reviews": 100,
+      "likes": 10,
+      "rating": 4.5,
+      "category": "sale",
       "description": "Balo thời trang cao cấp, chống sốc, chống nước, nhiều ngăn tiện lợi.",
       "specifications": {
         "Chất liệu": "Vải Oxford cao cấp",
@@ -150,25 +164,28 @@
 
     {
       "id": "sale4",
-      "name": "BALO MWC - 1031 Balo Nam Nữ Thời Trang Cao Cấp Đa Năng Đi Học, Đi Chơi Chống Sốc Chống Nước Nhiều Ngăn",
-      "price": 700000,
-      "currency": "VND",
+      "name": "Dép Nữ MWC - 8136 Dép Nữ Quai Ngang Cách Điệu Dép Nữ Đế Bệt Mũi Vuông Hot Trend",
+      "price": "125,000đ",
       "images": {
-        "default": "../../assets/img/sale4-black.jpg",
-        "highResolution": "../../assets/img/sale4-black-large.jpg"
+        "default": "../../assets/img/sale/sale1-Bisque.jpg",
+        "highResolution": "../../assets/img/sale/sale1-Bisque-large.jpg"
       },
       "thumbnails": [
-        "../../assets/img/sale1-DarkRed-thumbnail1.jpg",
-        "../../assets/img/sale1-DarkRed-thumbnail2.jpg",
-        "../../assets/img/sale1-DarkRed-thumbnail3.jpg",
-        "../../assets/video/icon-video.png"
+        "../../assets/img/sale/sale1-Bisque-thumbnail1.jpg",
+        "../../assets/img/sale/sale1-Bisque-thumbnail2.jpg",
+        "../../assets/img/sale/sale1-Bisque-thumbnail3.jpg",
+        "../../assets/img/sale/sale1-Bisque-thumbnail4.jpg"
       ],
-      "type": "khuyến mãi",
-      "salePercent": 40,
+      "type": "sale",
+      "salePercent": "40%",
+      "saleEnd": "",
       "progress": 75,
-      "colors": ["black", "white"],
+      "colors": ["DarkRed"],
       "sizes": ["35", "36", "37", "38"],
-      "category": "khuyến mãi",
+      "reviews": 100,
+      "likes": 10,
+      "rating": 4.5,
+      "category": "sale",
       "description": "Balo thời trang cao cấp, chống sốc, chống nước, nhiều ngăn tiện lợi.",
       "specifications": {
         "Chất liệu": "Vải Oxford cao cấp",
@@ -200,80 +217,434 @@
     },
 
     {
-      "id": "sale1",
-      "name": "BALO MWC - 1031 Balo Nam Nữ Thời Trang Cao Cấp Đa Năng Đi Học ,Đi Chơi Chống Sốc Chống Nước Nhiều Ngăn",
-      "price": "700,000đ",
+      "id": "sale5",
+      "name": "Dép Nữ MWC - 8136 Dép Nữ Quai Ngang Cách Điệu Dép Nữ Đế Bệt Mũi Vuông Hot Trend",
+      "price": "125,000đ",
       "images": {
-        "default": "../../assets/img/sale1-DarkRed.jpg",
-        "highResolution": "../../assets/img/sale1-DarkRed-large.jpg"
+        "default": "../../assets/img/sale/sale1-Bisque.jpg",
+        "highResolution": "../../assets/img/sale/sale1-Bisque-large.jpg"
       },
       "thumbnails": [
-        "../../assets/img/sale1-DarkRed-thumbnail1.jpg",
-        "../../assets/img/sale1-DarkRed-thumbnail2.jpg",
-        "../../assets/img/sale1-DarkRed-thumbnail3.jpg",
-        "../../assets/video/icon-video.png"
+        "../../assets/img/sale/sale1-Bisque-thumbnail1.jpg",
+        "../../assets/img/sale/sale1-Bisque-thumbnail2.jpg",
+        "../../assets/img/sale/sale1-Bisque-thumbnail3.jpg",
+        "../../assets/img/sale/sale1-Bisque-thumbnail4.jpg"
       ],
       "type": "sale",
       "salePercent": "40%",
+      "saleEnd": "",
       "progress": 75,
       "colors": ["DarkRed"],
+      "sizes": ["35", "36", "37", "38"],
+      "reviews": 100,
+      "likes": 10,
+      "rating": 4.5,
       "category": "sale",
       "description": "Balo thời trang cao cấp, chống sốc, chống nước, nhiều ngăn tiện lợi.",
       "specifications": {
-        "material": "Vải Oxford cao cấp",
-        "size": "42x32x15 cm",
-        "weight": "950g",
-        "capacity": "20L",
-        "laptopCompartment": "15.6 inch",
-        "waterResistance": "Chống nước tuyệt đối"
+        "Chất liệu": "Vải Oxford cao cấp",
+        "Kích thước": "42x32x15 cm",
+        "Trọng lượng": "950g",
+        "Dung tích": "20L",
+        "Ngăn laptop": "15.6 inch",
+        "Khả năng chống nước": "Chống nước tuyệt đối",
+        "Màu sắc": "Đỏ đô",
+        "Bảo hành": "12 tháng"
+      },
+      "describe": [
+        "Dép nữ với thiết kế quai ngang bản to nhún cách điệu, dép được làm bằng chất liệu da tổng hợp cao cấp nên rất êm mềm và bền bỉ.",
+        "Dép đế đúc nguyên khối nên có trọng lượng nhẹ, tạo sự thoải mái dễ đi, dễ phối với nhiều trang phục khác nhau từ quần tây, jeans hay chân váy, sooc,... đều rất hợp thời trang, từ đó làm tô thêm vẻ đẹp trẻ trung, năng động của các bạn gái.",
+        "Dép nữ quai ngang thực sự là lựa chọn lý tưởng cho phong cách năng động, tràn đầy sức sống, dép mang đi chơi, đi phố, đi trong nhà văn phòng đều phù hợp."
+      ],
+      "detailed_title": "Dép Nữ MWC 8347 - Dép Nữ Quai Ngang Bản To Nhún Cách Điệu, Dép Đế Đúc 3cm Năng Động, Trẻ Trung, Thời Trang.",
+      "detailed_info": {
+        "Chiều cao": "Khoảng 3cm",
+        "Chất liệu": "Da mềm tổng hợp cao cấp",
+        "Kiểu dáng": "Dép nữ quai ngang bản to, dép thời trang nữ",
+        "Đế": "Xẻ rãnh chống trơn trượt",
+        "Màu sắc": "Nâu - Đen - Kem",
+        "Size": "35 - 36 - 37 - 38 - 39",
+        "Xuất xứ": "Việt Nam",
+        "Chú ý": "Kích thước so sánh một cách cẩn thận, vui lòng cho phép sai số 1-3 cm do đo lường thủ công.",
+        "Lưu ý khác": "Do màn hình hiển thị khác nhau và ánh sáng khác nhau, hình ảnh có thể chênh lệch 5->10% màu sắc thật của sản phẩm. Cảm ơn bạn đã thông cảm."
       }
     },
+
     {
-      "id": "sale2",
-      "name": "BALO MWC - 1031 Balo Nam Nữ Thời Trang Cao Cấp Đa Năng Đi Học ,Đi Chơi Chống Sốc Chống Nước Nhiều Ngăn",
-      "price": "500,000đ",
+      "id": "sale6",
+      "name": "Dép Nữ MWC - 8136 Dép Nữ Quai Ngang Cách Điệu Dép Nữ Đế Bệt Mũi Vuông Hot Trend",
+      "price": "125,000đ",
       "images": {
-        "default": "../../assets/img/sale2-.jpg",
-        "highResolution": "../../assets/img/sale2-large.jpg"
+        "default": "../../assets/img/sale/sale1-Bisque.jpg",
+        "highResolution": "../../assets/img/sale/sale1-Bisque-large.jpg"
       },
-      "thumbnails": ["../../assets/img/sale2-thumbnail1.jpg", "../../assets/img/sale2-thumbnail2.jpg", "../../assets/img/sale2-thumbnail3.jpg", "../../assets/video/icon-video.png"],
+      "thumbnails": [
+        "../../assets/img/sale/sale1-Bisque-thumbnail1.jpg",
+        "../../assets/img/sale/sale1-Bisque-thumbnail2.jpg",
+        "../../assets/img/sale/sale1-Bisque-thumbnail3.jpg",
+        "../../assets/img/sale/sale1-Bisque-thumbnail4.jpg"
+      ],
       "type": "sale",
       "salePercent": "40%",
-      "progress": 30,
-      "colors": [],
-      "category": "sale",
-      "description": "Balo thời trang cao cấp, chống sốc, chống nước, nhiều ngăn tiện lợi.",
-      "specifications": {
-        "material": "Vải Oxford cao cấp",
-        "size": "42x32x15 cm",
-        "weight": "950g",
-        "capacity": "20L",
-        "laptopCompartment": "15.6 inch",
-        "waterResistance": "Chống nước tuyệt đối"
-      }
-    },
-    {
-      "id": "sale3",
-      "name": "BALO MWC - 1072 Balo Phong Cách Basic Cao Cấp Vải Mềm Mịn,Đa Năng Đi Học ,Đi Chơi Chống Sốc Chống Nước Thời Trang",
-      "price": "500,000đ",
-      "images": {
-        "default": "../../assets/img/sale3-SteelBlue.jpg",
-        "highResolution": "../../assets/img/sale3-SteelBlue-large.jpg"
-      },
-      "thumbnails": ["../../assets/img/sale2-thumbnail1.jpg", "../../assets/img/sale2-thumbnail2.jpg", "../../assets/img/sale2-thumbnail3.jpg", "../../assets/video/icon-video.png"],
-      "type": "sale",
-      "salePercent": "40%",
+      "saleEnd": "",
       "progress": 75,
-      "colors": ["SteelBlue", "DodgerBlue"],
+      "colors": ["DarkRed"],
+      "sizes": ["35", "36", "37", "38"],
+      "reviews": 100,
+      "likes": 10,
+      "rating": 4.5,
       "category": "sale",
       "description": "Balo thời trang cao cấp, chống sốc, chống nước, nhiều ngăn tiện lợi.",
       "specifications": {
-        "material": "Vải Oxford cao cấp",
-        "size": "42x32x15 cm",
-        "weight": "950g",
-        "capacity": "20L",
-        "laptopCompartment": "15.6 inch",
-        "waterResistance": "Chống nước tuyệt đối"
+        "Chất liệu": "Vải Oxford cao cấp",
+        "Kích thước": "42x32x15 cm",
+        "Trọng lượng": "950g",
+        "Dung tích": "20L",
+        "Ngăn laptop": "15.6 inch",
+        "Khả năng chống nước": "Chống nước tuyệt đối",
+        "Màu sắc": "Đỏ đô",
+        "Bảo hành": "12 tháng"
+      },
+      "describe": [
+        "Dép nữ với thiết kế quai ngang bản to nhún cách điệu, dép được làm bằng chất liệu da tổng hợp cao cấp nên rất êm mềm và bền bỉ.",
+        "Dép đế đúc nguyên khối nên có trọng lượng nhẹ, tạo sự thoải mái dễ đi, dễ phối với nhiều trang phục khác nhau từ quần tây, jeans hay chân váy, sooc,... đều rất hợp thời trang, từ đó làm tô thêm vẻ đẹp trẻ trung, năng động của các bạn gái.",
+        "Dép nữ quai ngang thực sự là lựa chọn lý tưởng cho phong cách năng động, tràn đầy sức sống, dép mang đi chơi, đi phố, đi trong nhà văn phòng đều phù hợp."
+      ],
+      "detailed_title": "Dép Nữ MWC 8347 - Dép Nữ Quai Ngang Bản To Nhún Cách Điệu, Dép Đế Đúc 3cm Năng Động, Trẻ Trung, Thời Trang.",
+      "detailed_info": {
+        "Chiều cao": "Khoảng 3cm",
+        "Chất liệu": "Da mềm tổng hợp cao cấp",
+        "Kiểu dáng": "Dép nữ quai ngang bản to, dép thời trang nữ",
+        "Đế": "Xẻ rãnh chống trơn trượt",
+        "Màu sắc": "Nâu - Đen - Kem",
+        "Size": "35 - 36 - 37 - 38 - 39",
+        "Xuất xứ": "Việt Nam",
+        "Chú ý": "Kích thước so sánh một cách cẩn thận, vui lòng cho phép sai số 1-3 cm do đo lường thủ công.",
+        "Lưu ý khác": "Do màn hình hiển thị khác nhau và ánh sáng khác nhau, hình ảnh có thể chênh lệch 5->10% màu sắc thật của sản phẩm. Cảm ơn bạn đã thông cảm."
+      }
+    },
+
+    {
+      "id": "sale7",
+      "name": "Dép Nữ MWC - 8136 Dép Nữ Quai Ngang Cách Điệu Dép Nữ Đế Bệt Mũi Vuông Hot Trend",
+      "price": "125,000đ",
+      "images": {
+        "default": "../../assets/img/sale/sale1-Bisque.jpg",
+        "highResolution": "../../assets/img/sale/sale1-Bisque-large.jpg"
+      },
+      "thumbnails": [
+        "../../assets/img/sale/sale1-Bisque-thumbnail1.jpg",
+        "../../assets/img/sale/sale1-Bisque-thumbnail2.jpg",
+        "../../assets/img/sale/sale1-Bisque-thumbnail3.jpg",
+        "../../assets/img/sale/sale1-Bisque-thumbnail4.jpg"
+      ],
+      "type": "sale",
+      "salePercent": "40%",
+      "saleEnd": "",
+      "progress": 75,
+      "colors": ["DarkRed"],
+      "sizes": ["35", "36", "37", "38"],
+      "reviews": 100,
+      "likes": 10,
+      "rating": 4.5,
+      "category": "sale",
+      "description": "Balo thời trang cao cấp, chống sốc, chống nước, nhiều ngăn tiện lợi.",
+      "specifications": {
+        "Chất liệu": "Vải Oxford cao cấp",
+        "Kích thước": "42x32x15 cm",
+        "Trọng lượng": "950g",
+        "Dung tích": "20L",
+        "Ngăn laptop": "15.6 inch",
+        "Khả năng chống nước": "Chống nước tuyệt đối",
+        "Màu sắc": "Đỏ đô",
+        "Bảo hành": "12 tháng"
+      },
+      "describe": [
+        "Dép nữ với thiết kế quai ngang bản to nhún cách điệu, dép được làm bằng chất liệu da tổng hợp cao cấp nên rất êm mềm và bền bỉ.",
+        "Dép đế đúc nguyên khối nên có trọng lượng nhẹ, tạo sự thoải mái dễ đi, dễ phối với nhiều trang phục khác nhau từ quần tây, jeans hay chân váy, sooc,... đều rất hợp thời trang, từ đó làm tô thêm vẻ đẹp trẻ trung, năng động của các bạn gái.",
+        "Dép nữ quai ngang thực sự là lựa chọn lý tưởng cho phong cách năng động, tràn đầy sức sống, dép mang đi chơi, đi phố, đi trong nhà văn phòng đều phù hợp."
+      ],
+      "detailed_title": "Dép Nữ MWC 8347 - Dép Nữ Quai Ngang Bản To Nhún Cách Điệu, Dép Đế Đúc 3cm Năng Động, Trẻ Trung, Thời Trang.",
+      "detailed_info": {
+        "Chiều cao": "Khoảng 3cm",
+        "Chất liệu": "Da mềm tổng hợp cao cấp",
+        "Kiểu dáng": "Dép nữ quai ngang bản to, dép thời trang nữ",
+        "Đế": "Xẻ rãnh chống trơn trượt",
+        "Màu sắc": "Nâu - Đen - Kem",
+        "Size": "35 - 36 - 37 - 38 - 39",
+        "Xuất xứ": "Việt Nam",
+        "Chú ý": "Kích thước so sánh một cách cẩn thận, vui lòng cho phép sai số 1-3 cm do đo lường thủ công.",
+        "Lưu ý khác": "Do màn hình hiển thị khác nhau và ánh sáng khác nhau, hình ảnh có thể chênh lệch 5->10% màu sắc thật của sản phẩm. Cảm ơn bạn đã thông cảm."
+      }
+    },
+
+    {
+      "id": "sale8",
+      "name": "Dép Nữ MWC - 8136 Dép Nữ Quai Ngang Cách Điệu Dép Nữ Đế Bệt Mũi Vuông Hot Trend",
+      "price": "125,000đ",
+      "images": {
+        "default": "../../assets/img/sale/sale1-Bisque.jpg",
+        "highResolution": "../../assets/img/sale/sale1-Bisque-large.jpg"
+      },
+      "thumbnails": [
+        "../../assets/img/sale/sale1-Bisque-thumbnail1.jpg",
+        "../../assets/img/sale/sale1-Bisque-thumbnail2.jpg",
+        "../../assets/img/sale/sale1-Bisque-thumbnail3.jpg",
+        "../../assets/img/sale/sale1-Bisque-thumbnail4.jpg"
+      ],
+      "type": "sale",
+      "salePercent": "40%",
+      "saleEnd": "",
+      "progress": 75,
+      "colors": ["DarkRed"],
+      "sizes": ["35", "36", "37", "38"],
+      "reviews": 100,
+      "likes": 10,
+      "rating": 4.5,
+      "category": "sale",
+      "description": "Balo thời trang cao cấp, chống sốc, chống nước, nhiều ngăn tiện lợi.",
+      "specifications": {
+        "Chất liệu": "Vải Oxford cao cấp",
+        "Kích thước": "42x32x15 cm",
+        "Trọng lượng": "950g",
+        "Dung tích": "20L",
+        "Ngăn laptop": "15.6 inch",
+        "Khả năng chống nước": "Chống nước tuyệt đối",
+        "Màu sắc": "Đỏ đô",
+        "Bảo hành": "12 tháng"
+      },
+      "describe": [
+        "Dép nữ với thiết kế quai ngang bản to nhún cách điệu, dép được làm bằng chất liệu da tổng hợp cao cấp nên rất êm mềm và bền bỉ.",
+        "Dép đế đúc nguyên khối nên có trọng lượng nhẹ, tạo sự thoải mái dễ đi, dễ phối với nhiều trang phục khác nhau từ quần tây, jeans hay chân váy, sooc,... đều rất hợp thời trang, từ đó làm tô thêm vẻ đẹp trẻ trung, năng động của các bạn gái.",
+        "Dép nữ quai ngang thực sự là lựa chọn lý tưởng cho phong cách năng động, tràn đầy sức sống, dép mang đi chơi, đi phố, đi trong nhà văn phòng đều phù hợp."
+      ],
+      "detailed_title": "Dép Nữ MWC 8347 - Dép Nữ Quai Ngang Bản To Nhún Cách Điệu, Dép Đế Đúc 3cm Năng Động, Trẻ Trung, Thời Trang.",
+      "detailed_info": {
+        "Chiều cao": "Khoảng 3cm",
+        "Chất liệu": "Da mềm tổng hợp cao cấp",
+        "Kiểu dáng": "Dép nữ quai ngang bản to, dép thời trang nữ",
+        "Đế": "Xẻ rãnh chống trơn trượt",
+        "Màu sắc": "Nâu - Đen - Kem",
+        "Size": "35 - 36 - 37 - 38 - 39",
+        "Xuất xứ": "Việt Nam",
+        "Chú ý": "Kích thước so sánh một cách cẩn thận, vui lòng cho phép sai số 1-3 cm do đo lường thủ công.",
+        "Lưu ý khác": "Do màn hình hiển thị khác nhau và ánh sáng khác nhau, hình ảnh có thể chênh lệch 5->10% màu sắc thật của sản phẩm. Cảm ơn bạn đã thông cảm."
+      }
+    },
+
+    {
+      "id": "sale9",
+      "name": "Dép Nữ MWC - 8136 Dép Nữ Quai Ngang Cách Điệu Dép Nữ Đế Bệt Mũi Vuông Hot Trend",
+      "price": "125,000đ",
+      "images": {
+        "default": "../../assets/img/sale/sale1-Bisque.jpg",
+        "highResolution": "../../assets/img/sale/sale1-Bisque-large.jpg"
+      },
+      "thumbnails": [
+        "../../assets/img/sale/sale1-Bisque-thumbnail1.jpg",
+        "../../assets/img/sale/sale1-Bisque-thumbnail2.jpg",
+        "../../assets/img/sale/sale1-Bisque-thumbnail3.jpg",
+        "../../assets/img/sale/sale1-Bisque-thumbnail4.jpg"
+      ],
+      "type": "sale",
+      "salePercent": "40%",
+      "saleEnd": "",
+      "progress": 75,
+      "colors": ["DarkRed"],
+      "sizes": ["35", "36", "37", "38"],
+      "reviews": 100,
+      "likes": 10,
+      "rating": 4.5,
+      "category": "sale",
+      "description": "Balo thời trang cao cấp, chống sốc, chống nước, nhiều ngăn tiện lợi.",
+      "specifications": {
+        "Chất liệu": "Vải Oxford cao cấp",
+        "Kích thước": "42x32x15 cm",
+        "Trọng lượng": "950g",
+        "Dung tích": "20L",
+        "Ngăn laptop": "15.6 inch",
+        "Khả năng chống nước": "Chống nước tuyệt đối",
+        "Màu sắc": "Đỏ đô",
+        "Bảo hành": "12 tháng"
+      },
+      "describe": [
+        "Dép nữ với thiết kế quai ngang bản to nhún cách điệu, dép được làm bằng chất liệu da tổng hợp cao cấp nên rất êm mềm và bền bỉ.",
+        "Dép đế đúc nguyên khối nên có trọng lượng nhẹ, tạo sự thoải mái dễ đi, dễ phối với nhiều trang phục khác nhau từ quần tây, jeans hay chân váy, sooc,... đều rất hợp thời trang, từ đó làm tô thêm vẻ đẹp trẻ trung, năng động của các bạn gái.",
+        "Dép nữ quai ngang thực sự là lựa chọn lý tưởng cho phong cách năng động, tràn đầy sức sống, dép mang đi chơi, đi phố, đi trong nhà văn phòng đều phù hợp."
+      ],
+      "detailed_title": "Dép Nữ MWC 8347 - Dép Nữ Quai Ngang Bản To Nhún Cách Điệu, Dép Đế Đúc 3cm Năng Động, Trẻ Trung, Thời Trang.",
+      "detailed_info": {
+        "Chiều cao": "Khoảng 3cm",
+        "Chất liệu": "Da mềm tổng hợp cao cấp",
+        "Kiểu dáng": "Dép nữ quai ngang bản to, dép thời trang nữ",
+        "Đế": "Xẻ rãnh chống trơn trượt",
+        "Màu sắc": "Nâu - Đen - Kem",
+        "Size": "35 - 36 - 37 - 38 - 39",
+        "Xuất xứ": "Việt Nam",
+        "Chú ý": "Kích thước so sánh một cách cẩn thận, vui lòng cho phép sai số 1-3 cm do đo lường thủ công.",
+        "Lưu ý khác": "Do màn hình hiển thị khác nhau và ánh sáng khác nhau, hình ảnh có thể chênh lệch 5->10% màu sắc thật của sản phẩm. Cảm ơn bạn đã thông cảm."
+      }
+    },
+
+    {
+      "id": "sale10",
+      "name": "Dép Nữ MWC - 8136 Dép Nữ Quai Ngang Cách Điệu Dép Nữ Đế Bệt Mũi Vuông Hot Trend",
+      "price": "125,000đ",
+      "images": {
+        "default": "../../assets/img/sale/sale1-Bisque.jpg",
+        "highResolution": "../../assets/img/sale/sale1-Bisque-large.jpg"
+      },
+      "thumbnails": [
+        "../../assets/img/sale/sale1-Bisque-thumbnail1.jpg",
+        "../../assets/img/sale/sale1-Bisque-thumbnail2.jpg",
+        "../../assets/img/sale/sale1-Bisque-thumbnail3.jpg",
+        "../../assets/img/sale/sale1-Bisque-thumbnail4.jpg"
+      ],
+      "type": "sale",
+      "salePercent": "40%",
+      "saleEnd": "",
+      "progress": 75,
+      "colors": ["DarkRed"],
+      "sizes": ["35", "36", "37", "38"],
+      "reviews": 100,
+      "likes": 10,
+      "rating": 4.5,
+      "category": "sale",
+      "description": "Balo thời trang cao cấp, chống sốc, chống nước, nhiều ngăn tiện lợi.",
+      "specifications": {
+        "Chất liệu": "Vải Oxford cao cấp",
+        "Kích thước": "42x32x15 cm",
+        "Trọng lượng": "950g",
+        "Dung tích": "20L",
+        "Ngăn laptop": "15.6 inch",
+        "Khả năng chống nước": "Chống nước tuyệt đối",
+        "Màu sắc": "Đỏ đô",
+        "Bảo hành": "12 tháng"
+      },
+      "describe": [
+        "Dép nữ với thiết kế quai ngang bản to nhún cách điệu, dép được làm bằng chất liệu da tổng hợp cao cấp nên rất êm mềm và bền bỉ.",
+        "Dép đế đúc nguyên khối nên có trọng lượng nhẹ, tạo sự thoải mái dễ đi, dễ phối với nhiều trang phục khác nhau từ quần tây, jeans hay chân váy, sooc,... đều rất hợp thời trang, từ đó làm tô thêm vẻ đẹp trẻ trung, năng động của các bạn gái.",
+        "Dép nữ quai ngang thực sự là lựa chọn lý tưởng cho phong cách năng động, tràn đầy sức sống, dép mang đi chơi, đi phố, đi trong nhà văn phòng đều phù hợp."
+      ],
+      "detailed_title": "Dép Nữ MWC 8347 - Dép Nữ Quai Ngang Bản To Nhún Cách Điệu, Dép Đế Đúc 3cm Năng Động, Trẻ Trung, Thời Trang.",
+      "detailed_info": {
+        "Chiều cao": "Khoảng 3cm",
+        "Chất liệu": "Da mềm tổng hợp cao cấp",
+        "Kiểu dáng": "Dép nữ quai ngang bản to, dép thời trang nữ",
+        "Đế": "Xẻ rãnh chống trơn trượt",
+        "Màu sắc": "Nâu - Đen - Kem",
+        "Size": "35 - 36 - 37 - 38 - 39",
+        "Xuất xứ": "Việt Nam",
+        "Chú ý": "Kích thước so sánh một cách cẩn thận, vui lòng cho phép sai số 1-3 cm do đo lường thủ công.",
+        "Lưu ý khác": "Do màn hình hiển thị khác nhau và ánh sáng khác nhau, hình ảnh có thể chênh lệch 5->10% màu sắc thật của sản phẩm. Cảm ơn bạn đã thông cảm."
+      }
+    },
+
+    {
+      "id": "sale11",
+      "name": "Dép Nữ MWC - 8136 Dép Nữ Quai Ngang Cách Điệu Dép Nữ Đế Bệt Mũi Vuông Hot Trend",
+      "price": "125,000đ",
+      "images": {
+        "default": "../../assets/img/sale/sale1-Bisque.jpg",
+        "highResolution": "../../assets/img/sale/sale1-Bisque-large.jpg"
+      },
+      "thumbnails": [
+        "../../assets/img/sale/sale1-Bisque-thumbnail1.jpg",
+        "../../assets/img/sale/sale1-Bisque-thumbnail2.jpg",
+        "../../assets/img/sale/sale1-Bisque-thumbnail3.jpg",
+        "../../assets/img/sale/sale1-Bisque-thumbnail4.jpg"
+      ],
+      "type": "sale",
+      "salePercent": "40%",
+      "saleEnd": "",
+      "progress": 75,
+      "colors": ["DarkRed"],
+      "sizes": ["35", "36", "37", "38"],
+      "reviews": 100,
+      "likes": 10,
+      "rating": 4.5,
+      "category": "sale",
+      "description": "Balo thời trang cao cấp, chống sốc, chống nước, nhiều ngăn tiện lợi.",
+      "specifications": {
+        "Chất liệu": "Vải Oxford cao cấp",
+        "Kích thước": "42x32x15 cm",
+        "Trọng lượng": "950g",
+        "Dung tích": "20L",
+        "Ngăn laptop": "15.6 inch",
+        "Khả năng chống nước": "Chống nước tuyệt đối",
+        "Màu sắc": "Đỏ đô",
+        "Bảo hành": "12 tháng"
+      },
+      "describe": [
+        "Dép nữ với thiết kế quai ngang bản to nhún cách điệu, dép được làm bằng chất liệu da tổng hợp cao cấp nên rất êm mềm và bền bỉ.",
+        "Dép đế đúc nguyên khối nên có trọng lượng nhẹ, tạo sự thoải mái dễ đi, dễ phối với nhiều trang phục khác nhau từ quần tây, jeans hay chân váy, sooc,... đều rất hợp thời trang, từ đó làm tô thêm vẻ đẹp trẻ trung, năng động của các bạn gái.",
+        "Dép nữ quai ngang thực sự là lựa chọn lý tưởng cho phong cách năng động, tràn đầy sức sống, dép mang đi chơi, đi phố, đi trong nhà văn phòng đều phù hợp."
+      ],
+      "detailed_title": "Dép Nữ MWC 8347 - Dép Nữ Quai Ngang Bản To Nhún Cách Điệu, Dép Đế Đúc 3cm Năng Động, Trẻ Trung, Thời Trang.",
+      "detailed_info": {
+        "Chiều cao": "Khoảng 3cm",
+        "Chất liệu": "Da mềm tổng hợp cao cấp",
+        "Kiểu dáng": "Dép nữ quai ngang bản to, dép thời trang nữ",
+        "Đế": "Xẻ rãnh chống trơn trượt",
+        "Màu sắc": "Nâu - Đen - Kem",
+        "Size": "35 - 36 - 37 - 38 - 39",
+        "Xuất xứ": "Việt Nam",
+        "Chú ý": "Kích thước so sánh một cách cẩn thận, vui lòng cho phép sai số 1-3 cm do đo lường thủ công.",
+        "Lưu ý khác": "Do màn hình hiển thị khác nhau và ánh sáng khác nhau, hình ảnh có thể chênh lệch 5->10% màu sắc thật của sản phẩm. Cảm ơn bạn đã thông cảm."
+      }
+    },
+
+    {
+      "id": "sale12",
+      "name": "Dép Nữ MWC - 8136 Dép Nữ Quai Ngang Cách Điệu Dép Nữ Đế Bệt Mũi Vuông Hot Trend",
+      "price": "125,000đ",
+      "images": {
+        "default": "../../assets/img/sale/sale1-Bisque.jpg",
+        "highResolution": "../../assets/img/sale/sale1-Bisque-large.jpg"
+      },
+      "thumbnails": [
+        "../../assets/img/sale/sale1-Bisque-thumbnail1.jpg",
+        "../../assets/img/sale/sale1-Bisque-thumbnail2.jpg",
+        "../../assets/img/sale/sale1-Bisque-thumbnail3.jpg",
+        "../../assets/img/sale/sale1-Bisque-thumbnail4.jpg"
+      ],
+      "type": "sale",
+      "salePercent": "40%",
+      "saleEnd": "",
+      "progress": 75,
+      "colors": ["DarkRed"],
+      "sizes": ["35", "36", "37", "38"],
+      "reviews": 100,
+      "likes": 10,
+      "rating": 4.5,
+      "category": "sale",
+      "description": "Balo thời trang cao cấp, chống sốc, chống nước, nhiều ngăn tiện lợi.",
+      "specifications": {
+        "Chất liệu": "Vải Oxford cao cấp",
+        "Kích thước": "42x32x15 cm",
+        "Trọng lượng": "950g",
+        "Dung tích": "20L",
+        "Ngăn laptop": "15.6 inch",
+        "Khả năng chống nước": "Chống nước tuyệt đối",
+        "Màu sắc": "Đỏ đô",
+        "Bảo hành": "12 tháng"
+      },
+      "describe": [
+        "Dép nữ với thiết kế quai ngang bản to nhún cách điệu, dép được làm bằng chất liệu da tổng hợp cao cấp nên rất êm mềm và bền bỉ.",
+        "Dép đế đúc nguyên khối nên có trọng lượng nhẹ, tạo sự thoải mái dễ đi, dễ phối với nhiều trang phục khác nhau từ quần tây, jeans hay chân váy, sooc,... đều rất hợp thời trang, từ đó làm tô thêm vẻ đẹp trẻ trung, năng động của các bạn gái.",
+        "Dép nữ quai ngang thực sự là lựa chọn lý tưởng cho phong cách năng động, tràn đầy sức sống, dép mang đi chơi, đi phố, đi trong nhà văn phòng đều phù hợp."
+      ],
+      "detailed_title": "Dép Nữ MWC 8347 - Dép Nữ Quai Ngang Bản To Nhún Cách Điệu, Dép Đế Đúc 3cm Năng Động, Trẻ Trung, Thời Trang.",
+      "detailed_info": {
+        "Chiều cao": "Khoảng 3cm",
+        "Chất liệu": "Da mềm tổng hợp cao cấp",
+        "Kiểu dáng": "Dép nữ quai ngang bản to, dép thời trang nữ",
+        "Đế": "Xẻ rãnh chống trơn trượt",
+        "Màu sắc": "Nâu - Đen - Kem",
+        "Size": "35 - 36 - 37 - 38 - 39",
+        "Xuất xứ": "Việt Nam",
+        "Chú ý": "Kích thước so sánh một cách cẩn thận, vui lòng cho phép sai số 1-3 cm do đo lường thủ công.",
+        "Lưu ý khác": "Do màn hình hiển thị khác nhau và ánh sáng khác nhau, hình ảnh có thể chênh lệch 5->10% màu sắc thật của sản phẩm. Cảm ơn bạn đã thông cảm."
       }
     }
   ]

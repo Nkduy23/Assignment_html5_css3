@@ -42,27 +42,36 @@
         </div>
         <div class="product-detail__info">
           <h1 class="product-detail__title"></h1>
+          <div class="product-detail__rating">
+            <div class="product-detail__stars"></div>
+            <p class="product-detail__reviews"></p>
+            <p class="product-detail__likes"></p>
+          </div>
           <p class="product-detail__price"></p>
+          <div class="flash-sale__timer" aria-live="countdown">
+            <div class="flash-sale__timer-box">
+              <span id="days" class="flash-sale__timer-value">00</span>
+            </div>
+            <div class="flash-sale__timer-box">
+              <span id="hours" class="flash-sale__timer-value">00</span>
+            </div>
+            <div class="flash-sale__timer-box">
+              <span id="minutes" class="flash-sale__timer-value">00</span>
+            </div>
+            <div class="flash-sale__timer-box">
+              <span id="seconds" class="flash-sale__timer-value">00</span>
+            </div>
+          </div>
           <p class="product-detail__description"></p>
-          <!-- Phần chọn màu -->
+
           <div class="product-detail__color-selection">
             <h4>Chọn Màu:</h4>
-            <div class="product-detail__color-options">
-              <button class="product-detail__color-option" style="background-color: red" data-color="red"></button>
-              <button class="product-detail__color-option" style="background-color: blue" data-color="blue"></button>
-              <button class="product-detail__color-option" style="background-color: green" data-color="green"></button>
-              <button class="product-detail__color-option" style="background-color: black" data-color="black"></button>
-            </div>
+            <div class="product-detail__color-options"></div>
           </div>
           <!-- Phần chọn size -->
           <div class="product-detail__size-selection">
             <h4>Chọn Size:</h4>
-            <div class="product-detail__size-options">
-              <button class="product-detail__size-option" data-size="S">S</button>
-              <button class="product-detail__size-option" data-size="M">M</button>
-              <button class="product-detail__size-option" data-size="L">L</button>
-              <button class="product-detail__size-option" data-size="XL">XL</button>
-            </div>
+            <div class="product-detail__size-options"></div>
           </div>
           <!-- Các nút thêm vào giỏ hàng và mua ngay -->
           <div class="product-detail__actions">
@@ -75,29 +84,29 @@
           <div class="product-detail__benefits">
             <div class="product-detail__benefits-row">
               <div class="product-detail__benefit-item">
-                <img src="../../assets/img/benefit1.jpg" alt="Bảo hành keo vĩnh viễn" />
+                <img src="../../assets/img/benefit/benefit1.jpg" alt="Bảo hành keo vĩnh viễn" />
                 <p>Bảo hành keo vĩnh viễn</p>
               </div>
               <div class="product-detail__benefit-item">
-                <img src="../../assets/img/benefit2.jpg" alt="Miễn phí vận chuyển" />
+                <img src="../../assets/img/benefit/benefit2.jpg" alt="Miễn phí vận chuyển" />
                 <p>Miễn phí vận chuyển toàn quốc<br />cho đơn hàng từ 150k</p>
               </div>
               <div class="product-detail__benefit-item">
-                <img src="../../assets/img/benefit3.jpg" alt="Đổi hàng trong 60 ngày" />
+                <img src="../../assets/img/benefit/benefit3.jpg" alt="Đổi hàng trong 60 ngày" />
                 <p>Đổi hàng trong 60 ngày</p>
               </div>
             </div>
             <div class="product-detail__benefits-row">
               <div class="product-detail__benefit-item">
-                <img src="../../assets/img/benefit4.jpg" alt="Đổi trả dễ dàng" />
+                <img src="../../assets/img/benefit/benefit4.jpg" alt="Đổi trả dễ dàng" />
                 <p>Đổi trả dễ dàng<br />(trong vòng 7 ngày nếu lỗi nhà sản xuất)</p>
               </div>
               <div class="product-detail__benefit-item">
-                <img src="../../assets/img/benefit5.jpg" alt="Hotline hỗ trợ" />
+                <img src="../../assets/img/benefit/benefit5.jpg" alt="Hotline hỗ trợ" />
                 <p>Hotline 1900.633.349<br />hỗ trợ từ 8h30-21h30</p>
               </div>
               <div class="product-detail__benefit-item">
-                <img src="../../assets/img/benefit6.jpg" alt="Giao hàng tận nơi" />
+                <img src="../../assets/img/benefit/benefit6.jpg" alt="Giao hàng tận nơi" />
                 <p>Giao hàng tận nơi,<br />nhận hàng xong thanh toán</p>
               </div>
             </div>
@@ -148,21 +157,21 @@
         <div class="related-products__grid">
           <a href="/views/detail/saleDetail.html?id=sale2&category=sale">
             <div class="product-item">
-              <img src="../../assets/img/sale1-gray.jpg" alt="Sản phẩm 1" />
-              <p>Sản phẩm liên quan 1</p>
+              <img src="../../assets/img/sale/sale1-Bisque.jpg" alt="Sản phẩm 1" />
+              <p>Dép Nữ MWC - 8136 Dép Nữ Quai Ngang Cách Điệu Dép Nữ Đế Bệt Mũi Vuông Hot Trend</p>
             </div>
           </a>
           <div class="product-item">
-            <img src="../../assets/img/sale2-.jpg" alt="Sản phẩm 2" />
-            <p>Sản phẩm liên quan 2</p>
+            <img src="../../assets/img/sale/sale2-Black.jpg" alt="Sản phẩm 2" />
+            <p>Dép nữ MWC - 8173 Dép Nữ Đế Bánh Mì Cao 4cm,Dép Nữ Quai Chéo Lót Dán Siêu Êm Chân Thời Trang Trẻ Trung Thanh Lịch</p>
           </div>
           <div class="product-item">
-            <img src="../../assets/img/sale3-SteelBlue.jpg" alt="Sản phẩm 3" />
-            <p>Sản phẩm liên quan 3</p>
+            <img src="../../assets/img/sale/sale3-Gold.jpg" alt="Sản phẩm 3" />
+            <p>Dép nam MWC - 7741 Dép Nam Quai Ngang Phối Màu In Chữ Nổi Bật Cực Đẹp, Dép Nam Kiểu Dáng Thời Trang, Đi Êm Chân, Mẫu Mới</p>
           </div>
           <div class="product-item">
-            <img src="../../assets/img/sale4-black.jpg" alt="Sản phẩm 4" />
-            <p>Sản phẩm liên quan 4</p>
+            <img src="../../assets/img/sale/sale4-DarkGoldenRod.jpg" alt="Sản phẩm 4" />
+            <p>Dép Nữ MWC 8347 - Dép Nữ Quai Ngang Bản To Nhún Cách Điệu, Dép Đế Đúc 3cm Năng Động,Trẻ Trung, Thời Trang.</p>
           </div>
         </div>
       </section>
@@ -175,5 +184,6 @@
     <script src="../../assets/js/views/navigationView.js"></script>
     <script src="../../assets/js/views/productDetailView.js" type="module"></script>
     <script src="../../assets/js/controllers/categoryController.js" type="module"></script>
+    <script src="../../assets/js/views/countdownView.js" type="module"></script>
   </body>
 </html>
