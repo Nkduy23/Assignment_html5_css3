@@ -1,11 +1,3 @@
-// $grid-breakpoints: (
-//     sm: 576px,
-//     md: 768px,
-//     lg: 992px,
-//     xl: 1200px,
-//     xxl: 1400px,
-//   );
-
 @media (max-width: 992px) {
   .header {
     .nav {
@@ -22,7 +14,7 @@
 
       &__button-bar {
         display: block;
-        font-size: 2rem;
+        font-size: 20px;
       }
 
       &.show {
@@ -66,9 +58,9 @@
         }
       }
 
-      &__link {
-        display: block;
-      }
+      // &__link {
+      //   display: block;
+      // }
 
       &__sublist {
         position: static;
@@ -90,7 +82,6 @@
       }
     }
   }
-  .category-list-container,
   #flash-sale-products,
   .category-list {
     grid-template-columns: repeat(2, 1fr);

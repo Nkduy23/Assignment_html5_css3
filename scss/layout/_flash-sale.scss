@@ -1,7 +1,5 @@
 .flash-sale {
   padding: 1rem;
-  display: flex;
-  align-items: center;
   column-gap: 1.5rem;
 
   &__title {
@@ -17,7 +15,6 @@
   }
 
   &__timer {
-    display: flex;
     justify-content: flex-start;
     gap: 1rem;
 

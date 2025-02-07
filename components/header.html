@@ -1,22 +1,18 @@
 <div class="container-main">
-  <!-- header -->
   <header class="header">
     <div class="container-header d-flex-between flex-wrap">
-      <!-- Navbar Toggler -->
       <button type="button" class="nav__button-bar d-none button" aria-controls="navbar" aria-label="Toggler navigation">
         <span class="navbar__button-icon">
           <i class="fa-solid fa-bars"></i>
         </span>
       </button>
 
-      <!-- Logo -->
       <div class="header__logo" aria-label="Logo MWC">
         <a href="/index.html" class="header__logo-link">
           <img src="../../assets/img/logo.png" alt="Logo MWC" class="header__logo-img" />
         </a>
       </div>
 
-      <!-- navigation -->
       <nav class="nav" aria-label="Main Navigation">
         <div class="nav__menu d-none">
           <h5 class="nav__menu-title">Menu</h5>
@@ -24,12 +20,10 @@
             <span class="nav__button-icon"><i class="fa-solid fa-xmark"></i></span>
           </button>
         </div>
-        
-        <!-- List -->
-        <ul class="nav__list d-flex">
 
+        <ul class="nav__list d-flex">
           <li class="nav__item" role="menuitem" aria-haspopup="true">
-            <a class="nav__link dropdown" href="#giaynay" id="dropdownMenu-1">Giày Nam</a>
+            <a class="nav__link dropdown" href="#giaynam" id="dropdownMenu-1">Giày Nam</a>
             <ul class="nav__sublist" role="submenu" aria-labelledby="dropdownMenu-1">
               <li class="nav__subitem">
                 <a class="nav__sublink" href="#">Thể Thao</a>
@@ -95,10 +89,10 @@
           </li>
 
           <li class="nav__item" role="menuitem" aria-haspopup="true">
-            <a class="nav__link dropdown" href="#balotui" id="dropdownMenu-2">Balo-Túi</a>
+            <a class="nav__link dropdown" href="#bagstui" id="dropdownMenu-2">bags-Túi</a>
             <ul class="nav__sublist" role="submenu" aria-labelledby="dropdownMenu-2">
               <li class="nav__subitem">
-                <a class="nav__sublink" href="#">Balo Laptop, Du Lịch, Thời Trang</a>
+                <a class="nav__sublink" href="#">bags Laptop, Du Lịch, Thời Trang</a>
               </li>
               <li class="nav__subitem">
                 <a class="nav__sublink" href="#">Đi Chơi</a>
@@ -127,18 +121,16 @@
               <li class="nav__subitem">
                 <a class="nav__sublink" href="#">Chai Xịt Giày</a>
               </li>
-              </li>
             </ul>
           </li>
         </ul>
       </nav>
 
-      <!-- Search -->
       <div class="header__search" aria-label="Search">
         <form action="#" class="header__search-form">
           <input type="text" class="header__search-input" placeholder="Search..." />
           <button class="header__search-button button" aria-label="Search button">
-           <span class="header__search-button-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+            <span class="header__search-button-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
           </button>
         </form>
 
@@ -147,15 +139,16 @@
         </button>
       </div>
 
-      <!-- action -->
       <div class="header__action d-flex" aria-label="Action buttons">
-        <button type="button" class="header__action-button-open d-none button" aria-controls="Search" aria-expanded="false" aria-label="Search button"><i class="fa-solid fa-magnifying-glass"></i></button>
-        <button class="header__action-button button" aria-label="Login button">
+        <button type="button" class="header__action-button-open d-none button" aria-controls="Search" aria-expanded="false" aria-label="Search button">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        <a href="/views/account/login.html" class="header__action-button button" aria-label="Login button">
           <i class="fa-regular fa-user"></i>
-        </button>
-        <button class="header__action-button button" aria-label="Cart button">
+        </a>
+        <a href="/views/account/register.html" class="header__action-button button" aria-label="Cart button">
           <i class="fa-solid fa-cart-shopping"></i>
-        </button>
+        </a>
       </div>
     </div>
   </header>

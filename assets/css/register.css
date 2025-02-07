@@ -1,0 +1,76 @@
+.register-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 30px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.register-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+.register-container .register-form .form-group {
+  margin-bottom: 20px;
+}
+.register-container .register-form .form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.register-container .register-form .form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border 0.3s ease;
+}
+.register-container .register-form .form-group input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+.register-container .register-form .btn-register {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  font-size: 18px;
+}
+.register-container .register-form .register-options {
+  text-align: center;
+  margin-top: 15px;
+}
+.register-container .register-form .register-options a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+.register-container .register-form .register-options a:hover {
+  text-decoration: underline;
+}
+.register-container .register-form .social-login {
+  text-align: center;
+  margin-top: 20px;
+}
+.register-container .register-form .social-login p {
+  margin-bottom: 10px;
+}
+.register-container .register-form .social-login .btn-google {
+  background-color: #db4437;
+  color: #fff;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.register-container .register-form .social-login .btn-google:hover {
+  background-color: #bd2e22;
+}
+.register-container .register-form .social-login .btn-facebook {
+  background-color: #1877f2;
+  color: #fff;
+  width: 100%;
+}
+.register-container .register-form .social-login .btn-facebook:hover {
+  background-color: #0b5fcc;
+}
