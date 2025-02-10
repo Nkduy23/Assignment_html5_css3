@@ -1,5 +1,14 @@
 import { createProductHTML } from "../helpers/product.template.js";
-import { getCategoryContainer } from "../controllers/category.mapper.js";
+
+const getCategoryContainer = (category) => {
+  const categoryMap = {
+    shoesForWomen: document.querySelector("#shoes-for-women .category-list"),
+    bags: document.querySelector("#bags .category-list"),
+    shoesForMen: document.querySelector("#shoes-for-men .category-list"),
+    DepSandal: document.querySelector("#dep-sandal .category-list"),
+  };
+  return categoryMap[category] || null;
+};
 
 // Hàm render sản phẩm
 const renderProduct = (product, container = null) => {

@@ -1,11 +1,14 @@
 import { setupHeaderFooter } from "./utils/setup-header-footer.util.js";
-import { setupNavbar } from "./views/navigation.view.js";
+import { navbarController } from "./controllers/navigation.controller.js";
+import { listenToNavbarEvents } from "./views/navigation.view.js";
 import { loadDataByCategory } from "./controllers/category.controller.js";
 
 const initializeCategoryPage = async () => {
   try {
     await setupHeaderFooter();
-    setupNavbar();
+
+    const navbarCtrl = navbarController();
+    listenToNavbarEvents(navbarCtrl);
 
     const category = new URLSearchParams(window.location.search).get("category");
     if (category) {

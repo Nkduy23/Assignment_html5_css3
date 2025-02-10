@@ -1,31 +1,35 @@
-import { CountdownTimer } from "../models/countdown.model.js";
-import { SALE_ENDED_MESSAGE, DEFAULT_SALE_END_TIME } from "../constants/sale.constants.js";
+/**
+ * Cập nhật giao diện bộ đếm ngược
+ * @param {Object} remainingTime
+ */
+export function updateCountdownView({ days, hours, minutes, seconds }) {
+  const daysElement = document.getElementById("days");
+  const hoursElement = document.getElementById("hours");
+  const minutesElement = document.getElementById("minutes");
+  const secondsElement = document.getElementById("seconds");
+
+  daysElement.textContent = formatNumber(days);
+  hoursElement.textContent = formatNumber(hours);
+  minutesElement.textContent = formatNumber(minutes);
+  secondsElement.textContent = formatNumber(seconds);
+}
 
 /**
- * Khởi động bộ đếm ngược khuyến mãi
- * @param {string} [endTime] - Thời gian kết thúc khuyến mãi (mặc định lấy từ config.js nếu không có)
- * @param {string} originalPrice - Giá gốc sản phẩm
+ * Hiển thị thông báo khi hết thời gian
+ * @param {string} message
  */
-export function startCountdownTimer(endTime = DEFAULT_SALE_END_TIME, originalPrice) {
-  const timer = new CountdownTimer(
-    endTime, // Dùng giá trị mặc định nếu không truyền
-    {
-      days: document.getElementById("days"),
-      hours: document.getElementById("hours"),
-      minutes: document.getElementById("minutes"),
-      seconds: document.getElementById("seconds"),
-      subtitle: document.querySelector(".flash-sale__subtitle"),
-    },
-    SALE_ENDED_MESSAGE
-  );
+export function displaySaleEndedMessage(message) {
+  const subtitleElement = document.querySelector(".flash-sale__subtitle");
+  if (subtitleElement) {
+    subtitleElement.textContent = message;
+  }
+}
 
-  // Khi hết thời gian sale, hiển thị lại giá gốc
-  timer.onEnd = function () {
-    const priceElement = document.querySelector(".product-detail__price");
-    if (priceElement) {
-      priceElement.innerHTML = `<p class="product-detail__price">${originalPrice}</p>`;
-    }
-  };
-
-  timer.start();
+/**
+ * Định dạng số
+ * @param {number} number
+ * @returns {string}
+ */
+function formatNumber(number) {
+  return number.toString().padStart(2, "0");
 }

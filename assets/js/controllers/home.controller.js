@@ -3,6 +3,18 @@ import { renderSaleProduct, renderRegularProductByCategory } from "../views/prod
 import { addColorChangeEventListeners } from "../views/product-color.view.js";
 import { updateProductProgress } from "../views/product-progress.view.js";
 
+export function handleProductLoading() {
+  const saleContainer = document.getElementById("flash-sale-products");
+
+  if (saleContainer) {
+    console.log("Sale container found! Fetching sale data...");
+    loadHomePage(saleContainer);
+  } else {
+    console.log("No sale container found. Rendering regular products...");
+    loadHomePage();
+  }
+}
+
 export const loadHomePage = async (saleContainer = null) => {
   try {
     const products = await getHomeProducts();
@@ -23,7 +35,6 @@ export const loadHomePage = async (saleContainer = null) => {
     const allProducts = [...products.saleProducts, ...products.regularProducts];
     addColorChangeEventListeners(allProducts);
     updateProductProgress();
-    
   } catch (error) {
     console.error("Error loading home page:", error);
   }

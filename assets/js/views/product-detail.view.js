@@ -1,6 +1,6 @@
 import { getCategoryProducts } from "../models/product.model.js";
-import { startCountdownTimer } from "../views/countdown.view.js";
-import { DEFAULT_SALE_END_TIME } from "../constants/sale.constants.js";
+import { DEFAULT_SALE_END_TIME, SALE_ENDED_MESSAGE } from "../constants/sale.constants.js";
+import { CountdownController } from "../controllers/countdown.controller.js";
 
 // Lấy tham số từ URL (id và category)
 const urlParams = new URLSearchParams(window.location.search);
@@ -117,7 +117,9 @@ function updatePrice(product) {
           <span class="product-detail__price-original">${product.price}</span>
           <span class="product-detail__price-discounted">${discountedPrice.toLocaleString("vi-VN")}đ</span>
         </p>`;
-      startCountdownTimer(saleEndTime, product.price);
+      // startCountdownTimer(saleEndTime, product.price);
+      const countdownCtrl = new CountdownController(DEFAULT_SALE_END_TIME, SALE_ENDED_MESSAGE);
+      countdownCtrl.start();
     } else {
       // Nếu sale đã hết hạn => chỉ hiển thị giá gốc
       priceHTML = `<p class="product-detail__price">${product.price}</p>`;

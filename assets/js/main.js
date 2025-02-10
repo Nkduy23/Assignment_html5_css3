@@ -1,17 +1,29 @@
 import { setupHeaderFooter } from "./utils/setup-header-footer.util.js";
-import { setupNavbar } from "./views/navigation.view.js";
-import { setupSlider } from "./views/slider.view.js";
-import { DEFAULT_SALE_END_TIME } from "./constants/sale.constants.js";
-import { startCountdownTimer } from "./views/countdown.view.js";
-import { handleProductLoading } from "./controllers/product.controller.js";
+import { navbarController } from "./controllers/navigation.controller.js";
+import { listenToNavbarEvents } from "./views/navigation.view.js";
+import { sliderConfig } from "./controllers/setup/setupSlider.js";
+import { DEFAULT_SALE_END_TIME, SALE_ENDED_MESSAGE } from "./constants/sale.constants.js";
+import { CountdownController } from "./controllers/countdown.controller.js";
+import { handleProductLoading } from "./controllers/home.controller.js";
 
 const initializeApp = async () => {
   try {
+    // Khởi tạo header và footer
     await setupHeaderFooter();
-    setupNavbar();
-    setupSlider();
+
+    // Điều phối logic điều hướng giữa View và Model
+    const navbarCtrl = navbarController();
+    listenToNavbarEvents(navbarCtrl);
+
+    // Khởi tạo slider
+    sliderConfig();
+
+    // Bắt đầu đồng hồ đếm ngược
+    const countdownCtrl = new CountdownController(DEFAULT_SALE_END_TIME, SALE_ENDED_MESSAGE);
+    countdownCtrl.start();
+
+    // Load sản phẩm
     handleProductLoading();
-    startCountdownTimer(DEFAULT_SALE_END_TIME);
   } catch (error) {
     console.error("Error initializing app:", error);
   }

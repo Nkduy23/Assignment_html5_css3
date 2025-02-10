@@ -1,44 +1,17 @@
-import { sliderLogic } from "../models/slider.model.js";
-
-export function setupSlider() {
-  const config = {
-    slider: ".slider",
-    slides: ".slider__image",
-    prevButton: ".slider__prev-button",
-    nextButton: ".slider__next-button",
-    autoPlayInterval: 3000,
-    swipeThreshold: 50, // Ngưỡng để nhận biết vuốt
-  };
-
-  // Utility functions
-  const addEventListenerSafe = (element, event, handler) => {
-    if (element) {
-      element.addEventListener(event, handler);
-    }
-  };
-
-  const slider = document.querySelector(config.slider);
+export const createSliderView = (config, handleSlideChange, handleSwipeStart, handleSwipeEnd) => {
+  const sliderElement = document.querySelector(config.slider);
   const slides = document.querySelectorAll(config.slides);
   const prevButton = document.querySelector(config.prevButton);
   const nextButton = document.querySelector(config.nextButton);
-  const totalSlides = slides.length;
 
-  // Quản lý trạng thái
-  const state = {
-    isSliding: false,
-    currentIndex: 0,
-    startX: 0,
-  };
+  if (!sliderElement || slides.length === 0 || !prevButton || !nextButton) {
+    console.error("Slider elements not found. Check your selectors in config.");
+    return;
+  }
 
-  const toggleAutoPlay = (start = true) => {
-    if (start) {
-      state.autoPlayTimer = setInterval(() => {
-        sliderLogic.handleSlideChange(1, totalSlides, slider, toggleAutoPlay, state);
-      }, config.autoPlayInterval);
-    } else {
-      clearInterval(state.autoPlayTimer);
-      state.autoPlayTimer = null;
-    }
+  const updateSlidePosition = (index, enableTransition) => {
+    sliderElement.style.transition = enableTransition ? "transform 0.5s ease" : "none";
+    sliderElement.style.transform = `translateX(-${index * 100}%)`;
   };
 
   const updateImageSource = () => {
@@ -49,24 +22,20 @@ export function setupSlider() {
     });
   };
 
-  // Gán sự kiện vuốt
-  slider.addEventListener("mousedown", (e) => sliderLogic.handleSwipeStart(e, state));
-  slider.addEventListener("touchstart", (e) => sliderLogic.handleSwipeStart(e, state));
-  slider.addEventListener("mouseup", (e) => sliderLogic.handleSwipeEnd(e, config, totalSlides, slider, toggleAutoPlay, state));
-  slider.addEventListener("touchend", (e) => sliderLogic.handleSwipeEnd(e, config, totalSlides, slider, toggleAutoPlay, state));
+  const attachEvents = () => {
+    prevButton.addEventListener("click", () => handleSlideChange(-1));
+    nextButton.addEventListener("click", () => handleSlideChange(1));
 
-  // Sự kiện click
-  prevButton.addEventListener("click", () => {
-    sliderLogic.handleSlideChange(-1, totalSlides, slider, toggleAutoPlay, state);
-  });
-  nextButton.addEventListener("click", () => {
-    sliderLogic.handleSlideChange(1, totalSlides, slider, toggleAutoPlay, state);
-  });
-  addEventListenerSafe(window, "resize", updateImageSource);
+    sliderElement.addEventListener("mousedown", handleSwipeStart);
+    sliderElement.addEventListener("touchstart", handleSwipeStart);
+    sliderElement.addEventListener("mouseup", handleSwipeEnd);
+    sliderElement.addEventListener("touchend", handleSwipeEnd);
 
-  // Initialize
-  slider.style.transform = `translateX(-${state.currentIndex * 100}%)`;
-  toggleAutoPlay(true);
-}
+    window.addEventListener("resize", updateImageSource);
+  };
 
-document.addEventListener("DOMContentLoaded", setupSlider);
+  return {
+    updateSlidePosition,
+    attachEvents,
+  };
+};

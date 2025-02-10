@@ -1,50 +1,33 @@
-const sliderLogic = {
-  updateSliderPosition: function (slider, currentIndex) {
-    slider.style.transform = `translateX(-${currentIndex * 100}%)`;
-  },
+export const createSliderModel = (totalSlides, toggleAutoPlay) => {
+  let currentIndex = 0;
+  let isSliding = false;
 
-  toggleAutoPlay: function (autoPlayTimer, start = true, handleSlideChange) {
-    if (start) {
-      autoPlayTimer = setInterval(() => handleSlideChange(1), 3000);
-    } else {
-      clearInterval(autoPlayTimer);
-      autoPlayTimer = null;
-    }
-    return autoPlayTimer;
-  },
+  const navigateSlide  = (direction) => {
+    if (isSliding) return;
 
-  handleSlideChange: function (direction, totalSlides, slider, toggleAutoPlay, state) {
-    if (state.isSliding) return;
-    state.isSliding = true;
+    isSliding = true;
+
+    const nextIndex = (currentIndex + direction + totalSlides) % totalSlides;
+
+    // Tạm dừng autoplay khi người dùng tương tác
     toggleAutoPlay(false);
 
-    // Tính toán chỉ số slide tiếp theo
-    state.currentIndex = (state.currentIndex + direction + totalSlides) % totalSlides;
-    slider.style.transition = `transform 500ms ease`;
-    slider.style.transform = `translateX(-${state.currentIndex * 100}%)`;
-
     setTimeout(() => {
-      state.isSliding = false;
+      isSliding = false;
       toggleAutoPlay(true);
-    }, 500);
-  },
+    }, 500); // Thời gian chuyển slide
 
-  handleSwipeStart: function (e, state) {
-    state.startX = e.type.includes("touch") ? e.touches[0].clientX : e.clientX;
-  },
+    const isLooping = nextIndex === 0 && direction > 0; // Điều kiện về slide đầu
+    const isReverseLooping = nextIndex === totalSlides - 1 && direction < 0; // Slide cuối
 
-  handleSwipeEnd: function (e, config, totalSlides, slider, toggleAutoPlay, state) {
-    const endX = e.type.includes("touch") ? e.changedTouches[0].clientX : e.clientX;
-    const swipeDistance = state.startX - endX;
+    currentIndex = nextIndex;
 
-    if (swipeDistance > config.swipeThreshold) {
-      // Vuốt trái
-      this.handleSlideChange(1, totalSlides, slider, toggleAutoPlay, state);
-    } else if (swipeDistance < -config.swipeThreshold) {
-      // Vuốt phải
-      this.handleSlideChange(-1, totalSlides, slider, toggleAutoPlay, state);
-    }
-  },
+    // trả về index và trạng thái "loop"
+    return { index: currentIndex, isLooping, isReverseLooping };
+  };
+
+  return {
+    navigateSlide ,
+    getCurrentIndex: () => currentIndex,
+  };
 };
-
-export { sliderLogic };
