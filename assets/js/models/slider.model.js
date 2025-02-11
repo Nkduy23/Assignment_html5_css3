@@ -1,9 +1,11 @@
-export const createSliderModel = (totalSlides, toggleAutoPlay) => {
+export const sliderModel = (totalSlides, toggleAutoPlay) => {
   let currentIndex = 0;
   let isSliding = false;
 
-  const navigateSlide  = (direction) => {
-    if (isSliding) return;
+  const navigateSlide = (direction) => {
+    if (isSliding) {
+      return { index: currentIndex, isLooping: false, isReverseLooping: false };
+    }
 
     isSliding = true;
 
@@ -27,7 +29,7 @@ export const createSliderModel = (totalSlides, toggleAutoPlay) => {
   };
 
   return {
-    navigateSlide ,
+    navigateSlide,
     getCurrentIndex: () => currentIndex,
   };
 };

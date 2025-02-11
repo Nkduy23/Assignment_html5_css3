@@ -1,6 +1,4 @@
-import { createSliderController } from "../slider.controller.js";
-
-export const sliderConfig = () => {
+export const setupSlider = () => {
   const config = {
     slider: ".slider",
     slides: ".slider__image",
@@ -9,6 +7,13 @@ export const sliderConfig = () => {
     autoPlayInterval: 3000,
     swipeThreshold: 50,
   };
-  const sliderController = createSliderController(config);
-  sliderController.initialize();
+
+  const elements = {
+    sliderElement: document.querySelector(config.slider),
+    slides: document.querySelectorAll(config.slides),
+    prevButton: document.querySelector(config.prevButton),
+    nextButton: document.querySelector(config.nextButton),
+  };
+
+  return { config, elements };
 };

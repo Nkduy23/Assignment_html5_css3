@@ -1,124 +1,100 @@
-import { handleToggle, handleClose } from "../models/navigation.model.js";
-import { setupNavigation } from "../controllers/setup/setupNavigation.js";
+const toggleState = (element, toggleClass, expanded = null) => {
+  const isExpanded = expanded !== null ? expanded : element.getAttribute("aria-expanded") === "true";
+  element.setAttribute("aria-expanded", expanded !== null ? expanded : !isExpanded);
 
-// Hàm khởi tạo DOM của Navbar
-export const createNavigationView = (config) => {
-  const elements = {
-    navbarBody: document.querySelector(config.navbar.body),
-    navbarButton: document.querySelector(config.navbar.button),
-    navbarClose: document.querySelector(config.navbar.close),
-    searchBody: document.querySelector(config.search.body),
-    searchButton: document.querySelector(config.search.button),
-    searchClose: document.querySelector(config.search.close),
-    dropdownToggles: document.querySelectorAll(config.dropdown),
-  };
+  if (expanded === false) {
+    element.classList.remove(toggleClass);
+  } else if (expanded === true) {
+    element.classList.add(toggleClass);
+  } else {
+    element.classList.toggle(toggleClass);
+  }
+};
 
-  return elements;
+const handleToggle = (element, bodyClass, toggleClass) => {
+  if (element) {
+    const isOpen = element.classList.contains(toggleClass);
+    document.body.classList.toggle(bodyClass, !isOpen);
+    toggleState(element, toggleClass);
+  } else {
+    console.warn(
+      `handleToggle failed: Target element is ${element}. 
+      Ensure the element exists and is correctly selected before toggling '${toggleClass}'.`
+    );
+  }
+};
+
+const handleClose = (element, bodyClass, closeClass) => {
+  if (element) {
+    document.body.classList.remove(bodyClass);
+    element.classList.remove(closeClass);
+    element.setAttribute("aria-expanded", "false");
+  } else {
+    console.warn(
+      `handleClose failed: Target element is ${element}. 
+      Ensure the element exists and is correctly selected before removing '${closeClass}'.`
+    );
+  }
 };
 
 // Hàm mở/đóng Navbar
-export const toggleNavbar = () => {
-  const { navbarBody } = setupNavigation();
-  const { searchBody } = setupNavigation();
-  console.log(navbarBody);
+export const toggleNavbar = (navbarConfig) => {
+  const { navbarBody, searchBody } = navbarConfig;
 
-  if(searchBody.getAttribute("aria-expanded") === "true") closeSearch();
+  if (searchBody.getAttribute("aria-expanded") === "true") closeSearch(navbarConfig);
 
   handleToggle(navbarBody, "navbar-open", "show");
 };
 
 // Hàm đóng Navbar
-export const closeNavbar = () => {
-  const { navbarBody } = setupNavigation();
+export const closeNavbar = (navbarConfig) => {
+  const { navbarBody } = navbarConfig;
   handleClose(navbarBody, "navbar-open", "show");
 };
 
 // Hàm mở/đóng Search
-export const toggleSearch = () => {
-  const { navbarBody } = setupNavigation();
-  const { searchBody } = setupNavigation();
-  console.log(searchBody);
+export const toggleSearch = (navbarConfig) => {
+  const { navbarBody, searchBody } = navbarConfig;
 
-  if (navbarBody.getAttribute("aria-expanded") === "true") closeNavbar();
-  
+  if (navbarBody.getAttribute("aria-expanded") === "true") closeNavbar(navbarConfig);
+
   handleToggle(searchBody, "search-open", "show");
 };
 
 // Hàm đóng Search
-export const closeSearch = () => {
-  const { searchBody } = setupNavigation();
+export const closeSearch = (navbarConfig) => {
+  const { searchBody } = navbarConfig;
   handleClose(searchBody, "search-open", "show");
 };
 
 // Hàm mở/đóng Dropdown
-export const toggleDropdown = (dropdownToggle) => {
-  if (!dropdownToggle) {
-    console.error("Dropdown toggle element not found!");
+export const toggleDropdown = (toggle) => {
+  if (!toggle) {
+    console.warn("toggleDropdown failed: The 'dropdownToggle' element is missing. Make sure the correct element is passed.");
     return;
   }
 
-  const dropdownMenu = dropdownToggle.nextElementSibling;
+  const dropdownMenu = toggle.nextElementSibling;
   if (!dropdownMenu) {
-    console.error("Dropdown menu element not found!");
+    console.warn(
+      `toggleDropdown failed: No sibling element found for the dropdown menu. 
+      Ensure 'dropdownToggle' has a valid sibling that serves as the dropdown menu.`
+    );
     return;
   }
 
-  const isExpanded = dropdownToggle.getAttribute("aria-expanded") === "true";
-  dropdownToggle.setAttribute("aria-expanded", !isExpanded);
+  const isExpanded = toggle.getAttribute("aria-expanded") === "true";
+  toggle.setAttribute("aria-expanded", !isExpanded);
   dropdownMenu.classList.toggle("active", !isExpanded);
 };
 
 // Đóng tất cả Dropdowns
-export const closeAllDropdowns = () => {
-  const { dropdownToggles } = setupNavigation();
+export const closeAllDropdowns = (navbarConfig) => {
+  const { dropdownToggles } = navbarConfig;
 
   dropdownToggles.forEach((toggle) => {
     toggle.setAttribute("aria-expanded", "false");
     const menu = toggle.nextElementSibling;
     if (menu) menu.classList.remove("active");
   });
-};
-
-// Lắng nghe sự kiện từ DOM và gọi hàm từ Controller
-export const listenToNavbarEvents = (controller) => {
-  const { navbarButton, navbarClose, searchButton, searchClose, dropdownToggles } = setupNavigation();
-
-  const addEventListenerSafe = (element, event, handler) => {
-    if (element) {
-      element.addEventListener(event, handler);
-    }
-  };
-
-  addEventListenerSafe(navbarButton, "click", (e) => {
-    e.stopPropagation();
-    controller.handleNavbarToggle();
-  });
-
-  addEventListenerSafe(navbarClose, "click", (e) => {
-    e.stopPropagation();
-    controller.handleNavbarClose();
-  });
-
-  addEventListenerSafe(searchButton, "click", (e) => {
-    e.stopPropagation();
-    controller.handleSearchToggle();
-  });
-
-  addEventListenerSafe(searchClose, "click", (e) => {
-    e.stopPropagation();
-    controller.handleSearchClose();
-  });
-
-  dropdownToggles.forEach((toggle) => {
-    addEventListenerSafe(toggle, "click", (e) => {
-      e.stopPropagation();
-      controller.handleDropdownToggle(toggle);
-    });
-  });
-
-  document.addEventListener("click", (e) => {
-    controller.handleOutsideClick(e);
-  });
-
-  console.log("Events are being listened by the View");
 };

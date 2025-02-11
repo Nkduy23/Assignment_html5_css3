@@ -1,9 +1,23 @@
-import { createSliderModel } from "../models/slider.model.js";
-import { createSliderView } from "../views/slider.view.js";
+import { setupSlider } from "./setup/setupSlider.js";
+import { sliderModel } from "../models/slider.model.js";
+import { sliderView } from "../views/slider.view.js";
 
-export const createSliderController = (config) => {
+export const sliderController = () => {
+  const { config, elements } = setupSlider();
   let autoPlayTimer = null;
-  let startX = 0; // Lưu giá trị startX để sử dụng trong handleSwipeEnd
+  let startX = 0;
+
+  const attachEvents = () => {
+    elements.prevButton.addEventListener("click", () => handleSlideChange(-1));
+    elements.nextButton.addEventListener("click", () => handleSlideChange(1));
+
+    elements.sliderElement.addEventListener("mousedown", handleSwipeStart);
+    elements.sliderElement.addEventListener("touchstart", handleSwipeStart);
+    elements.sliderElement.addEventListener("mouseup", handleSwipeEnd);
+    elements.sliderElement.addEventListener("touchend", handleSwipeEnd);
+
+    window.addEventListener("resize", view.updateImageSource);
+  };
 
   const toggleAutoPlay = (start = true) => {
     if (start) {
@@ -16,17 +30,16 @@ export const createSliderController = (config) => {
     }
   };
 
-  // Xử lý chuyển slide
   const handleSlideChange = (direction) => {
-    const { index, isLooping, isReverseLooping } = sliderModel.navigateSlide(direction);
+    const { index, isLooping, isReverseLooping } = model.navigateSlide(direction);
 
     if (isLooping || isReverseLooping) {
-      sliderView.updateSlidePosition(index, false); // Tắt transition
+      view.updateSlidePosition(index, false);
       setTimeout(() => {
-        sliderView.updateSlidePosition(index, true); // Bật lại transition
+        view.updateSlidePosition(index, true);
       }, 50);
     } else {
-      sliderView.updateSlidePosition(index, true);
+      view.updateSlidePosition(index, true);
     }
   };
 
@@ -44,17 +57,13 @@ export const createSliderController = (config) => {
     }
   };
 
-  const sliderModel = createSliderModel(document.querySelectorAll(config.slides).length, toggleAutoPlay);
+  const model = sliderModel(elements.slides.length, toggleAutoPlay);
+  const view = sliderView(elements);
 
-  const sliderView = createSliderView(config, handleSlideChange, handleSwipeStart, handleSwipeEnd);
-
-  const initialize = () => {
-    sliderView.updateSlidePosition(sliderModel.getCurrentIndex(), true);
+  const init = () => {
+    attachEvents();
     toggleAutoPlay(true);
-    sliderView.attachEvents();
   };
 
-  return {
-    initialize,
-  };
+  return { init };
 };

@@ -1,6 +1,4 @@
-import { createNavigationView } from "../../views/navigation.view.js";
-
-export const setupNavigation = () => {
+export const setupNavbar = () => {
   const config = {
     navbar: {
       body: ".nav",
@@ -15,5 +13,16 @@ export const setupNavigation = () => {
     dropdown: ".dropdown",
   };
 
-  return createNavigationView(config);
+  const elements = {
+    navbarBody: document.querySelector(config.navbar.body),
+    navbarButton: document.querySelector(config.navbar.button),
+    navbarClose: document.querySelector(config.navbar.close),
+    searchBody: document.querySelector(config.search.body),
+    searchButton: document.querySelector(config.search.button),
+    searchClose: document.querySelector(config.search.close),
+    dropdownToggles: document.querySelectorAll(config.dropdown),
+  };
+
+  return elements;
 };
+
