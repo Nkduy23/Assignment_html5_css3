@@ -4,7 +4,7 @@ export const renderHTMLContent = (content, elementId) => {
       if (!targetElement) {
         throw new Error(`Element with ID "${elementId}" not found.`);
       }
-      targetElement.innerHTML = content; // Gắn nội dung HTML vào DOM
+      targetElement.innerHTML = content;
     } catch (error) {
       console.error("Error rendering HTML content:", error);
       throw error;

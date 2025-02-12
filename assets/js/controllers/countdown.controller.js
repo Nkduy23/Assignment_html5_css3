@@ -9,6 +9,7 @@ export class CountdownController {
 
   start() {
     // Khởi tạo bộ đếm ngược
+    // remainingTime là callback
     this.timer.start((remainingTime) => {
       if (remainingTime <= 0) {
         displaySaleEndedMessage(this.onEndMessage);
@@ -19,3 +20,13 @@ export class CountdownController {
     });
   }
 }
+
+
+
+// Bước	Hành động của hàm?
+// 1	Controller gọi this.timer.start(callback)	Controller
+// 2	Model chạy setInterval(), tính toán thời gian	Model
+// 3	Model gọi callback(remainingTime), gửi dữ liệu về Controller	Model
+// 4	Controller nhận remainingTime và gọi updateCountdownView()	Controller
+// 5	Giao diện cập nhật số ngày, giờ, phút, giây còn lại	View
+

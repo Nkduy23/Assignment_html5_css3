@@ -1,4 +1,4 @@
-import { fetchHTMLContent } from "../models/include-html.model.js";
+import { fetchHTMLContent } from "../models/fetch-header-footer.model.js";
 import { renderHTMLContent } from "../views/header-footer.view.js";
 
 const includeHTML = async (file, elementId) => {

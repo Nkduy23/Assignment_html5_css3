@@ -2,6 +2,7 @@ export const sliderModel = (totalSlides, toggleAutoPlay) => {
   let currentIndex = 0;
   let isSliding = false;
 
+  // Hàm chuyển slide
   const navigateSlide = (direction) => {
     if (isSliding) {
       return { index: currentIndex, isLooping: false, isReverseLooping: false };

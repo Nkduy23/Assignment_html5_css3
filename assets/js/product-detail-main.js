@@ -1,13 +1,11 @@
-import { setupHeaderFooter } from "./utils/setup-header-footer.util.js";
-import { navbarController } from "./controllers/navigation.controller.js";
-import { listenToNavbarEvents } from "./views/navigation.view.js";
+import { setupHeaderFooter } from "./controllers/header-footer.controller.js";
+import { listenToNavbarEvents } from "./controllers/navigation.controller.js";
 
 const initializeProductDetailPage = async () => {
   try {
     await setupHeaderFooter();
-    // Điều phối logic điều hướng giữa View và Model
-    const navbarCtrl = navbarController();
-    listenToNavbarEvents(navbarCtrl);
+
+    listenToNavbarEvents();
     
   } catch (error) {
     console.error("Error initializing product detail page:", error);

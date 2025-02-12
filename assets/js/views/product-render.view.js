@@ -10,7 +10,6 @@ const getCategoryContainer = (category) => {
   return categoryMap[category] || null;
 };
 
-// Hàm render sản phẩm
 const renderProduct = (product, container = null) => {
   if (!product) {
     console.error("Product is undefined or null.");
@@ -20,10 +19,8 @@ const renderProduct = (product, container = null) => {
   const productHTML = createProductHTML(product);
 
   if (container) {
-    // Render vào container được truyền
     container.insertAdjacentHTML("beforeend", productHTML);
   } else if (product.category) {
-    // Tự động tìm container theo danh mục sản phẩm
     const categoryContainer = getCategoryContainer(product.category);
     if (categoryContainer) {
       categoryContainer.insertAdjacentHTML("beforeend", productHTML);
@@ -35,12 +32,10 @@ const renderProduct = (product, container = null) => {
   }
 };
 
-// Hàm render sản phẩm Sale
 const renderSaleProduct = (product, container) => {
   renderProduct(product, container);
 };
 
-// Hàm render sản phẩm Regular
 const renderRegularProductByCategory = (product) => {
   renderProduct(product);
 };

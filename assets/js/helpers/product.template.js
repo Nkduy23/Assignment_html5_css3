@@ -6,10 +6,8 @@ function createProductHTML(product) {
     )
     .join("");
 
-  // Tạo label giảm giá
   const saleLabel = product.type === "sale" ? `<div class="product-card__sale-label" data-sale="${product.salePercent}" aria-label="Sale ${product.salePercent}"></div>` : "";
 
-  // Thanh tiến trình nếu là sản phẩm sale
   const progressBar =
     product.type === "sale"
       ? `<div class="product-card__progress" role="progressbar" aria-valuenow="${product.progress}" aria-valuemin="0" aria-valuemax="100" aria-label="Progress bar">
@@ -18,7 +16,6 @@ function createProductHTML(product) {
        </div>`
       : "";
 
-  // Tính toán giá đã giảm (chuyển đổi giá tiền thành số và trừ giảm giá)
   let discountedPriceHTML = "";
   if (product.type === "sale") {
     const originalPrice = parseInt(product.price.replace(/[^0-9]/g, ""), 10);
@@ -34,7 +31,6 @@ function createProductHTML(product) {
     discountedPriceHTML = `<p class="product-card__price-regular">${product.price}</p>`;
   }
 
-  // Đường dẫn đến trang chi tiết sản phẩm
   const productPage =
     product.type === "sale" ? `/views/detail/sale-detail.html?id=${product.id}&category=${product.category}` : `/views/detail/product-detail.html?id=${product.id}&category=${product.category}`;
 

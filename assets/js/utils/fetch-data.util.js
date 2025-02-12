@@ -7,7 +7,7 @@ export const fetchData = async (jsonFile) => {
 
     return await response.json();
   } catch (error) {
-    console.error("Error fetching data:", error); // Log lỗi ra console
-    throw error; // Ném lại lỗi để xử lý tiếp ở cấp trên
+    console.error("Error fetching data:", error);
+    throw error;
   }
 };

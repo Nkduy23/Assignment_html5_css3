@@ -1,7 +1,7 @@
+import { getCategoryProducts } from "../models/product.model.js";
 import { renderSaleProduct, renderRegularProductByCategory } from "../views/product-render.view.js";
 import { addColorChangeEventListeners } from "../views/product-color.view.js";
 import { updateProductProgress } from "../views/product-progress.view.js";
-import { getCategoryProducts } from "../models/product.model.js";
 
 console.log("Product Category Controller Loaded");
 
@@ -46,11 +46,11 @@ const renderProducts = (products, category, container, renderFunction) => {
   console.log(`Rendered ${products[`${category}Products`].length} products for category "${category}".`);
 };
 
-// Hàm chính
 export const loadDataByCategory = async (category) => {
   const { containerId, renderFunction } = getCategoryConfig(category);
 
   const container = document.getElementById(containerId);
+  
   if (!container) {
     console.error(`Container element for category "${category}" not found!`);
     return;

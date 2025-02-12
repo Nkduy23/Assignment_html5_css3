@@ -1,20 +1,18 @@
-import { setupHeaderFooter } from "./utils/setup-header-footer.util.js";
-import { navbarController } from "./controllers/navigation.controller.js";
-import { listenToNavbarEvents } from "./views/navigation.view.js";
+import { setupHeaderFooter } from "./controllers/header-footer.controller.js";
+import { listenToNavbarEvents } from "./controllers/navigation.controller.js";
 import { loadDataByCategory } from "./controllers/category.controller.js";
 
 const initializeCategoryPage = async () => {
   try {
     await setupHeaderFooter();
 
-    const navbarCtrl = navbarController();
-    listenToNavbarEvents(navbarCtrl);
+    listenToNavbarEvents();
 
     const category = new URLSearchParams(window.location.search).get("category");
     if (category) {
       loadDataByCategory(category);
     } else {
-      console.warn("Tham số 'category' không được cung cấp trong URL. Hiển thị danh mục mặc định.");
+      console.warn("Category parameter not found in URL. Loading default category.");
       loadDataByCategory("default");
     }
   } catch (error) {

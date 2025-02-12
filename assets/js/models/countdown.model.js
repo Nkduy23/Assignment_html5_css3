@@ -30,8 +30,8 @@ export class CountdownTimer {
    */
   start(callback) {
     this.interval = setInterval(() => {
-      const remainingTime = this.calculateRemainingTime();
-      callback(remainingTime);
+      const remainingTime = this.calculateRemainingTime(); // Model tính toán thời gian còn lại
+      callback(remainingTime); // gọi lại callback, gửi dữ liệu về controller
 
       if (remainingTime.days === 0 && remainingTime.hours === 0 && remainingTime.minutes === 0 && remainingTime.seconds === 0) {
         clearInterval(this.interval);

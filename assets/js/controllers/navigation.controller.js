@@ -49,6 +49,4 @@ export const listenToNavbarEvents = () => {
     if (!e.target.closest(".header__search") && !e.target.closest(".header__action-button-open")) closeSearch(navbarConfig);
     if (!e.target.closest(".dropdown")) closeAllDropdowns(navbarConfig);
   });
-
-  console.log("Events are being listened by the View");
 };
