@@ -1,4 +1,7 @@
 @media (max-width: 768px) {
+  .container-main {
+    padding: 0 0.5rem;
+  }
   html {
     font-size: 55%;
   }
@@ -50,13 +53,14 @@
 
   .product-detail {
     grid-template-columns: 1fr;
-
+    padding: 0.5rem;
     &__thumbnails {
       grid-template-columns: repeat(2, 1fr);
     }
   }
   .related-products__grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
   }
 }
 

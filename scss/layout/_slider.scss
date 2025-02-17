@@ -4,6 +4,9 @@
 }
 
 .slider {
+  transition: transform 0.5s ease-in-out;
+  display: flex;
+  
   &__prev-button,
   &__next-button {
     position: absolute;
@@ -34,12 +37,10 @@
 
   &__item {
     min-width: 100%;
+    cursor: grabbing;
   }
 
   &__image {
     width: 100%;
   }
-
-  transition: transform 0.5s ease-in-out;
-  display: flex;
 }

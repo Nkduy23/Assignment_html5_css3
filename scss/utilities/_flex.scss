@@ -23,12 +23,18 @@
 .d-flex-center {
     display: flex;
     justify-content: center;
-    align-items: center;
+    // align-items: center;
 }
 
 .d-flex-between {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+.d-flex-around {
+    display: flex;
+    justify-content: space-around;
     align-items: center;
 }
 

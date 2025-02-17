@@ -1,57 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Register</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
     <link rel="stylesheet" href="../../assets/css/main.css" />
-    <link rel="stylesheet" href="../../assets/css/register.css" />
-</head>
-<body>
+    <link rel="stylesheet" href="../../assets/css/login.css" />
+  </head>
+  <body>
     <!-- Header -->
     <div id="header-placeholder"></div>
 
-    <div class="register-container">
+    <main class="login-container">
+      <div class="login-box">
         <h2>Đăng Ký</h2>
-        <form action="#" class="register-form">
-            <div class="form-group">
-                <label for="fullname">Tên</label>
-                <input type="text" id="fullname" placeholder="Enter your full name" required>
-            </div>
+        <form action="#" method="POST">
+          <div class="input-group">
+            <label for="hoTen">Họ Tên</label>
+            <input type="text" id="hoTen" name="hoTen" required />
+          </div>
+          <div class="input-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="input-group">
+            <label for="taiKhoan">Tài Khoản Đăng Nhập</label>
+            <input type="text" id="taiKhoan" name="taiKhoan" required />
+          </div>
+          <div class="input-group">
+            <label for="password">Mật Khẩu</label>
+            <input type="password" id="password" name="password" required />
+          </div>
+          <div class="input-group">
+            <label for="confirmPassword">Nhắc Lại Mật Khẩu</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required />
+          </div>
+          <div class="actions">
+            <button type="submit" class="btn login">Đăng Ký</button>
+          </div>
+          
+          <p class="or">Hoặc đăng nhập với</p>
 
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" placeholder="Enter your email" required>
-            </div>
-
-            <div class="form-group">
-                <label for="password">Mật Khẩu</label>
-                <input type="password" id="password" placeholder="Enter your password" required>
-            </div>
-
-            <div class="form-group">
-                <label for="confirm-password">Nhập Lại Mật Khẩu</label>
-                <input type="password" id="confirm-password" placeholder="Confirm your password" required>
-            </div>
-
-            <button type="submit" class="btn-register">Đăng Ký</button>
-
-            <div class="register-options">
-                <p>Bạn đã có tài khoản? <a href="login.html">Đăng Nhập</a></p>
-            </div>
-
-            <div class="social-login">
-                <p>Hoặc đăng nhập với:</p>
-                <button class="btn-google">Google</button>
-                <button class="btn-facebook">Facebook</button>
-            </div>
+          <div class="social-login">
+            <button class="btn google"><img src="../../assets/icon/google.png" alt="" />Google</button>
+            <button class="btn facebook"><img src="../../assets/icon/facebook.png" alt="" />Facebook</button>
+          </div>
         </form>
-    </div>
+      </div>
+    </main>
 
     <!-- Footer -->
     <div id="footer-placeholder"></div>
 
     <script src="../../assets/js/product-detail-main.js" type="module"></script>
-</body>
+  </body>
 </html>

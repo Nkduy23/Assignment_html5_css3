@@ -79,4 +79,9 @@
       }
     }
   }
+
+  &__bottom.bct {
+    border-top: 1px solid #ccc;
+    column-gap: 4rem;
+  }
 }

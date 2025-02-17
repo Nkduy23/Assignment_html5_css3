@@ -13,10 +13,20 @@
 
     <main>
       <div class="container-main">
+        <section class="filter-section">
+          <h2>Bộ Lọc</h2>
+          <p>Sắp Xếp Theo:</p>
+          <select name="price" id="price">
+            <option value="all">Tùy chọn</option>
+            <option value="low">Gía từ thấp đến cao</option>
+            <option value="high">Gía từ cao đến thấp</option>
+          </select>
+        </section>
+
         <section class="home__flash-sale" aria-label="Regular Products">
           <div id="regular-products" class="product-list">
             <div id="shoes-for-men">
-              <h3 class="category-title">Giày Nam</h3>
+              <h3 class="category-title list">Giày Nam</h3>
               <div class="category-list container"></div>
             </div>
           </div>
@@ -26,7 +36,7 @@
 
     <!-- Footer -->
     <div id="footer-placeholder"></div>
-    
+
     <script src="../../assets/js/category-main.js" type="module"></script>
   </body>
 </html>
