@@ -1,0 +1,72 @@
+.checkout-container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.checkout-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.checkout-container .checkout-layout {
+  display: flex;
+  gap: 20px;
+}
+.checkout-container .checkout-layout .order-summary {
+  flex: 1;
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+}
+.checkout-container .checkout-layout .order-summary table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+.checkout-container .checkout-layout .order-summary table th, .checkout-container .checkout-layout .order-summary table td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+.checkout-container .checkout-layout .order-summary table th {
+  background: #eee;
+}
+.checkout-container .checkout-layout .order-summary h3 {
+  text-align: right;
+  margin-top: 10px;
+}
+.checkout-container .checkout-layout .customer-info {
+  flex: 1;
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+}
+.checkout-container .checkout-layout .customer-info form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.checkout-container .checkout-layout .customer-info form label {
+  font-weight: bold;
+}
+.checkout-container .checkout-layout .customer-info form input, .checkout-container .checkout-layout .customer-info form select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+.checkout-container .checkout-layout .customer-info form button {
+  background: #007bff;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+.checkout-container .checkout-layout .customer-info form button:hover {
+  background: #0056b3;
+}

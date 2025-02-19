@@ -38,7 +38,14 @@ function createProductHTML(product) {
         <div class="product-card" data-type="${product.type}" aria-label="Product Card">
           <div class="product-card__image-wrapper">
             <a href="${productPage}">
-              <img src="${product.images ? product.images.default : product.image}" alt="${product.name}" class="product-card__image" data-product-id="${product.id}" />
+              <img src="${product.images ? product.images.default : product.image}"  
+              draggable="true" 
+              data-product-id="${product.id}"  
+              alt="${product.name}" 
+              data-product-price="${product.price}"
+              data-product-size="${product.size || 'M'}"
+              data-product-color="${Array.isArray(product.colors) ? product.colors[0] : product.colors}" 
+              class="product-card__image" data-product-id="${product.id}" />
             </a>
             ${saleLabel}
             <div class="product-card__color-options">

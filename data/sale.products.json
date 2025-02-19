@@ -180,7 +180,7 @@
       "salePercent": "40%",
       "saleEnd": "",
       "progress": 75,
-      "colors": ["DarkRed"],
+      "colors": ["DarkRed", "Cornsilk", "Black"],
       "sizes": ["35", "36", "37", "38"],
       "reviews": 100,
       "likes": 10,

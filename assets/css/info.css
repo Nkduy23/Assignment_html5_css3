@@ -1,0 +1,52 @@
+.container-main.info-mwc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  gap: 30px;
+}
+.container-main.info-mwc section {
+  width: 80%;
+  max-width: 800px;
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  overflow-x: scroll;
+}
+.container-main.info-mwc section h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+.container-main.info-mwc section p {
+  font-size: 16px;
+  color: #555;
+}
+.container-main.info-mwc section svg {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+}
+.container-main.info-mwc section ul {
+  list-style: none;
+  padding: 0;
+}
+.container-main.info-mwc section ul li {
+  font-size: 16px;
+  padding: 5px 0;
+}
+.container-main.info-mwc section iframe {
+  border-radius: 10px;
+}
+.container-main.info-mwc section canvas {
+  background: #fff;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+}

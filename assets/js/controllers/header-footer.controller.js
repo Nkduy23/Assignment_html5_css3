@@ -10,6 +10,7 @@ const includeHTML = async (file, elementId) => {
   }
 };
 
+
 export const setupHeaderFooter = async () => {
   try {
     await includeHTML("../../components/header.html", "header-placeholder");

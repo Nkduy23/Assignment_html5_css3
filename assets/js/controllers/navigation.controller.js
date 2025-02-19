@@ -50,3 +50,5 @@ export const listenToNavbarEvents = () => {
     if (!e.target.closest(".dropdown")) closeAllDropdowns(navbarConfig);
   });
 };
+
+

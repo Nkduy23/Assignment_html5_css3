@@ -123,6 +123,11 @@
               </li>
             </ul>
           </li>
+
+          <!-- Thông tin shop -->
+          <li class="nav__item info" role="info-shop" aria-haspopup="false">
+            <a class="nav__link" href="../views/info/info.html" id="dropdownMenu-6">Thông tin</a>
+          </li>
         </ul>
       </nav>
 
@@ -143,12 +148,16 @@
         <button type="button" class="header__action-button-open d-none button" aria-controls="Search" aria-expanded="false" aria-label="Search button">
           <i class="fa-solid fa-magnifying-glass"></i>
         </button>
-        <a href="/views/account/login.html" class="header__action-button button" aria-label="Login button">
-          <i class="fa-regular fa-user"></i>
-        </a>
         <a href="/views/cart/cart.html" class="header__action-button button" aria-label="Cart button">
           <i class="fa-solid fa-cart-shopping"></i>
         </a>
+        <div class="header__user-info" style="display: none"></div>
+        <a href="/views/account/login.html" class="header__action-button-login button" aria-label="Login button">
+          <i class="fa-regular fa-user"></i>
+        </a>
+        <button class="button header__action-button-logout" style="display: none">
+          <i class="fa-solid fa-sign-out"></i>
+        </button>
       </div>
     </div>
   </header>

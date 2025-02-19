@@ -12,7 +12,6 @@ function displayError(message) {
 
 getCategoryProducts(category)
   .then((data) => {
-    console.log(data);
     const productKey = `${category}Products`;
 
     if (data[productKey] && Array.isArray(data[productKey])) {
@@ -37,6 +36,8 @@ function updateElement(selector, content, attribute = "textContent") {
 function updateProductDetails(product) {
   updateElement(".product-detail__title", product.name);
 
+  document.querySelector(".product-detail__title").dataset.id = product.id;
+
   updateRating(product.rating, product.reviews, product.likes);
 
   updatePrice(product);
@@ -44,6 +45,8 @@ function updateProductDetails(product) {
   updateColorOptions(product.colors);
 
   updateSizeOptions(product.sizes);
+
+  updateQuantity();
 
   addActionButtons();
 
@@ -122,21 +125,30 @@ function updateColorOptions(colors) {
   colorOptionsContainer.innerHTML = "";
 
   if (colors && colors.length > 0) {
-    colors.forEach((color) => {
-      const colorButton = document.createElement("button");
-      colorButton.classList.add("product-detail__color-option");
-      colorButton.style.backgroundColor = color.toLowerCase();
-      colorButton.setAttribute("data-color", color);
+    if (colors.length === 1) {
+      // Nếu chỉ có 1 màu, tự động chọn màu đó
+      const singleColor = colors[0];
+      colorOptionsContainer.innerHTML = `<button class="product-detail__color-option active" data-color="${singleColor}" style="background-color: ${singleColor.toLowerCase()}"></button>`;
+      colorOptionsContainer.dataset.selectedColor = singleColor;  // Lưu màu vào dataset
+    } else {
+      // Nếu có nhiều màu, tạo các button màu để người dùng chọn
+      colors.forEach((color) => {
+        const colorButton = document.createElement("button");
+        colorButton.classList.add("product-detail__color-option");
+        colorButton.style.backgroundColor = color.toLowerCase();
+        colorButton.setAttribute("data-color", color);
 
-      colorButton.addEventListener("click", () => {
-        document.querySelectorAll(".product-detail__color-option").forEach((btn) => {
-          btn.classList.remove("active");
+        colorButton.addEventListener("click", () => {
+          document.querySelectorAll(".product-detail__color-option").forEach((btn) => {
+            btn.classList.remove("active");
+          });
+          colorButton.classList.add("active");
+          colorOptionsContainer.dataset.selectedColor = color;  // Lưu màu vào dataset
         });
-        colorButton.classList.add("active");
-      });
 
-      colorOptionsContainer.appendChild(colorButton);
-    });
+        colorOptionsContainer.appendChild(colorButton);
+      });
+    }
   } else {
     colorOptionsContainer.innerHTML = "<p>Không có màu sắc.</p>";
   }
@@ -152,6 +164,7 @@ function updateSizeOptions(sizes) {
       sizeOption.value = size;
       sizeOption.textContent = size;
 
+      // Đảm bảo khi người dùng chọn size, sẽ có class 'active'
       sizeOption.addEventListener("click", () => {
         document.querySelectorAll(".product-detail__size-options option").forEach((opt) => {
           opt.classList.remove("active");
@@ -166,6 +179,53 @@ function updateSizeOptions(sizes) {
   }
 }
 
+// Hàm thêm vào giỏ hàng
+function addToCart() {
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  const quantity = parseInt(document.querySelector(".product-detail__quantity-value").textContent);
+  
+  // Lấy màu đã chọn từ dataset (hoặc tự động chọn nếu chỉ có 1 màu)
+  const selectedColor = document.querySelector(".product-detail__color-options").dataset.selectedColor || "Không chọn";
+  
+  // Lấy size đã chọn từ các option có class 'active'
+  const selectedSizeElement = document.querySelector(".product-detail__size-options .active");
+
+  // Kiểm tra đã chọn size chưa
+  if (!selectedSizeElement) {
+    alert("Vui lòng chọn size trước khi thêm vào giỏ hàng!");
+    return;
+  }
+  // Kiểm tra đã chọn màu chưa
+  if (!selectedColor) {
+    alert("Vui lòng chọn màu trước khi thêm vào giỏ hàng!");
+    return;
+  }
+  const selectedSize = selectedSizeElement.value;
+
+  const productId = document.querySelector(".product-detail__title").dataset.id;
+  const existingProduct = cart.find((item) => item.id === productId && item.color === selectedColor && item.size === selectedSize);
+
+  if (existingProduct) {
+    existingProduct.quantity += quantity;
+  } else {
+    cart.push({
+      id: productId,
+      name: document.querySelector(".product-detail__title").textContent,
+      price: document.querySelector(".product-detail__price-discounted")?.textContent || 
+             document.querySelector(".product-detail__price").textContent,
+      image: document.querySelector(".product-detail__image").src,
+      quantity: quantity,
+      color: selectedColor,
+      size: selectedSize,
+    });
+  }
+
+  localStorage.setItem("cart", JSON.stringify(cart));
+  alert("Sản phẩm đã được thêm vào giỏ hàng!");
+}
+
+
+
 function addActionButtons() {
   const buyNowButton = document.querySelector(".product-detail__buy-now");
   const addToCartButton = document.querySelector(".product-detail__add-to-cart");
@@ -175,7 +235,26 @@ function addActionButtons() {
   });
 
   addToCartButton.addEventListener("click", () => {
-    alert("Sản phẩm đã được thêm vào giỏ hàng!");
+    addToCart();
+  });
+}
+
+function updateQuantity() {
+  const quantityValue = document.querySelector(".product-detail__quantity-value");
+  const buttons = document.querySelectorAll(".product-detail__quantity-button");
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      let currentQuantity = parseInt(quantityValue.textContent) || 1;
+
+      if (button.textContent === "+") {
+        currentQuantity++;
+      } else if (button.textContent === "-" && currentQuantity > 1) {
+        currentQuantity--;
+      }
+
+      quantityValue.textContent = currentQuantity;
+    });
   });
 }
 

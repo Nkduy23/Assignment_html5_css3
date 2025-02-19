@@ -85,6 +85,21 @@
   -moz-column-gap: 1.5rem;
        column-gap: 1.5rem;
 }
+.product-detail__quantity-options {
+  gap: 1rem;
+}
+.product-detail__quantity-button {
+  border: none;
+  background-color: #f1f1f1;
+  cursor: pointer;
+  font-size: 1.6rem;
+  padding: 1rem;
+  margin-left: 1rem;
+  transition: background-color 0.3s ease;
+}
+.product-detail__quantity-button:hover {
+  background-color: #ddd;
+}
 .product-detail__add-to-cart, .product-detail__buy-now {
   padding: 1.2rem 2rem;
   border: none;

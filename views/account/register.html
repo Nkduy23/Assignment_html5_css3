@@ -25,8 +25,8 @@
             <input type="email" id="email" name="email" required />
           </div>
           <div class="input-group">
-            <label for="taiKhoan">Tài Khoản Đăng Nhập</label>
-            <input type="text" id="taiKhoan" name="taiKhoan" required />
+            <label for="username">Tài Khoản Đăng Nhập</label>
+            <input type="text" id="username" name="username" required />
           </div>
           <div class="input-group">
             <label for="password">Mật Khẩu</label>
@@ -39,7 +39,7 @@
           <div class="actions">
             <button type="submit" class="btn login">Đăng Ký</button>
           </div>
-          
+
           <p class="or">Hoặc đăng nhập với</p>
 
           <div class="social-login">
@@ -52,6 +52,44 @@
 
     <!-- Footer -->
     <div id="footer-placeholder"></div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.querySelector("form");
+        form.addEventListener("submit", function (event) {
+          event.preventDefault();
+          const hoTen = document.getElementById("hoTen").value;
+          const email = document.getElementById("email").value;
+          const taiKhoan = document.getElementById("username").value;
+          const password = document.getElementById("password").value;
+          const confirmPassword = document.getElementById("confirmPassword").value;
+
+          if (password !== confirmPassword) {
+            alert("Mật khẩu nhập lại không khớp!");
+            return;
+          }
+
+          // Lấy danh sách user từ localStorage
+          let users = JSON.parse(localStorage.getItem("users")) || [];
+
+          // Kiểm tra tài khoản hoặc email đã tồn tại chưa
+          const isExist = users.some((user) => user.email === email || user.taiKhoan === taiKhoan);
+
+          if (isExist) {
+            alert("Email hoặc tài khoản đã tồn tại!");
+            return;
+          }
+
+          // Lưu thông tin user vào localStorage
+          const newUser = { hoTen, email, taiKhoan, password };
+          users.push(newUser);
+          localStorage.setItem("users", JSON.stringify(users));
+
+          alert("Đăng ký thành công! Chuyển hướng đến trang đăng nhập...");
+          window.location.href = "login.html";
+        });
+      });
+    </script>
 
     <script src="../../assets/js/product-detail-main.js" type="module"></script>
   </body>
