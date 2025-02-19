@@ -1,12 +1,12 @@
 .container-main {
-    margin-bottom: 5rem;
+  margin-bottom: 5rem;
 }
 
 .cart-container {
   margin: 20px auto;
   background: #fff;
   border-radius: 10px;
-  overflow-x:auto;
+  overflow-x: auto;
 
   h2 {
     text-align: center;
@@ -26,6 +26,13 @@
       text-align: center;
     }
 
+    td {
+      white-space: nowrap;
+      overflow-x: hidden;
+      text-overflow: ellipsis;
+      max-width: 250px;
+    }
+
     th {
       background: #f4f4f4;
       font-weight: bold;
@@ -40,46 +47,46 @@
 }
 
 .cart-summary-container {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 20px;
-  }
-  
-  .cart-summary {
-    width: 300px;
-    padding: 20px;
-    background: #fcf8f8;
-    border-radius: 10px;
-    text-align: center;
-  
-    h3 {
-      margin-bottom: 5px;
-      padding: 5px;
-      font-weight: bold;
-      font-size: 1.8rem;
-    }
-  
-    p {
-      font-size: 1.5rem;
-      margin-bottom: 10px;
-    }
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
 
-    #total-price {
-      font-weight: bold;
-      color: rgba(189, 25, 25, 0.848);
-    }
-  
-    .checkout-btn {
-      padding: 10px 20px;
-      background: #28a745;
-      color: #fff;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: 0.3s;
-  
-      &:hover {
-        background: #218838;
-      }
+.cart-summary {
+  width: 300px;
+  padding: 20px;
+  background: #fcf8f8;
+  border-radius: 10px;
+  text-align: center;
+
+  h3 {
+    margin-bottom: 5px;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 1.8rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  #total-price {
+    font-weight: bold;
+    color: rgba(189, 25, 25, 0.848);
+  }
+
+  .checkout-btn {
+    padding: 10px 20px;
+    background: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      background: #218838;
     }
   }
+}

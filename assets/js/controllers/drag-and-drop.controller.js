@@ -1,8 +1,5 @@
 export function dragStart(event) {
-  console.log("dragStart được gọi với event:", event);
-  
   const productElement = event.target.closest(".product-card");
-  console.log("productElement:", productElement);
 
   if (!productElement) {
     console.log("Không tìm thấy productElement");
@@ -26,17 +23,13 @@ export function dragStart(event) {
     quantity: 1,
   };
 
-  console.log("Dữ liệu sản phẩm được kéo:", productData);
   event.dataTransfer.setData("application/json", JSON.stringify(productData));
 }
 
-
-// Hàm cho phép thả vào khu vực giỏ hàng
 export function allowDrop(event) {
   event.preventDefault();
 }
 
-// Hàm xử lý khi thả sản phẩm vào giỏ hàng
 export function drop(event) {
   event.preventDefault();
 
@@ -47,8 +40,6 @@ export function drop(event) {
   }
 
   const productData = JSON.parse(productDataJSON);
-  console.log("Dữ liệu thả vào:", productData); // Kiểm tra dữ liệu có đúng không
-
   const cart = JSON.parse(localStorage.getItem("cart")) || [];
   const existingProduct = cart.find((item) => item.id === productData.id);
 

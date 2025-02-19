@@ -93,4 +93,10 @@
       row-gap: 2.5rem;
     }
   }
+
+  .checkout-container {
+    .checkout-layout {
+      grid-template-columns: 1fr;
+    }
+  }
 }

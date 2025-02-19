@@ -37,7 +37,7 @@ const handleClose = (element, bodyClass, closeClass) => {
   }
 };
 
-// Hàm mở/đóng Navbar
+
 export const toggleNavbar = (navbarConfig) => {
   const { navbarBody, searchBody } = navbarConfig;
 
@@ -46,13 +46,13 @@ export const toggleNavbar = (navbarConfig) => {
   handleToggle(navbarBody, "navbar-open", "show");
 };
 
-// Hàm đóng Navbar
+
 export const closeNavbar = (navbarConfig) => {
   const { navbarBody } = navbarConfig;
   handleClose(navbarBody, "navbar-open", "show");
 };
 
-// Hàm mở/đóng Search
+
 export const toggleSearch = (navbarConfig) => {
   const { navbarBody, searchBody } = navbarConfig;
 
@@ -61,13 +61,11 @@ export const toggleSearch = (navbarConfig) => {
   handleToggle(searchBody, "search-open", "show");
 };
 
-// Hàm đóng Search
 export const closeSearch = (navbarConfig) => {
   const { searchBody } = navbarConfig;
   handleClose(searchBody, "search-open", "show");
 };
 
-// Hàm mở/đóng Dropdown
 export const toggleDropdown = (toggle) => {
   if (!toggle) {
     console.warn("toggleDropdown failed: The 'dropdownToggle' element is missing. Make sure the correct element is passed.");
@@ -88,7 +86,6 @@ export const toggleDropdown = (toggle) => {
   dropdownMenu.classList.toggle("active", !isExpanded);
 };
 
-// Đóng tất cả Dropdowns
 export const closeAllDropdowns = (navbarConfig) => {
   const { dropdownToggles } = navbarConfig;
 

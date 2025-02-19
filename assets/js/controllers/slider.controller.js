@@ -31,10 +31,8 @@ export const sliderController = () => {
   };
 
   const handleSlideChange = (direction) => {
-    // Tạo biến và gọi hàm từ model truyền direction
     const { index, isLooping, isReverseLooping } = model.navigateSlide(direction);
 
-    // Của hàm từ view truyền index và enableTransition
     if (isLooping || isReverseLooping) {
       view.updateSlidePosition(index, false);
       setTimeout(() => {
@@ -45,12 +43,10 @@ export const sliderController = () => {
     }
   };
 
-  // Hàm xuất hành khi người dùng tương tác
   const handleSwipeStart = (e) => {
     startX = e.touches ? e.touches[0].clientX : e.clientX;
   };
 
-  // Hàm tính deltaX vị trí từ lúc chạm đến lúc thả ra tính độ dài
   const handleSwipeEnd = (e) => {
     const endX = e.changedTouches ? e.changedTouches[0].clientX : e.clientX;
     const deltaX = endX - startX;

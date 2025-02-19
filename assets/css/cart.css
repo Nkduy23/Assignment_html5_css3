@@ -24,6 +24,12 @@
   border-bottom: 1px solid #ddd;
   text-align: center;
 }
+.cart-container .cart-table td {
+  white-space: nowrap;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  max-width: 250px;
+}
 .cart-container .cart-table th {
   background: #f4f4f4;
   font-weight: bold;

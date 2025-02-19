@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Thanh toán</title>
-    <link rel="stylesheet" href="../../assets/css/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
     <link rel="stylesheet" href="../../assets/css/checkout.css" />
+    <link rel="stylesheet" href="../../assets/css/main.css" />
   </head>
   <body>
     <div id="header-placeholder"></div>
@@ -14,7 +15,6 @@
       <h2>Thông tin thanh toán</h2>
 
       <div class="checkout-layout">
-        <!-- Bảng đơn hàng -->
         <div class="order-summary">
           <h3>Đơn hàng của bạn</h3>
           <table>
@@ -26,14 +26,11 @@
                 <th>Tổng</th>
               </tr>
             </thead>
-            <tbody id="order-summary">
-              <!-- Dữ liệu sản phẩm -->
-            </tbody>
+            <tbody id="order-summary"></tbody>
           </table>
           <h3>Tổng cộng: <span id="checkout-total">0</span> đ</h3>
         </div>
 
-        <!-- Form thông tin khách hàng -->
         <div class="customer-info">
           <h3>Thông tin khách hàng</h3>
           <form id="checkout-form">
@@ -45,6 +42,8 @@
 
             <label for="address">Địa chỉ giao hàng:</label>
             <input type="text" id="address" required />
+            <button type="button" id="get-location">📍 Lấy vị trí của tôi</button>
+            <p id="location-status"></p>
 
             <label for="email">Email:</label>
             <input type="email" id="email" />
@@ -63,74 +62,7 @@
     </div>
 
     <div id="footer-placeholder"></div>
-    <script src="../../assets/js/product-detail-main.js" type="module"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const orderSummary = document.getElementById("order-summary");
-        const checkoutTotal = document.getElementById("checkout-total");
-        const checkoutForm = document.getElementById("checkout-form");
-
-        let cartItems = JSON.parse(localStorage.getItem("checkoutCart")) || [];
-
-        if (cartItems.length === 0) {
-          orderSummary.innerHTML = "<tr><td colspan='4'>Không có sản phẩm nào trong đơn hàng.</td></tr>";
-          return;
-        }
-
-        let total = 0;
-        cartItems.forEach((item) => {
-          const itemTotal = parseFloat(item.price.replace(/[^0-9]/g, "")) * item.quantity;
-          total += itemTotal;
-
-          const row = document.createElement("tr");
-          row.innerHTML = `
-      <td>${item.name}</td>
-      <td>${item.quantity}</td>
-      <td>${item.price} đ</td>
-      <td>${itemTotal.toLocaleString()} đ</td>
-    `;
-          orderSummary.appendChild(row);
-        });
-
-        checkoutTotal.textContent = total.toLocaleString();
-
-        // Xử lý thanh toán khi submit form
-        checkoutForm.addEventListener("submit", function (event) {
-          event.preventDefault();
-
-          const fullname = document.getElementById("fullname").value.trim();
-          const phone = document.getElementById("phone").value.trim();
-          const address = document.getElementById("address").value.trim();
-          const email = document.getElementById("email").value.trim();
-          const paymentMethod = document.getElementById("payment-method").value;
-
-          if (!fullname || !phone || !address || !paymentMethod) {
-            alert("Vui lòng điền đầy đủ thông tin.");
-            return;
-          }
-
-          const orderData = {
-            fullname,
-            phone,
-            address,
-            email,
-            paymentMethod,
-            items: cartItems,
-            totalPrice: total,
-          };
-
-          console.log("Dữ liệu đơn hàng:", orderData);
-
-          // Xóa giỏ hàng sau khi đặt hàng
-          localStorage.removeItem("checkoutCart");
-          localStorage.removeItem("cart");
-
-          alert("Thanh toán thành công!");
-
-          // Chuyển hướng về trang chủ
-          window.location.href = "../../index.html";
-        });
-      });
-    </script>
+    <script src="../../assets/js/main.js" type="module"></script>
+    <script src="../../assets/js/page/checkout.js"></script>
   </body>
 </html>

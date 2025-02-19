@@ -12,7 +12,6 @@
     <div id="header-placeholder"></div>
 
     <main class="container-main info-mwc">
-      <!-- 1. Thông tin giới thiệu về shop -->
       <section class="shop-info">
         <h2>Giới Thiệu Về MWC</h2>
         <p>MWC là thương hiệu giày dép thời trang chất lượng cao, chuyên cung cấp các sản phẩm phong cách và bền đẹp.</p>
@@ -23,7 +22,6 @@
         </ul>
       </section>
 
-      <!-- 2. Thẻ nhúng video từ YouTube -->
       <section class="shop-video">
         <h2>Video Hướng Dẫn</h2>
         <iframe
@@ -38,7 +36,11 @@
         ></iframe>
       </section>
 
-      <!-- 3. Biểu đồ doanh thu -->
+      <section class="shop-video">
+        <h2>Video Sản Phẩm</h2>
+        <video src="../../assets/video/mwc.mp4" controls></video>
+      </section>
+
       <section class="shop-sales">
         <h2>Doanh Thu Theo Năm</h2>
         <canvas id="salesChart" width="600" height="400"></canvas>
@@ -46,12 +48,9 @@
 
       <section class="growth-chart">
         <h2>Biểu Đồ Tăng Trưởng</h2>
-        <svg id="growthChart" width="600" height="400">
-          <!-- Đường và điểm sẽ được vẽ ở đây -->
-        </svg>
+        <svg id="growthChart" width="600" height="400"></svg>
       </section>
 
-      <!-- 4. Kết luận -->
       <section class="shop-summary">
         <h2>Tổng Kết</h2>
         <p>MWC không ngừng phát triển với doanh thu tăng trưởng hàng năm. Chúng tôi cam kết mang đến sản phẩm tốt nhất cho khách hàng!</p>
@@ -60,97 +59,7 @@
 
     <div id="footer-placeholder"></div>
 
-    <script src="../../assets/js/product-detail-main.js" type="module"></script>
-    <script>
-      // Dữ liệu doanh thu bán hàng từ 2020 đến 2025
-      const salesData = {
-        2015: 500,
-        2016: 800,
-        2017: 1200,
-        2018: 1000,
-        2019: 3000,
-        2020: 5000,
-        2021: 7000,
-        2022: 4000,
-        2023: 6000,
-        2024: 10000,
-        2025: 5000,
-      };
-
-      // Lấy phần tử canvas
-      const canvas = document.getElementById("salesChart");
-      const ctx = canvas.getContext("2d");
-
-      // Vẽ trục x và y cho biểu đồ cột
-      ctx.beginPath();
-      ctx.moveTo(20, 20);
-      ctx.lineTo(20, 350); // Vẽ đường thẳng xuống dưới (trục Y)
-      ctx.lineTo(500, 350); // Vẽ đường thẳng sang phải (trục X)
-      ctx.stroke();
-
-      // Dữ liệu năm và doanh thu
-      const years = Object.keys(salesData);
-      const sales = Object.values(salesData);
-
-      // Kích thước cột và khoảng cách
-      const barWidth = 50;
-      const barSpacing = 20;
-      const maxBarHeight = 250; // Độ cao tối đa của cột trên trục Y
-
-      // Vẽ biểu đồ cột
-      for (let i = 0; i < sales.length; i++) {
-        const x = 50 + i * (barWidth + barSpacing); // Vị trí trên trục X
-        const height = (sales[i] / 12000) * maxBarHeight; // Chiều cao đúng tỷ lệ
-        const y = 350 - height; // Vị trí y để cột không bị lộn ngược
-
-        // Vẽ cột
-        ctx.fillStyle = "blue";
-        ctx.fillRect(x, y, barWidth, height); // Vẽ hình chữ nhật đại diện cho cột
-
-        // Thêm nhãn năm dưới cột
-        ctx.fillStyle = "black";
-        ctx.fillText(years[i], x + barWidth / 2 - 10, 370); // Thêm nhãn dưới cột
-      }
-
-      // Vẽ biểu đồ đường tăng trưởng với SVG
-      const svg = document.getElementById("growthChart");
-
-      // Tạo tỷ lệ cho đường (x, y)
-      const xScale = (index) => 50 + index * (500 / (years.length - 1));
-      const yScale = (value) => 350 - (value / 12000) * 250;
-
-      // Tạo đường vẽ
-      let pathData = "M " + xScale(0) + " " + yScale(sales[0]); // Điểm đầu tiên
-      for (let i = 1; i < sales.length; i++) {
-        pathData += " L " + xScale(i) + " " + yScale(sales[i]); // Các đường nối
-      }
-
-      // Tạo phần tử đường SVG
-      const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
-      path.setAttribute("d", pathData);
-      path.setAttribute("stroke", "green");
-      path.setAttribute("stroke-width", "2");
-      path.setAttribute("fill", "none");
-      svg.appendChild(path);
-
-      // Vẽ các điểm dữ liệu dưới dạng các vòng tròn nhỏ trên biểu đồ đường
-      for (let i = 0; i < sales.length; i++) {
-        const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
-        circle.setAttribute("cx", xScale(i));
-        circle.setAttribute("cy", yScale(sales[i]));
-        circle.setAttribute("r", "5");
-        circle.setAttribute("fill", "green");
-        svg.appendChild(circle);
-
-        // Thêm nhãn giá trị cho mỗi điểm
-        const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
-        text.setAttribute("x", xScale(i));
-        text.setAttribute("y", yScale(sales[i]) - 10); // Đưa nhãn lên trên điểm một chút
-        text.setAttribute("fill", "black");
-        text.setAttribute("text-anchor", "middle"); // Căn giữa nhãn
-        text.textContent = sales[i]; // Nội dung nhãn là giá trị doanh thu
-        svg.appendChild(text);
-      }
-    </script>
+    <script src="../../assets/js/main.js" type="module"></script>
+    <script src="../../assets/js/page/info.js"></script>
   </body>
 </html>

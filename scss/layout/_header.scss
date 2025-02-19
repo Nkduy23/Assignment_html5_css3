@@ -87,5 +87,13 @@
 
   &__action {
     column-gap: 1rem;
+    align-items: center;
   }
+}
+
+.header__user-info {
+  width: 50px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
