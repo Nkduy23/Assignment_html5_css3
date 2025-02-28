@@ -33,7 +33,9 @@ export const loadHomePage = async (saleContainer = null) => {
 
     // Gộp tất cả sản phẩm để xử lý sự kiện màu sắc
     const allProducts = [...products.saleProducts, ...products.regularProducts];
-    addColorChangeEventListeners(allProducts);
+    console.log("allProducts", allProducts);
+    
+    addColorChangeEventListeners(allProducts);  
     updateProductProgress();
   } catch (error) {
     console.error("Error loading home page:", error);

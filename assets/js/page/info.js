@@ -15,7 +15,6 @@ const salesData = {
   const canvas = document.getElementById("salesChart");
   const ctx = canvas.getContext("2d");
   
-  // Vẽ trục x và y cho biểu đồ cột
   ctx.beginPath();
   ctx.moveTo(20, 20);
   ctx.lineTo(20, 350); // Vẽ đường thẳng xuống dưới (trục Y)
@@ -24,15 +23,14 @@ const salesData = {
   
   const years = Object.keys(salesData);
   const sales = Object.values(salesData);
-  
-  // Kích thước cột và khoảng cách
+
   const barWidth = 50;
   const barSpacing = 20;
-  const maxBarHeight = 250; // Độ cao tối đa của cột trên trục Y
+  const maxBarHeight = 250;
   
   for (let i = 0; i < sales.length; i++) {
-    const x = 50 + i * (barWidth + barSpacing); // Vị trí trên trục X
-    const height = (sales[i] / 12000) * maxBarHeight; // Chiều cao đúng tỷ lệ
+    const x = 50 + i * (barWidth + barSpacing);
+    const height = (sales[i] / 12000) * maxBarHeight;
     const y = 350 - height; // Vị trí y để cột không bị lộn ngược
   
     // Vẽ cột
@@ -47,18 +45,15 @@ const salesData = {
   // Vẽ biểu đồ đường tăng trưởng với SVG
   const svg = document.getElementById("growthChart");
   
-  // Tạo tỷ lệ cho đường (x, y)
   const xScale = (index) => 50 + index * (500 / (years.length - 1));
   const yScale = (value) => 350 - (value / 12000) * 250;
   
-  // Tạo đường vẽ
   let pathData = "M " + xScale(0) + " " + yScale(sales[0]); // Điểm đầu tiên
   for (let i = 1; i < sales.length; i++) {
     pathData += " L " + xScale(i) + " " + yScale(sales[i]); // Các đường nối
   }
   
   // Tạo phần tử đường SVG
-  // document.createElementNS(namespace, tagName)
   const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
   path.setAttribute("d", pathData);
   path.setAttribute("stroke", "green");
